@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)build\Sdk.props" />
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <TargetFramework Condition="$(TargetFramework)==''">netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <LocalFeed>$(MSBuildThisFileDirectory).artifect/</LocalFeed>
+    <Version>0.1.0</Version>
+    <VersionSuffix>0001</VersionSuffix>
+    <PackageOutputPath>$(LocalFeed)</PackageOutputPath>
+    <PublishDir>$(MSBuildThisFileDirectory)publish/</PublishDir>
+    <OutputType Condition="$(TargetFramework)=='netstandard*'">Library</OutputType>
+    <OutputType Condition="$(TargetFramework)=='netcoreapp2.*'">Exe</OutputType>
+  </PropertyGroup>
+</Project>

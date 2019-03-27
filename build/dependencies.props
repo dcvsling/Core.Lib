@@ -1,0 +1,11 @@
+﻿<Project>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <PropertyGroup Label="Package Versions">
+    <AspNetCoreVersion>2.2.*</AspNetCoreVersion>
+    <ExtensionsVersion>2.2.*</ExtensionsVersion>
+    <DotNetCoreVersion>4.3.*</DotNetCoreVersion>
+  </PropertyGroup>
+  <Import Project="sources.props" Condition="$(RestoreSources)==''" />
+</Project>

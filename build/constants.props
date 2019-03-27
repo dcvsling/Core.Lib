@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <DefineConstants Condition="$(Configuration)=='Debug'">$(DefaultConstants);DEBUG</DefineConstants>
+    <DefineConstants Condition="$(Configuration)=='Release'">$(DefaultConstants);TRACE</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='net462'">$(DefaultConstants);NET;NET462</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='netstandard2.0'">$(DefaultConstants);NETSTANDARD;NETSTANDARD20</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='netstandard2.1'">$(DefaultConstants);NETSTANDARD;NETSTANDARD21</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='netcoreapp2.1'">$(DefaultConstants);NETCOREAPP;NETCOREAPP21</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='netcoreapp2.2'">$(DefaultConstants);NETCOREAPP;NETCOREAPP22</DefineConstants>
+    <DefineConstants Condition="$(TargetFramework)=='netcoreapp3.0'">$(DefaultConstants);NETCOREAPP;NETCOREAPP30</DefineConstants>
+    <DefineConstants Condition="$(IsPackable)=='false'">$(DefaultConstants);TESTING</DefineConstants>
+</PropertyGroup>
+</Project>

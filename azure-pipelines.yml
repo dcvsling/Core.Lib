@@ -1,0 +1,32 @@
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
+
+trigger:
+- master
+
+pool:
+  vmImage: 'Ubuntu-16.04'
+
+variables:
+  dotnetVersion: 3.0.100-preview4-010603
+  buildConfiguration: 'Debug'
+  version: '0.1.0-preview-$(Build.BuildNumber)'
+  feedUrl: 'https://www.myget.org/F/dcvs-lib/api/v2/package'
+  apikey: e0d689c7-c532-4dc3-9906-52ab95535fc5
+steps:
+
+- task: DotNetCoreInstaller@0
+  displayName: 'install dotnet sdk version $(dotnetVersion)'
+  inputs:
+    version: $(dotnetVersion) # replace this value with the version that you need for your project
+  
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
+- script: dotnet pack -o $(Build.ArtifactStagingDirectory) --no-dependencies --no-build --include-symbols -p:PackageVersion=$(version) 
+  displayName: 'dotnet pack version $(version)'
+
+- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/(Build.Repository.Name).nupkg -s $(feedUrl) -k $(apikey)
+  displayName: push to myget
