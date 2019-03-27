@@ -1,5 +1,5 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildThisFileDirectory)build\Sdk.props" />
+  <Import Project="$(MSBuildThisFileDirectory)build\sdk.props" />
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <TargetFramework Condition="$(TargetFramework)==''">netstandard2.0</TargetFramework>
