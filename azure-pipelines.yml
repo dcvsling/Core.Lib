@@ -28,5 +28,5 @@ steps:
 - script: dotnet pack -o $(Build.ArtifactStagingDirectory) --no-dependencies --no-build --include-symbols -p:PackageVersion=$(version) 
   displayName: 'dotnet pack version $(version)'
 
-- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/(Build.Repository.Name).nupkg -s $(feedUrl) -k $(apikey)
+- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k $(apikey)
   displayName: push to myget
