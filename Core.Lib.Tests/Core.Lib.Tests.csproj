@@ -22,6 +22,7 @@
     <ProjectReference Include="..\Core.Lib.Module\Core.Lib.Module.csproj" />
     <ProjectReference Include="..\Core.Lib.Reflections\Core.Lib.Reflections.csproj" />
     <ProjectReference Include="..\Core.Lib.Rss\Core.Lib.Rss.csproj" />
+    <ProjectReference Include="..\TestModule\TestModule.csproj" />
   </ItemGroup>
 
   <ItemGroup>
