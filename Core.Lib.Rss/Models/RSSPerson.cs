@@ -1,6 +1,4 @@
-﻿using Microsoft.SyndicationFeed;
-
-namespace Core.Lib.RSS
+﻿namespace Core.Lib.RSS.Models
 {
     public class RSSPerson
     {

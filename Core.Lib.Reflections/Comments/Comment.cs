@@ -1,16 +1,22 @@
-﻿using System.Collections.Concurrent;
+﻿using System;
+using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using System.Reflection;
 using Core.Net.GraphQLConventions;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.KeyPerFile;
 using Microsoft.Extensions.FileSystemGlobbing;
 
-namespace System
+namespace Core.Lib
 {
 
     public static class Comment
     {
+        static Comment()
+        {
+            SetRoot(Directory.GetCurrentDirectory());
+        }
         private static ConcurrentDictionary<string, IConfiguration> _configurations
             = new ConcurrentDictionary<string, IConfiguration>();
 
@@ -26,7 +32,7 @@ namespace System
                 .GetResultsInFullPath(root)
                 .GroupBy(Path.GetFileNameWithoutExtension)
                 .Where(x => x.Count() != 2)
-                .ToDictionary(x => x.Key, x => new ConfigurationBuilder().AddXmlFile(x.First(y => Path.GetExtension(y) == ".xml").Replace(root, string.Empty)).Build());
+                .ToDictionary(x => x.Key, x => new ConfigurationBuilder().AddKeyPerFile(".",true));
 
         public static string Get(MemberInfo member)
             => GetProvider(member.DeclaringType.Assembly.GetName().Name).Get(member);

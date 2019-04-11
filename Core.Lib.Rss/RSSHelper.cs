@@ -1,12 +1,6 @@
-﻿using Microsoft.SyndicationFeed;
-using Microsoft.SyndicationFeed.Rss;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using Core.Lib.RSS.Models;
+using Microsoft.SyndicationFeed;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 
 namespace Core.Lib.RSS
 {
@@ -14,8 +8,7 @@ namespace Core.Lib.RSS
     public static class RSSHelper
     {
         public static RSSLink MapTo(this ISyndicationLink link)
-            => new RSSLink
-            {
+            => new RSSLink {
                 Uri = link.Uri,
                 Title = link.Title,
                 MediaType = link.MediaType,
@@ -24,8 +17,7 @@ namespace Core.Lib.RSS
                 LastUpdated = link.LastUpdated
             };
         public static RSSPerson MapTo(this ISyndicationPerson person)
-        => new RSSPerson
-        {
+        => new RSSPerson {
             Name = person.Name,
             Email = person.Email,
             Uri = person.Uri,
@@ -34,15 +26,13 @@ namespace Core.Lib.RSS
 
 
         public static RSSCategory MapTo(this ISyndicationCategory category)
-            => new RSSCategory
-            {
+            => new RSSCategory {
                 Name = category.Name,
                 Label = category.Label,
                 Scheme = category.Scheme
             };
         public static RSSItem MapTo(this ISyndicationItem item)
-            => new RSSItem
-            {
+            => new RSSItem {
                 Id = item.Id,
                 Title = item.Title,
                 Description = item.Description,
@@ -54,29 +44,25 @@ namespace Core.Lib.RSS
             };
 
         public static ISyndicationCategory MapTo(this RSSCategory category)
-               => new SyndicationCategory(category.Name)
-               {
+               => new SyndicationCategory(category.Name) {
                    Label = category.Label,
-                   Scheme = category.Scheme,
+                   Scheme = category.Scheme
                };
 
         public static ISyndicationPerson MapTo(this RSSPerson person)
-              => new SyndicationPerson(person.Name, person.Email)
-              {
+              => new SyndicationPerson(person.Name, person.Email) {
                   Uri = person.Uri,
                   RelationshipType = person.RelationshipType
               };
         public static ISyndicationLink MapTo(this RSSLink link)
-               => new SyndicationLink(link.Uri, link.MediaType)
-               {
+               => new SyndicationLink(link.Uri, link.MediaType) {
                    Title = link.Title,
                    Length = link.Length,
                    LastUpdated = link.LastUpdated
                };
         public static ISyndicationItem MapTo(this RSSItem item)
         {
-            var result = new SyndicationItem
-            {
+            var result = new SyndicationItem {
                 Id = item.Id,
                 Title = item.Title,
                 Description = item.Description,

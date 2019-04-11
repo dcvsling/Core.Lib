@@ -2,10 +2,15 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
-  <PropertyGroup Label="Package Versions">
+  <PropertyGroup Label="Package Versions" Condition="$(TargetFramework.Contains('netstandard')) OR $(TargetFramework.Contains('netcoreapp2'))">
     <AspNetCoreVersion>2.2.*</AspNetCoreVersion>
     <ExtensionsVersion>2.2.*</ExtensionsVersion>
     <DotNetCoreVersion>4.3.*</DotNetCoreVersion>
+  </PropertyGroup>
+  <PropertyGroup Label="Package Versions" Condition="$(TargetFramework)=='netcoreapp3.0'">
+    <AspNetCoreVersion>3.0.0-*</AspNetCoreVersion>
+    <ExtensionsVersion>3.0.0-*</ExtensionsVersion>
+    <DotNetCoreVersion>4.3.0-*</DotNetCoreVersion>
   </PropertyGroup>
   <Import Project="sources.props" Condition="$(RestoreSources)==''" />
 </Project>

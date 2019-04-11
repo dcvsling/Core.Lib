@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<rss xmlns:a10="http://www.w3.org/2005/Atom" version="2.0">
+<channel xmlns:sxp="blogs.technet.microsoft.com/cloudplatform/rssfeeds/devblogs" xmlns:sxpMd="http://sxpdata.microsoft.com/metadata">
+<title>Category Name</title>
+<description>Category Name</description>
+<copyright>Copyright (c) 2019 Microsoft</copyright>
+<link>https://blogs.technet.microsoft.com/cloudplatform</link>
+<a10:link href="blogs.technet.microsoft.com/cloudplatform/rssfeeds/devblogs" rel="self" type="application/rss+xml"/>
+<item>
+<guid isPermaLink="true">
+https://devblogs.microsoft.com/dotnet/net-core-april-2019-updates-2-1-10-and-2-2-4/
+</guid>
+<pubDate>Tue, 09 Apr 2019 20:35:28 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[ .NET Core April 2019 Updates – 2.1.10 and 2.2.4 ]]>
+</title>
+<link>
+https://devblogs.microsoft.com/dotnet/net-core-april-2019-updates-2-1-10-and-2-2-4/
+</link>
+<description>
+<![CDATA[
+<p>Today, we are releasing the .NET Core April 2019 Update. These updates contain security and reliability fixes. See the individual release notes for details on included fixes.</p> <ul><li>.NET Core 2.2.4 and .NET Core SDK 2.2.106 ( <a href="https://www.microsoft.com/net/download/dotnet-core/2.2">Download</a> | <a href="https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2.4/2.2.4.md">Release Notes</a> )</li> <li>.NET Core 2.1.10 and .NET Core SDK 2.1.506 ( <a href="https://www.microsoft.com/net/download/dotnet-core/2.1">Download</a> | <a href="https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1.10/2.1.10.md">Release Notes</a>)</li> </ul><h2>Security</h2> <h3><a href="https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/CVE-2019-0815">Microsoft Security Advisory CVE-2019-0815: ASP.NET Core Denial of Service Vulnerability</a></h3> <p>A denial of service vulnerability exists in ASP.NET Core 2.2 where, if an application is hosted on Internet Information Server (IIS) a remote unauthenticated attacker can use a specially crafted request to cause a Denial of Service.</p> <p>The vulnerability affects any Microsoft ASP.NET Core 2.2 applications if it is hosted on an IIS server running <strong>AspNetCoreModuleV2 (ANCM)</strong> prior to and including <strong>12.2.19024.2</strong>.&nbsp;The security update addresses the vulnerability by ensuring the IIS worker process does not crash in response to specially crafted requests.</p> <h2>Getting the Update</h2> <p>The latest .NET Core updates are available on the <a href="https://www.microsoft.com/net/download/all">.NET Core download page</a>.</p> <p>See the .NET Core release notes ( <a href="https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1.10/2.1.10.md">2.1.10</a>&nbsp;| <a href="https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2.4/2.2.4.md">2.2.4</a>&nbsp;) for details on the release including a issues fixed and affected packages.</p> <h2>Docker Images</h2> <p>.NET Docker images have been updated for today&rsquo;s release. The following repos have been updated.</p> <p><a href="https://hub.docker.com/r/microsoft/dotnet/">microsoft/dotnet</a><br><a href="https://hub.docker.com/r/microsoft/dotnet-samples/">microsoft/dotnet-samples</a><br><a href="https://hub.docker.com/r/microsoft/aspnetcore">microsoft/aspnetcore</a></p> <p><strong>Note:</strong> Look at the &ldquo;Tags&rdquo; view in each repository to see the updated Docker image tags.</p> <p><strong>Note:</strong> You must re-pull base images in order to get updates. The Docker client does not pull updates automatically.</p> <h2>Azure App Services deployment</h2> <p>Deployment of these updates Azure App Services has been scheduled and they estimate the deployment will be complete by Apr 23, 2019.</p> <p>The post <a rel="nofollow" href="https://devblogs.microsoft.com/dotnet/net-core-april-2019-updates-2-1-10-and-2-2-4/">.NET Core April 2019 Updates &ndash; 2.1.10 and 2.2.4</a> appeared first on <a rel="nofollow" href="https://devblogs.microsoft.com/dotnet">.NET Blog</a>.</p>
+]]>
+</description>
+<author>Vivek Mishra</author>
+<source url="https://blogs.msdn.microsoft.com/dotnet/feed/">.NET Blog</source>
+<comments>
+https://devblogs.microsoft.com/dotnet/net-core-april-2019-updates-2-1-10-and-2-2-4/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://devblogs.microsoft.com/devops/april-security-release-patches-available-for-azure-devops-server-2019-tfs-2018-3-2-tfs-2018-1-2-tfs-2017-3-1-and-the-release-of-tfs-2015-4-2/
+</guid>
+<pubDate>Tue, 09 Apr 2019 17:24:22 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+April Security Release: Patches available for Azure DevOps Server 2019, TFS 2018.3.2, TFS 2018.1.2, TFS 2017.3.1, and the release of TFS 2015.4.2
+]]>
+</title>
+<link>
+https://devblogs.microsoft.com/devops/april-security-release-patches-available-for-azure-devops-server-2019-tfs-2018-3-2-tfs-2018-1-2-tfs-2017-3-1-and-the-release-of-tfs-2015-4-2/
+</link>
+<description>
+<![CDATA[
+<p>For the April security release, we are releasing fixes for vulnerabilities that impact Azure DevOps Server 2019, TFS 2018, TFS 2017, and TFS 2015. These vulnerabilities were found through our <a href="https://blogs.msdn.microsoft.com/devops/2019/01/17/announcing-the-azure-devops-bug-bounty-program/">Azure DevOps Bounty Program</a>. Thanks to everyone who has been participating in this program.</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0857">CVE-2019-0857</a>: spoofing vulnerability in the Wiki</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0866">CVE-2019-0866</a>: remote code execution vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0867">CVE-2019-0867</a>: cross site scripting (XSS) vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0868">CVE-2019-0868</a>: cross site scripting (XSS) vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0869">CVE-2019-0869</a>: HTML injection vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0870">CVE-2019-0870</a>: cross site scripting (XSS) vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0871">CVE-2019-0871</a>: cross site scripting (XSS) vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0874">CVE-2019-0874</a>: cross site scripting (XSS) vulnerability in Pipelines</p> <p><a href="https://msrc-portal-preview.azurewebsites.net/en-US/security-guidance/advisory/CVE-2019-0875">CVE-2019-0875</a>: elevation of privilege vulnerability in Boards</p> <p><img src="https://devblogs.microsoft.com/devops/wp-content/uploads/sites/6/2019/04/cve.png" alt="" width="981" height="349"></p> <h3>Azure DevOps Server 2019 Patch 1</h3> <p>If you have Azure DevOps Server 2019, you should install <a href="https://aka.ms/azdev2019patch">Azure DevOps Server 2019 Patch 1</a>.</p> <p><strong>Verifying Installation</strong></p> <p>To verify if you have this update installed, you can check the version of the following file: [INSTALL_DIR]Application TierWeb ServicesbinMicrosoft.TeamFoundation.Server.WebAccess.VersionControl.dll. Azure DevOps Server 2019 is installed to c:Program FilesAzure DevOps Server 2019 by default.</p> <p>After installing Azure DevOps Server 2019 Patch 1, the version will be 17.143.28804.3.</p> <h3>TFS 2018 Update 3.2 Patch 3</h3> <p>If you have TFS 2018 Update 2 or Update 3, you should first update to <a href="https://go.microsoft.com/fwlink/?LinkId=2008534">TFS 2018 Update 3.2</a>. Once on Update 3.2, install <a href="https://aka.ms/tfs2018.3.2patch">TFS 2018 Update 3.2 Patch 3</a>.</p> <p><strong>Verifying Installation</strong></p> <p>To verify if you have this update installed, you can check the version of the following file: [TFS_INSTALL_DIR]Application TierWeb ServicesbinMicrosoft.TeamFoundation.WorkItemTracking.Web.dll. TFS 2018 is installed to c:Program FilesMicrosoft Team Foundation Server 2018 by default.</p> <p>After installing TFS 2018 Update 3.2 Patch 3, the version will be 16.131.28728.4.</p> <h3>TFS 2018 Update 1.2 Patch 3</h3> <p>If you have TFS 2018 RTW or Update 1, you should first update to <a href="https://go.microsoft.com/fwlink/?LinkId=866620">TFS 2018 Update 1.2</a>. Once on Update 1.2, install <a href="https://aka.ms/tfs2018.1.2patch">TFS 2018 Update 1.2 Patch 3</a>.</p> <p><strong>Verifying Installation</strong></p> <p>To verify if you have this update installed, you can check the version of the following file: [TFS_INSTALL_DIR]Application TierWeb ServicesbinMicrosoft.TeamFoundation.Server.WebAccess.Admin.dll. TFS 2018 is installed to c:Program FilesMicrosoft Team Foundation Server 2018 by default.</p> <p>After installing TFS 2018 Update 1.2 Patch 3, the version will be 16.122.28801.2.</p> <h3>TFS 2017 Update 3.1 Patch 4</h3> <p>If you have TFS 2017, you should first update to <a href="https://go.microsoft.com/fwlink/?LinkId=857134">TFS 2017 Update 3.1</a>. Once on Update 3.1, install <a href="https://aka.ms/tfs2017.3.1patch">TFS 2017 Update 3.1 Patch 4</a>.</p> <p><strong>Verifying Installation</strong></p> <p>To verify if you have a patch installed, you can check the version of the following file: [TFS_INSTALL_DIR]Application TierWeb ServicesbinMicrosoft.TeamFoundation.Server.WebAccess.Admin.dll. TFS 2017 is installed to c:Program FilesMicrosoft Team Foundation Server 15.0 by default.</p> <p>After installing TFS 2017 Update 3.1 Patch 4, the version will be 15.117.28728.0.</p> <h3>TFS 2015 Update 4.2</h3> <p>If you are on TFS 2015, you should upgrade to TFS 2015 Update 4.2 with the <a href="https://go.microsoft.com/fwlink/?linkid=844069">ISO</a> or <a href="https://go.microsoft.com/fwlink/?linkid=844068">Web Install</a>. This is a full upgrade and will require you to run the Upgrade Wizard.</p> <p>The post <a rel="nofollow" href="https://devblogs.microsoft.com/devops/april-security-release-patches-available-for-azure-devops-server-2019-tfs-2018-3-2-tfs-2018-1-2-tfs-2017-3-1-and-the-release-of-tfs-2015-4-2/">April Security Release: Patches available for Azure DevOps Server 2019, TFS 2018.3.2, TFS 2018.1.2, TFS 2017.3.1, and the release of TFS 2015.4.2</a> appeared first on <a rel="nofollow" href="https://devblogs.microsoft.com/devops">Azure DevOps Blog</a>.</p>
+]]>
+</description>
+<author>Erin Dormier</author>
+<source url="https://blogs.msdn.microsoft.com/visualstudioalm/feed/">Microsoft Application Lifecycle Management</source>
+<comments>
+https://devblogs.microsoft.com/devops/april-security-release-patches-available-for-azure-devops-server-2019-tfs-2018-3-2-tfs-2018-1-2-tfs-2017-3-1-and-the-release-of-tfs-2015-4-2/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-to-accelerate-devops-with-machine-learning-lifecycle-management/
+</guid>
+<pubDate>Tue, 09 Apr 2019 11:00:05 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+How to accelerate DevOps with Machine Learning lifecycle management
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-to-accelerate-devops-with-machine-learning-lifecycle-management/
+</link>
+<description>
+<![CDATA[
+<p>DevOps is the union of people, processes, and products to enable the continuous delivery of value to end users. DevOps for machine learning is about bringing the lifecycle management of DevOps to Machine Learning. Utilizing Machine Learning, DevOps can easily manage, monitor, and version models while simplifying workflows and the collaboration process.</p>
+ 
+ <p>Effectively managing the Machine Learning lifecycle is critical for DevOps&rsquo; success. And the first piece to machine learning lifecycle management is building your machine learning pipeline(s).</p>
+ 
+ <h2>What is a Machine Learning Pipeline?&nbsp;</h2>
+ 
+ <p>DevOps for Machine Learning includes data preparation, experimentation, model training, model management, deployment, and monitoring while also enhancing governance, repeatability, and collaboration throughout the model development process. Pipelines allow for the modularization of phases into discrete steps and provide a mechanism for automating, sharing, and reproducing models and ML assets. They create and manage workflows that stitch together machine learning phases. Essentially, pipelines allow you to optimize your workflow with simplicity, speed, portability, and reusability.</p>
+ 
+ <p>There are four steps involved in deploying machine learning that data scientists, engineers and IT experts collaborate on:</p>
+ 
+ <ol><li>Data Ingestion and Preparation</li>
+ <li>Model Training and Retraining</li>
+ <li>Model Evaluation</li>
+ <li>Deployment</li>
+ </ol><p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/8cfc96cf-54d4-42a3-a524-ebee58419bf2.png"><img alt="fig1" border="0" height="363" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/d243dc01-3c83-42b4-822a-94c61f1c22cb.png" title="fig1" width="960"></a></p>
+ 
+ <p>Together, these steps make up the Machine Learning pipeline. Below is an excerpt from <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-ml-pipelines">documentation</a> on building machine pipelines with Azure Machine Learning service, which explains it well.</p>
+ 
+ <p>&ldquo;Using distinct steps makes it possible to rerun only the steps you need, as you tweak and test your workflow. A step is a computational unit in the pipeline. As shown in the preceding diagram, the task of preparing data can involve many steps. These include, but aren't limited to, normalization, transformation, validation, and featurization. Data sources and intermediate data are reused across the pipeline, which saves compute time and resources.&rdquo;</p>
+ 
+ <h2>4 benefits of accelerating Machine Learning pipelines for DevOps</h2>
+ 
+ <ol></ol><p>&nbsp;</p>
+ 
+ <blockquote>
+ <h3>1. Collaborate easily across teams</h3>
+ 
+ <ul><li>Data scientists, data engineers, and IT professionals using machine learning pipelines need to collaborate on every step involved in the machine learning lifecycle: from data prep to deployment.</li>
+ <li><a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-manage-workspace">Azure Machine Learning service workspace</a> is designed to make the pipelines you create visible to the members of your team. You can use Python to create your machine learning pipelines and interact with them in Jupyter notebooks, or in another preferred integrated development environment.</li>
+ </ul><h3>2. Simplify workflows</h3>
+ 
+ <ul><li>Data prep and modeling can last days or weeks, taking time and attention away from other business objectives.</li>
+ <li>The <a href="https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro?view=azure-ml-py">Azure Machine Learning SDK</a> offers imperative constructs for sequencing and parallelizing the steps in your pipelines when no data dependency is present. You can also templatize pipelines for specific scenarios and deploy them to a REST endpoint, so you can schedule batch-scoring or retraining jobs. You only need to rerun the steps you need, as you tweak and test your workflow when you rerun a pipeline.</li>
+ </ul><h3>3. Centralized Management</h3>
+ 
+ <ul><li>Tracking models and their version histories is a hurdle many DevOps teams face when building and maintaining their machine learning pipelines.</li>
+ <li>The <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-model-management-and-deployment">Azure Machine Learning service model registry</a> tracks models, their version histories, their lineage and artifacts. Once the model is in production, the Application Insights service collects both application and model telemetry that allows the model to be monitored in production for operational and model correctness. The data captured during inferencing is presented back to the data scientists and this information can be used to determine model performance, data drift, and model decay, as well as the tools to train, manage, and deploy machine learning experiments and web services in one central view.</li>
+ <li>The Azure Machine Learning SDK also allows you to submit and track individual pipeline runs. You can explicitly name and version your data sources, inputs, and outputs instead of manually tracking data and result paths as you iterate. You can also manage scripts and data separately for increased productivity. For each step in your pipeline. Azure coordinates between the various <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-azure-machine-learning-architecture">compute targets</a> you use, so that your intermediate data can be shared with the downstream compute targets easily. You can track the metrics for your pipeline experiments directly in the Azure portal.</li>
+ </ul><h3>4. Track your experiments easily</h3>
+ 
+ <p>&nbsp;</p>
+ </blockquote>
+ 
+ <blockquote>
+ <ul><li>DevOps capabilities for machine learning further improve productivity by enabling experiment tracking and management of models deployed in the cloud and on the edge. All these capabilities can be accessed from any Python environment running anywhere, including data scientists&rsquo; workstations. The data scientist can compare runs, and then select the &ldquo;best&rdquo; model for the problem statement.</li>
+ <li>The Azure Machine Learning workspace keeps a list of compute targets that you can use to train your model. It also keeps a history of the training runs, including logs, metrics, output, and a snapshot of your scripts. Create multiple workspaces or common workspaces to be shared by multiple people.</li>
+ </ul></blockquote>
+ 
+ <ul></ul><p>&nbsp;</p>
+ 
+ <ol></ol><h2>Conclusion</h2>
+ 
+ <p>As you can see, DevOps for Machine Learning can be streamlined across the ML pipeline with more visibility into training, experiment metrics, and model versions. Azure Machine Learning service, seamlessly integrates with Azure services to provide end-to-end capabilities for the entire Machine Learning lifecycle, making it simpler and faster than ever.</p>
+ 
+ <p>This is part two of a four-part series on the pillars of Azure Machine Learning services. Check out part one if you haven&rsquo;t already, and be sure to look out for our next blog, where we&rsquo;ll be talking about ML at scale.</p>
+ 
+ <h3>Learn More</h3>
+ 
+ <p><a href="https://azure.microsoft.com/en-us/services/machine-learning-service/">Visit our product site</a> to learn more about the Azure Machine Learning service, and get started with a <a href="https://azure.microsoft.com/en-us/trial/get-started-machine-learning/">free trial of Azure Machine Learning service</a>.</p>
+]]>
+</description>
+<author>Eduardo Melo</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-to-accelerate-devops-with-machine-learning-lifecycle-management/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-do-teams-work-together-on-an-automated-machine-learning-project/
+</guid>
+<pubDate>Tue, 09 Apr 2019 10:00:04 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+How do teams work together on an automated machine learning project?
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-do-teams-work-together-on-an-automated-machine-learning-project/
+</link>
+<description>
+<![CDATA[
+<p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/3a83e1a4-088f-4804-af1d-ad2a6e7de199.png"><img alt="How do teams work together on an automated machine learning project?" border="0" height="182" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e2121316-f475-4c40-984e-682029400209.png" title="How do teams work together on an automated machine learning project?" width="581"></a></p>
+ 
+ <p>When it comes to executing a machine learning project in an organization, data scientists, project managers, and business leads need to work together to deploy the best models to meet specific business objectives. A central objective of this step is to identify the key business variables that the analysis needs to predict. We refer to these variables as the model targets, and we use the metrics associated with them to determine the success of the project.</p>
+ 
+ <p>In this use case, available to the public on <a href="https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb?WT.mc_id=acom-blog-lazzeri">GitHub</a>, we&rsquo;ll see how a data scientist, project manager, and business lead at a retail grocer can leverage <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-automated-ml?WT.mc_id=acom-blog-lazzeri">automated machine learning</a> and <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/?WT.mc_id=acom-blog-lazzeri">Azure Machine Learning service</a> to reduce product overstock. Azure Machine Learning service is a cloud service that you use to train, deploy, automate, and manage machine learning models, all at the broad scale that the cloud provides. Automated machine learning within Azure Machine Learning service is the process of taking training data with a defined target feature, and iterating through combinations of algorithms and feature selections to automatically select the best model for your data based on the training scores.</p>
+ 
+ <p>Excess stock quickly becomes a liquidity problem, as it is not converted back to cash unless margins are reduced by means of discounts and promotions or, even worse, when it accumulates to be sent to other channels such as outlets, delaying its sale. Identifying in advance which products will not have the level of rotation they expect and controlling replenishment with stock cover that is aligned with sales forecasts are key factors in helping retailers achieve ROI on their investments. Let&rsquo;s see how the team goes about solving this problem and how automated machine learning enables the democratization of artificial intelligence across the company.</p>
+ 
+ <h2>Identify the right business objective for the company</h2>
+ 
+ <p>Strong sales and profits are the result of having the right product mix and level of inventory. Achieving this ideal mix requires having current and accurate inventory information. Manual processes not only take time, causing delays in producing current and accurate inventory information, but also increase the likelihood of errors. These delays and errors are likely to cause lost revenue due to inventory overstocks, understocks, and out-of-stocks.</p>
+ 
+ <p>Overstock inventory can also take valuable warehouse space and tie up cash that ought to be used to purchase new inventory. But selling it in liquidation mode can cause its own set of problems, such as tarnishing your reputation and cannibalizing sales of other current products.</p>
+ 
+ <p>The project manager, being the bridge between data scientists and business operations, reaches out to the business lead to discuss the possibilities of using some of their internal and historical sales to solve their overstock inventory problem. The project manager and the business lead define project goals by asking and refining tangible questions that are relevant for the business objective.</p>
+ 
+ <p>There are two main tasks addressed in this stage:</p>
+ 
+ <ul><li><strong>Define objectives</strong>: The project manager and the business lead need to identify the business problems and, most importantly, formulate questions that define the business goals that the data science techniques can target.</li>
+ <li><strong>Identify data sources</strong>: The project manager and data scientist need to find relevant data that helps answer the questions that define the objectives of the project.</li>
+ </ul><h2>Look for the right data and pipeline</h2>
+ 
+ <p>It all starts with data. The project manager and the data scientist need to identify data sources that contain known examples of answers to the business problem. They look for the following types of data:</p>
+ 
+ <ul><li>Data that is relevant to the question. Do they have measures of the target and features that are related to the target?</li>
+ <li>Data that is an accurate measure of their model target and the features of interest.</li>
+ </ul><p>There are three main tasks that the data scientist needs to address in this stage:</p>
+ 
+ <ol><li>Ingest the data into the target analytics environment</li>
+ <li>Explore the data to determine if the data quality is adequate to answer the question</li>
+ <li>Set up a data pipeline to score new or regularly refreshed data</li>
+ </ol><p>After setting up the process to move the data from the source locations to the target locations where it&rsquo;s possible to run analytics operations, the data scientist starts working on raw data to produce a clean, high-quality data set whose relationship to the target variables is understood. Before training machine learning models, the data scientist needs to develop a sound understanding of the data and create a data summarization and visualization to audit the quality of the data and provide the information needed to process the data before it's ready for modeling.</p>
+ 
+ <p>Finally, the data scientist is also in charge of developing a solution architecture of the data pipeline that refreshes and scores the data regularly.</p>
+ 
+ <h2>Forecast orange juice sales with automated machine learning</h2>
+ 
+ <p>The data scientist and project manager decide to use <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-automated-ml?WT.mc_id=acom-blog-lazzeri">automated machine learning</a> for a few reasons: automated machine learning empowers customers, with or without data science expertise, to identify an end-to-end machine learning pipeline for any problem, achieving higher accuracy while spending far less of their time. And it also enables a significantly larger number of experiments to be run, resulting in faster iteration toward production-ready intelligent experiences.</p>
+ 
+ <p>Let&rsquo;s look at how their process using automated machine learning for orange juice sales forecasting delivers on these benefits.</p>
+ 
+ <p>After agreeing on the business objective and what type of internal and historical data should be used to meet that objective, the data scientist creates a workspace. This workspace is the top-level resource for the service and provides data scientists with a centralized place to work with all the artifacts they need to create. When a workspace is created in an AzureML service, the following Azure resources are added automatically (if they are regionally available):</p>
+ 
+ <ul><li>Azure Container Registry</li>
+ <li>Azure Storage</li>
+ <li>Azure Application Insights</li>
+ <li>Azure Key Vault</li>
+ </ul><p>To run automated machine learning, the data scientist also needs to create an <em>Experiment</em>. An <em>Experiment</em> is a named object in a workspace that represents a predictive task, the output of which is a trained model and a set of evaluation metrics for the model.</p>
+ 
+ <p>The data scientist is now ready to load the historical orange juice sales data and loads the CSV file into a plain pandas DataFrame. The time column in the CSV is called <i>WeekStarting</i>, so it will be specially parsed into the datetime type.</p>
+ 
+ <p>Each row in the DataFrame holds a quantity of weekly sales for an orange juice brand at a single store. The data also includes the sales price, a flag indicating if the orange juice brand was advertised in the store that week, and some customer demographic information based on the store location. For historical reasons, the data also includes the logarithm of the sales quantity.</p>
+ 
+ <p>The task is now to build a time series model for the <i>Quantity</i> column. It&rsquo;s important to note that this data set is comprised of many individual time series; one for each unique combination of <i>Store</i> and <i>Brand</i>. To distinguish the individual time series, we thus define the grain&mdash;the columns whose values determine the boundaries between time series.</p>
+ 
+ <p>After splitting the data into a training and a testing set for later forecast evaluation, the data scientist starts working on the modeling step for forecasting tasks, and automated machine learning uses pre-processing and estimation steps that are specific to time series. Automated machine learning will undertake the following pre-processing steps:</p>
+ 
+ <ul><li>Detect the time series sample frequency (e.g., hourly, daily, weekly) and create new records for absent time points to make the series regular. A regular time series has a well-defined frequency and has a value at every sample point in a contiguous time span.</li>
+ <li>Impute missing values in the target via forward-fill and feature columns using median column values.</li>
+ <li>Create grain-based features to enable fixed effects across different series.</li>
+ <li>Create time-based features to assist in learning seasonal patterns.</li>
+ <li>Encode categorical variables to numeric quantities.</li>
+ </ul><p>The <i>AutoMLConfig</i> object defines the settings and data for an automated machine learning training job. Below is a summary of automated machine learning configuration parameters that were used for training the orange juice sales forecasting model:</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/4d3bd3c5-84e7-486a-9195-d0eab8908a72.png"><img alt="Summary of automated machine learning configuration parameters." src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/94a02826-9991-4cee-8486-0c17311dbc9b.png" title="Summary of automated machine learning configuration parameters."></a></p>
+ 
+ <p>Visit <a href="https://github.com/Azure/MachineLearningNotebooks/blob/master/how-to-use-azureml/automated-machine-learning/forecasting-orange-juice-sales/auto-ml-forecasting-orange-juice-sales.ipynb?WT.mc_id=acom-blog-lazzeri">GitHub</a> for more information on forecasting. Each iteration runs within an experiment and stores serialized pipelines from the automated machine learning iterations until they retrieve the pipeline with the best performance on the validation data set.</p>
+ 
+ <p>Once the evaluation has been performed, the data scientist, project manager, and business lead meet again to review the forecasting results. It&rsquo;s the project manager and business lead&rsquo;s job to make sense of the outputs and choose practical steps based on those results. The business lead needs to confirm that the best model and pipeline meet the business objective and that the machine learning solution answers the questions with acceptable accuracy to deploy the system to production for use by their internal sales forecasting application.</p>
+ 
+ <h2>Microsoft invests in Automated Machine Learning</h2>
+ 
+ <p><a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-automated-ml?WT.mc_id=acom-blog-lazzeri">Automated machine learning</a> is based on a breakthrough from the Microsoft Research division. The approach combines ideas from collaborative filtering and Bayesian optimization to search an enormous space of possible machine learning pipelines intelligently and efficiently. It&rsquo;s essentially a recommender system for machine learning pipelines. Similar to how streaming services recommend movies for users, automated machine learning recommends machine learning pipelines for data sets.</p>
+ 
+ <p>It&rsquo;s now offered as part of the <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/?WT.mc_id=acom-blog-lazzeri">Azure Machine Learning service</a>. As you&rsquo;ve seen here, <a href="https://azure.microsoft.com/en-us/blog/announcing-automated-ml-capability-in-azure-machine-learning/">Automated machine learning empowers customers</a>, with or without data science expertise, to identify an end-to-end machine learning pipeline for any problem and save time while increasing accuracy. It also enables a larger number of experiments to be run and faster iterations. How could automated machine learning benefit your organization? How could your team work more closely on using machine learning to meet your business objectives?</p>
+ 
+ <p>&nbsp;</p>
+ 
+ <h3>Resources</h3>
+ 
+ <ul><li>Learn more about <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/?WT.mc_id=acom-blog-lazzeri">Azure Machine Learning service</a></li>
+ <li>Learn more about <a href="https://docs.microsoft.com/en-us/azure/machine-learning/service/concept-automated-ml?WT.mc_id=acom-blog-lazzeri">automated machine learning</a></li>
+ <li>Get started with a <a href="https://azure.microsoft.com/en-us/trial/get-started-machine-learning/?WT.mc_id=acom-blog-lazzeri">free trial of the Azure Machine Learning</a> service</li>
+ </ul>
+]]>
+</description>
+<author>Francesca Lazzeri</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-do-teams-work-together-on-an-automated-machine-learning-project/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-to-stay-informed-about-azure-service-issues/
+</guid>
+<pubDate>Tue, 09 Apr 2019 09:00:04 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[ How to stay informed about Azure service issues ]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-to-stay-informed-about-azure-service-issues/
+</link>
+<description>
+<![CDATA[
+<p><a href="https://aka.ms/ash-acom">Azure Service Health</a> helps you stay informed and take action when Azure service issues like outages and planned maintenance affect you. It provides you with a <a href="https://azure.microsoft.com/en-us/blog/stay-informed-about-service-issues-with-azure-service-health/">personalized dashboard</a> that can help you understand issues that may be impacting resources in your Azure subscriptions.</p>
+ 
+ <p>For any event, you can get guidance and support, share details with your colleagues, and receive issue updates. Most importantly, you can configure customizable alerts to automatically notify you of service issues, planned maintenance, and health advisories.</p>
+ 
+ <p>We&rsquo;ve posted a new video series to help you learn how to use Azure Service Health and ensure you stay on top of service issues. You&rsquo;ll find out how to:</p>
+ 
+ <ul><li><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2F6ksgE-zVSm8&amp;data=02%7C01%7Cdarasera%40microsoft.com%7C28bce7b7e6184126e97c08d6b23ef273%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636892380820428808&amp;sdata=nbtKH36IU2I2%2B9xB5xEkuqwy6qz2oj4Asb619KRxATk%3D&amp;reserved=0">Set up your first Azure Service Health alert.</a></li>
+ <li><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fyoutu.be%2Fk5d5ca8K6tc&amp;data=02%7C01%7Cdarasera%40microsoft.com%7Cccf191dc933e4fc2af3208d6b701c827%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636897615618208416&amp;sdata=Dx6uls0HOmMxYekm%2B26D4nnFygc7iADXQeCS%2FLso3Nw%3D&amp;reserved=0">Follow best practices in Azure Service Health alerting.</a></li>
+ <li><a href="https://youtu.be/Mix-oL9FpCE">Get alerted via mobile push notifications.</a></li>
+ <li><a href="https://youtu.be/e7rPH5V1PAk">Integrate Azure Service Health with your organization&rsquo;s ticketing system, for example, ServiceNow.</a></li>
+ <li><a href="https://youtu.be/xKMfSSGk9gU">Understand the differences between Azure Service Health, Azure Resource Health, and the Azure Status page.</a></li>
+ </ul><p>Watch the first video now:</p>
+ 
+ <p></p>
+ 
+ <p>Set up your Azure Service Health alerts today by visiting <a href="https://aka.ms/azureservicehealth">Azure Service Health</a> in the Azure portal.</p>
+ 
+ <p>For more in-depth guidance, visit the <a href="https://aka.ms/servicehealthdocs">Azure Service Health documentation</a>. Let us know if you have a suggestion for Service Health by submitting an idea via <a href="https://feedback.azure.com/forums/919477-azure-service-health">this page</a> or by sending us an email at <a href="mailto:servicehealth@microsoft.com">servicehealth@microsoft.com</a>.</p>
+]]>
+</description>
+<author>Stephen Baron</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-to-stay-informed-about-azure-service-issues/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/bitnami-apache-airflow-multi-tier-now-available-in-azure-marketplace/
+</guid>
+<pubDate>Tue, 09 Apr 2019 08:00:03 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+Bitnami Apache Airflow Multi-Tier now available in Azure Marketplace
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/bitnami-apache-airflow-multi-tier-now-available-in-azure-marketplace/
+</link>
+<description>
+<![CDATA[
+<p>A few months ago, we released a blog post that provided guidance on <a href="https://azure.microsoft.com/en-us/blog/deploying-apache-airflow-in-azure-to-build-and-run-data-pipelines/">how to deploy Apache Airflow on Azure</a>. The template in the blog provided a good quick start solution for anyo
+]]>
+<![CDATA[
+ne looking to quickly run and deploy Apache Airflow on Azure in sequential executor mode for testing and proof of concept study. However, the template was not designed for enterprise production deployments and required expert knowledge of Azure app services and container deployments to run it in Celery Executor mode. This is where we partnered with Bitnami to help simplify production grade deployments of Airflow on Azure for customers.</p>
+ 
+ <p>We are excited to announce that the <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/bitnami.airflow-multitier?tab=Overview">Bitnami Apache Airflow Multi-Tier</a> solution and the <a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/bitnami.airflow-container?tab=Overview">Apache Airflow Container</a> are now available for customers in the Azure Marketplace. Bitnami Apache Airflow Multi-Tier template provides a 1-click solution for customers looking to deploy Apache Airflow for production use cases. To see how easy it is to launch and start using them, <a href="https://www.youtube.com/watch?v=zAHp-6kQu3I&amp;t=64s">check out the short video tutorial</a>.</p>
+ 
+ <p>We are proud to say that the main committers to the Apache Airflow project have also tested this application to ensure that it was performed to the standards that they would expect.</p>
+ 
+ <blockquote>
+ <p><em>Apache Airflow PMC Member and Core Committer Kaxil Naik said, &ldquo;I am excited to see that Bitnami provided an Airflow Multi-Tier in the Azure Marketplace. Bitnami has removed the complexity of deploying the application for data scientists and data engineers, so they can focus on building the actual workflows or DAGs instead. Now, data scientists can create a cluster for themselves within about 20 minutes. They no longer need to wait for DevOps or a data engineer to provision one for them.&rdquo;</em></p>
+ </blockquote>
+ 
+ <h2>What is Apache Airflow?</h2>
+ 
+ <p>Apache Airflow is a popular open source workflow management tool used in orchestrating ETL pipelines, machine learning workflows, and many other creative use cases. It provides a scalable, distributed architecture that makes it simple to author, track and monitor workflows.</p>
+ 
+ <p>Users of Airflow create Directed Acyclic Graph (DAG) files to define the processes and tasks that must be executed, in what order, and their relationships and dependencies. DAG files are synchronized across nodes and the user will then leverage the UI or automation to schedule, execute and monitor their workflow.</p>
+ 
+ <h2>Introduction to Bitnami&rsquo;s Apache Airflow Multi-tier architecture</h2>
+ 
+ <p>Bitnami Apache Airflow has a multi-tier distributed architecture that uses Celery Executor, which is recommended by Apache Airflow for production environments.</p>
+ 
+ <p>It is comprised of several synchronized nodes:</p>
+ 
+ <ul><li>Web server (UI)</li>
+ <li>Scheduler</li>
+ <li>Workers</li>
+ </ul><p>It includes two managed Azure services:</p>
+ 
+ <ul><li>Azure Database for PostgreSQL</li>
+ <li>Azure Cache for Redis</li>
+ </ul><p>All nodes have a shared volume to synchronize DAG files.</p>
+ 
+ <p>DAG files are stored in a directory of the node. This directory is an external volume mounted in the same location in all nodes (both workers, scheduler, and web server). Since it is a shared volume, the files are automatically synchronized between servers. Add, modify or delete DAG files from this shared volume and the entire Airflow system will be updated.</p>
+ 
+ <p>You can also use DAGs from a GitHub repository. By using Git, you won&rsquo;t have to access any of the Airflow nodes and you can just push the changes through the Git repository instead.</p>
+ 
+ <p>To automatically synchronize DAG files with Airflow, please refer to <a href="https://docs.bitnami.com/azure-templates/infrastructure/apache-airflow/configuration/sync-dags/">Bitnami&rsquo;s documentation</a>.</p>
+ 
+ <h2>Bitnami&rsquo;s secret sauce - Packaging for production use</h2>
+ 
+ <p>Bitnami specializes in packaging multi-tier applications to work right out of the box leveraging the managed Azure services like Azure Database for PostgreSQL.</p>
+ 
+ <p>When packaging the Apache Airflow Multi-Tier solution, Bitnami added a few optimizations to ensure that it would work for production needs.</p>
+ 
+ <ul><li>Pre-packaged to leverage the most popular deployment strategies. For example, using PostgreSQL as the relational metadata store and the Celery executor.</li>
+ <li>Role-based access control is enabled by default to secure access to the UI.</li>
+ <li>The cache and the metadata store are Azure-native PaaS services that leverage the additional benefits those services offer, such as data redundancy and retention/recovery options as well as allowing Airflow to scale out to large jobs.</li>
+ <li>All communication between Airflow nodes and the PostgreSQL database service is secured using SSL.</li>
+ </ul><p>To learn more, join Azure, Apache Airflow, and Bitnami for a webinar on Wednesday, May 1st at 11:00 am PST. <a href="https://bitnami.zoom.us/webinar/register/4415542259104/WN_hUh69xA2T2SsUZx8r8_iRg">Register now</a>.</p>
+ 
+ <p>Get Started with <a href="https://azuremarketplace.microsoft.com/en-ca/marketplace/apps/bitnami.airflow-multitier?tab=Overview">Apache Airflow Multi-Tier Certified by Bitnami</a> today!</p>
+]]>
+</description>
+<author>Parikshit Savjani</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/bitnami-apache-airflow-multi-tier-now-available-in-azure-marketplace/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/smarter-faster-safer-azure-sql-data-warehouse-is-simply-unmatched/
+</guid>
+<pubDate>Mon, 08 Apr 2019 23:59:30 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+Smarter, faster, safer: Azure SQL Data Warehouse is simply unmatched
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/smarter-faster-safer-azure-sql-data-warehouse-is-simply-unmatched/
+</link>
+<description>
+<![CDATA[
+<p>Today, we want to call attention to the exciting news that <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/compare/" target="_blank">Azure SQL Data Warehouse has <em>again</em> outperformed other cloud providers in the most recent GigaOm benchmark report</a>.</p>
+ 
+ <p>This is the result of relentless innovation and laser-focused execution on providing new features our customers need, all while reducing prices so customers get industry-leading performance at the best possible value. <strong>In just the past year, SQL Data Warehouse has released 130+ features</strong> focused on providing customers with enhanced speed, flexibility, and security. And today we are excited to announce three additional enhancements that continue to make SQL Data Warehouse the industry leader:</p>
+ 
+ <ul><li>Unparalleled query performance</li>
+ <li>Intelligent workload management</li>
+ <li>Unmatched security and privacy</li>
+ </ul><p>In this blog, we&rsquo;ll take a closer look at the technical capabilities of these new features and, most importantly, how you can start using them today.</p>
+ 
+ <h2>Unparalleled query performance</h2>
+ 
+ <p>In our March 2019 release, a collection of newly available features<strong> improved workload performance by up to 22x compared to previous versions of Azure SQL Data Warehouse</strong>, which contributed to our leadership position in both the <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/data-warehouse-in-the-cloud-benchmark/FINAL%20data-warehouse-cloud-benchmark.pdf" target="_blank">TPC-H</a> and <a href="https://azure.microsoft.com/mediahandler/files/resourcefiles/cloud-data-warehouse-performance-testing/FINAL%20GigaOm%20Report_cloud-data-warehouse-performance-testing.pdf" target="_blank">TPC-DS</a> benchmark reports.</p>
+ 
+ <p>This didn&rsquo;t just happen overnight. With decades of experience building industry-leading database systems, like SQL Server, Azure SQL Data Warehouse is built on top of the world&rsquo;s largest cloud architectures.</p>
+ 
+ <p>Key innovations that have improved query performance include:</p>
+ 
+ <ul><li>Query Optimizer enhancements</li>
+ <li>Instant Data Movement</li>
+ <li>Additional advanced analytic functions</li>
+ </ul><h3>Query Optimizer enhancements</h3>
+ 
+ <p>Query Optimizer is one of the most critical components in any database. Making optimal choices on how to best execute a query can and does yield significant improvement. When executing complex analytical queries, the number of operations to be executed in a distributed environment matters. Every opportunity to eliminate redundant computation, such as repeated subqueries, has a direct impact to query performance. For instance, the following query is reduced from 13 down to 5 operations using the latest Query Optimizer enhancements.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/fac566e1-dcbc-4c8c-82e5-01e498a8b00b.gif"><img alt="Animated GIF displaying Query Optimizer enhancements" border="0" height="395" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/bd979dbf-a5d7-4a96-8b2d-4a96ce7ca6e0.gif" title="Query Optimizer enhancements" width="640"></a></p>
+ 
+ <h3>Instant Data Movement</h3>
+ 
+ <p>For a distributed database system, having the most efficient data movement mechanism is also a critical ingredient in achieving great performance. Instant Data Movement was introduced with the launch of the second generation of Azure SQL Data Warehouse. To improve instant data movement performance, broadcast and partition data movement operations were added. In addition, performance optimizations around how strings are processed during the data movement operations yielded <strong>improvements of up to 2x</strong>.</p>
+ 
+ <h3>Advanced analytic functions</h3>
+ 
+ <p>Having a rich set of analytic functions simplifies how you can write SQL across multiple dimensions that not only streamlines the query, but improves its performance. A set of such functions is GROUP BY ROLLUP, GROUPING(), GROUPING_ID(). See the example of a GROUP BY query from the online documentation below:</p>
+ 
+ <pre>
+ SELECT Country
+ ,Region
+ ,SUM(Sales) AS TotalSales
+ FROM Sales
+ GROUP BY ROLLUP(Country, Region)
+ ORDER BY Country
+ ,Region</pre>
+ 
+ <h2>Intelligent workload management</h2>
+ 
+ <p>The new workload importance feature in Azure SQL Data Warehouse enables prioritization over workloads that need to be executed on the data warehouse system. Workload importance provides administrators the ability to prioritize workloads based on business requirements (e.g., executive dashboard queries, ELT executions).</p>
+ 
+ <h3>Workload classification</h3>
+ 
+ <p>It all starts with workload classification. SQL Data Warehouse classifies a request based on a set of criteria, which administrators can define. In the absence of a matching classifier, the default classifier is chosen. SQL Data&#8239;Warehouse supports classification at different levels including at the SQL query level, a database user, database role, Azure Active Directory login, or Azure Active Directory group, and maps the request to a system defined&#8239;workload group classification.</p>
+ 
+ <h3>Workload importance</h3>
+ 
+ <p>Each workload classification can be assigned <strong>one of five levels of importance</strong>:&#8239;<em>low, below_normal, normal,&#8239;above_normal,&#8239;and&#8239;high</em>. Access to resources during&#8239;compilation, lock acquisition, and execution are prioritized based on the associated importance of a request.</p>
+ 
+ <p>The diagram below illustrates the workload classification and importance function:</p>
+ 
+ <p><strong><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/4390f4e5-0b54-480f-a2c1-e1d6d4e657bb.gif"><img alt="ADW_GIF2_v3H" border="0" height="330" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/96fb3703-c009-4d34-9b69-412ebe0bc624.gif" title="ADW_GIF2_v3H" width="400"></a></strong></p>
+ 
+ <h3>Classifying requests with importance</h3>
+ 
+ <p>Classifying requests is done with the new&#8239;CREATE WORKLOAD CLASSIFIER&#8239;syntax. Below is an example that maps the login for the ExecutiveReports role to&#8239;ABOVE_NORMAL&#8239;importance and the AdhocUsers role to&#8239;BELOW_NORMAL&#8239;importance. With this configuration, members of the ExecutiveReports role have their queries complete sooner because they get access to resources before members of the AdhocUsers role.</p>
+ 
+ <pre>
+ CREATE WORKLOAD CLASSIFIER ExecReportsClassifier
+ &#8239;&#8239; WITH (WORKLOAD_GROUP = 'mediumrc'
+ &#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239; ,MEMBERNAME&#8239;&#8239;&#8239;&#8239; = 'ExecutiveReports'
+ &#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239; ,IMPORTANCE&#8239;&#8239;&#8239;&#8239; =&#8239; above_normal);
+ &#8239;
+ CREATE WORKLOAD CLASSIFIER AdhocClassifier
+ &#8239;&#8239;&#8239; WITH (WORKLOAD_GROUP = 'smallrc'
+ &#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239; ,MEMBERNAME&#8239;&#8239;&#8239;&#8239; = 'AdhocUsers'
+ &#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239;&#8239; ,IMPORTANCE&#8239;&#8239;&#8239;&#8239; =&#8239; below_normal);</pre>
+ 
+ <p>For more information on workload importance, refer to the <a href="https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-workload-importance" target="_blank">classification importance</a> and <a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/create-workload-classifier-transact-sql?view=azure-sqldw-latest" target="_blank">CREATE WORKLOAD CLASSIFIER</a>&#8239;documents.</p>
+ 
+ <h2>Unmatched security and privacy</h2>
+ 
+ <p>When using a data warehouse, customers often have questions regarding security and privacy. As illustrated by Donald Farmer, a well-respected thought leader in the analytics space, Azure SQL Data Warehouse has the most <a href="https://info.microsoft.com/ww-landing-security-and-privacy-with-CDW.html" target="_blank">advanced security and privacy features</a> in the market. This wasn&rsquo;t achieved by chance. In fact, SQL Server, the core technology of SQL Data Warehouse, has been the least vulnerable database over the last eight years in the NIST vulnerabilities database.</p>
+ 
+ <p>One of our newest security and privacy features in SQL Data Warehouse is Data Discovery and Classification. This feature enables automated discovery of columns potentially containing sensitive data, recommends metadata tags to associate with the columns, and can persistently attach those tags to your tables.</p>
+ 
+ <p>These tags will appear in the Audit log for queries against sensitive data, in addition to being included alongside the query results for clients which support this feature.</p>
+ 
+ <p>The <a href="https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification" target="_blank">Azure SQL Database Data Discovery &amp; Classification</a> article walks you through enabling the feature via the Azure portal. While the article was written for Azure SQL Database, it is now equally applicable to SQL Data Warehouse.</p>
+ 
+ <h2>Next steps</h2>
+ 
+ <ul><li>Visit the <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/" target="_blank">Azure SQL Data Warehouse page</a> to learn more.</li>
+ <li>Get started with a free <a href="https://azure.microsoft.com/en-us/free/sql-data-warehouse/" target="_blank">Azure SQL Data Warehouse account</a>.</li>
+ <li>Discover the <a href="https://info.microsoft.com/ww-landing-security-and-privacy-with-CDW.html" target="_blank">seven essential security and privacy principles for your cloud data warehouse</a>.</li>
+ </ul><h2>Azure is the best place for data analytics</h2>
+ 
+ <p>Azure continues to be the best cloud for analytics. Learn more why&#8239;<a href="http://aka.ms/simply-unmatched" target="_blank">analytics in Azure is simply unmatched</a>.</p>
+]]>
+</description>
+<author>Kapil Gupta</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/smarter-faster-safer-azure-sql-data-warehouse-is-simply-unmatched/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/want-to-evaluate-your-cloud-analytics-provider-here-are-the-three-questions-to-ask/
+</guid>
+<pubDate>Mon, 08 Apr 2019 23:59:20 +0000</pubDate>
+<relativeTime>2 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+Want to evaluate your cloud analytics provider? Here are the three questions to ask.
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/want-to-evaluate-your-cloud-analytics-provider-here-are-the-three-questions-to-ask/
+</link>
+<description>
+<![CDATA[
+<p>We all want the truth. To properly assess your cloud analytics provider, ask them about the only three things that matter:</p>
+ 
+ <ol><li>Independent benchmark results</li>
+ <li>Company-wide access to insights</li>
+ <li>Security and privacy</li>
+ </ol><h2>What are their results on independent,
+]]>
+<![CDATA[
+industry-standard benchmarks?&nbsp;</h2>
+ 
+ <p>Perhaps you&rsquo;ve heard from other providers that benchmarks are irrelevant. If that&rsquo;s what you&rsquo;re hearing, maybe you should be asking yourself <em>why</em>? Independent, industry-standard benchmarks are important because they help you measure price <em>and</em> performance on both common and complex analytics workloads. They are essential indicators of value because as data volumes grow, it is vital to get the best performance you can at the lowest price possible.</p>
+ 
+ <p>In February, an independent study by GigaOm compared Azure SQL Data Warehouse, Amazon Redshift, and Google BigQuery using the highly recognized TPC-H benchmark. They found that Azure SQL Data Warehouse is up to <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/compare/" target="_blank">14x faster</a> and <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/compare/" target="_blank">costs 94 percent less</a> than other cloud providers. And today, we are pleased to announce that in GigaOm&rsquo;s second benchmark report, this time with the equally important TPC-DS benchmark, Azure SQL Data Warehouse is <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/compare/" target="_blank"><em>again</em> the industry leader</a>. Not Amazon Redshift. Not Google BigQuery. These results prove that Azure is the best place for all your analytics.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/944af19f-750c-4fba-bd97-1562a1cb046c.png"><img alt="Price performance comparison" border="0" height="429" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/622dd6e5-5711-438a-bd02-12130663aef5.png" title="Price performance comparison" width="390"></a></p>
+ 
+ <p>This is why customers like Columbia Sportswear choose Azure.</p>
+ 
+ <p><em>&ldquo;Azure SQL Data Warehouse instantly gave us equal or better performance as our current system, which has been incrementally tuned over the last 6.5 years for our demanding performance requirements.&rdquo; </em></p>
+ 
+ <p align="right">Lara Minor, Sr. Enterprise Data Manager, Columbia Sportswear</p>
+ 
+ <p align="right"><img alt="Columbia Sportswear logo" border="0" height="71" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/9c4ed3ef-c54b-4e2a-9a0e-ba9eb547623e.png" title="Columbia Sportswear logo" width="176">&nbsp;</p>
+ 
+ <h2>Can they easily deliver powerful insights across your organization?</h2>
+ 
+ <p>Insights from your analytics must be accessible to everyone in your organization. While other providers may say they can deliver this, the end result is often catered to specific workgroups versus being an enterprise-wide solution. Data can become quickly siloed in these situations, making it difficult to deliver insights across all users.</p>
+ 
+ <p>With Azure, employees can get their insights in seconds from all enterprise data. Data can seamlessly flow from your SQL Data Warehouse to Power BI. And without limitations on concurrency, Power BI can be used across teams to create the most beautiful visualizations that deliver powerful insights. This combination of powerful analytics with easy-to-use BI is quite unique. In fact, if you look at the <a href="https://www.gartner.com/doc/reprints?id=1-3TXXSLV&amp;ct=170221&amp;st=sb" target="_blank">Gartner 2019 Magic Quadrant for Analytics and Business Intelligence Platforms</a> and the <a href="https://www.gartner.com/doc/reprints?id=1-3U1LC65&amp;ct=170222&amp;st=sb" target="_blank">Gartner 2019 Magic Quadrant for Data Management Solutions for Analytics</a> below, you&rsquo;ll see that Microsoft is a Leader.</p>
+ 
+ <p>&nbsp;</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/70d4d6b3-98ad-4fc8-a1c0-78508be5d51c.png"><img alt="Gartner 2019 Magic Quadrant for Analytics and Business Intelligence Platforms and the Gartner 2019 Magic Quadrant for Data Management Solutions for Analytics" border="0" height="974" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/ba295c0e-243f-4aee-934a-20d7a9ab7573.png" title=" Gartner 2019 Magic Quadrant" width="1895"></a></p>
+ 
+ <p>&nbsp;</p>
+ 
+ <p>Our leadership position in BI, coupled with our undisputed performance in analytics means that customers can <em>truly</em> provide business-critical insights to all. As the TPC-DS benchmark demonstrates, <a href="https://azure.microsoft.com/en-us/blog/smarter-faster-safer-azure-sql-data-warehouse-is-simply-unmatched/" target="_blank">Azure SQL Data Warehouse provides unmatched performance</a> on complex analytics workloads that mimic the realities of your business. This means that<a href="https://powerbi.microsoft.com/en-us/blog/industry-benchmark-recognizes-microsofts-unmatched-analytics/" target="_blank"> Power BI users can effortlessly gain granular-level insights across all their data</a>.</p>
+ 
+ <p>The TPC-DS industry benchmark I mentioned above is particularly useful for organizations that run intense analytics workloads because it uses demanding queries to test actual performance. For instance, one of the queries used in the TPC-DS benchmark report calculates the number of orders, time window for the orders, and filters by state on non-returned orders shipped from a single warehouse. This type of complex query, which spans across billions of rows and multiple tables, is a real-world example of how companies use a data warehouse for business insights. And with Power BI, users can perform intense queries like this by easily integrating with SQL Data Warehouse for fast, industry-leading performance.</p>
+ 
+ <h2>How robust is their security?</h2>
+ 
+ <p>Everyone is a target. When it comes to data, privacy and security are non-negotiable. No matter how cautious you are, there is always a threat lurking around the corner. Your analytics system contains the most valuable business data and must have both stringent security and privacy capabilities.</p>
+ 
+ <p>Azure has you covered. As illustrated by Donald Farmer, a well-respected thought leader in the analytics space, analytics in Azure has the most <a href="https://info.microsoft.com/ww-landing-security-and-privacy-with-CDW.html" target="_blank">advanced security and privacy features</a> in the market. From proactive threat detection to providing custom recommendations that enhance security, Azure SQL Data Warehouse uses machine learning and AI to secure your data. It also enables you to encrypt your data, both in flight and at rest. You can provide users with appropriate levels of access, <strong>from a single source</strong>, using row and column level security. This not only secures your data, but also helps you meet stringent privacy requirements.</p>
+ 
+ <p><em>&ldquo;<i>It was immediately clear to us that with Azure, particularly Azure Key Vault, we would be able to meet our own rigorous requirements for data protection and security</i>.&rdquo; </em></p>
+ 
+ <p align="right">Guido Vetter, Head of Corporate Center of Excellence Advanced Analytics &amp; Big Data, Daimler</p>
+ 
+ <p align="right"><img alt="Daimler logo" border="0" height="26" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/08633b29-18fb-45b8-aeff-52512b3b4d46.png" title="Daimler logo" width="189"></p>
+ 
+ <p>Azure&rsquo;s leading security and data privacy features not only make it the most trusted cloud in the market, but also complements its leadership in other areas, such as price-performance, making it<em> <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/compare/" target="_blank">simply unmatched</a></em>.</p>
+ 
+ <h2>Get started today</h2>
+ 
+ <p>To learn more about Azure&rsquo;s industry-leading price-performance and security, <a href="https://azure.microsoft.com/en-us/services/sql-data-warehouse/" target="_blank">get started today</a>!</p>
+ 
+ <p>&nbsp;</p>
+ 
+ <p>&nbsp;</p>
+ 
+ <p><em>Gartner Magic Quadrant for Analytics and Business Intelligence Platforms Cindi Howson, James Richardson, Rita Sallam, Austin Kronz, 11 February 2019.</em></p>
+ 
+ <p><em>Gartner Magic Quadrant for Data Management Solutions for Analytics, Adam Ronthal, Roxane Edjlali, Rick Greenwald, 21 January 2019.</em></p>
+ 
+ <p><em>This graphic was published by Gartner, Inc. as part of a larger research document and should be evaluated in the context of the entire document. The Gartner document is available upon request from Microsoft. </em></p>
+ 
+ <p><em>Gartner does not endorse any vendor, product or service depicted in its research publications, and does not advise technology users to select only those vendors with the highest ratings or other designation. Gartner research publications consist of the opinions of Gartner&rsquo;s research organization and should not be construed as statements of fact. Gartner disclaims all warranties, expressed or implied, with respect to this research, including any warranties of merchantability or fitness for a particular purpose.</em></p>
+]]>
+</description>
+<author>Julia White</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/want-to-evaluate-your-cloud-analytics-provider-here-are-the-three-questions-to-ask/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://blogs.windows.com/msedgedev/2019/04/08/microsoft-edge-preview-channel-details/
+</guid>
+<pubDate>Mon, 08 Apr 2019 16:00:01 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+What to expect in the new Microsoft Edge Insider Channels
+]]>
+</title>
+<link>
+https://blogs.windows.com/msedgedev/2019/04/08/microsoft-edge-preview-channel-details/
+</link>
+<description>
+<![CDATA[
+<p>Today we are shipping <a href="https://www.microsoftedgeinsider.com/en-us/?form=MO12FP&amp;OCID=MO12FP">the first Dev and Canary channel builds</a> of the next version of Microsoft Edge, based on the Chromium open-source project. We&rsquo;re excited to be sharing this work at such an early stage in our development process. We invite you to <a href="https://www.microsoftedgeinsider.com/en-us/?form=MO12FP&amp;OCID=MO12FP">try out the preview today</a> on your devices, and we look forward to working together with the Microsoft Edge Insider community to make browsing the best experience possible for everyone.</p> <p>In this post, we&rsquo;ll walk you through how the new release channels work, and share a closer look at our early work in the Chromium open source project, as well as what&rsquo;s coming next.</p> <h1>Introducing the Microsoft Edge Insider Channels</h1> <p>The new Microsoft Edge builds are available through preview channels that we call &ldquo;Microsoft Edge Insider Channels.&rdquo; We are starting by launching the first two Microsoft Edge Insider Channels, Canary and Dev, which you can download and try at the <a href="https://www.microsoftedgeinsider.com/?form=MO12FP&amp;OCID=MO12FP">Microsoft Edge Insider site</a>. These channels are available starting today on all supported versions of Windows 10, with more platforms coming soon.</p> <p><a href="https://www.microsoftedgeinsider.com/en-us/?form=MO12FP&amp;OCID=MO12FP"><img src="https://blogs.windows.com/wp-content/uploads/prod/sites/33/2019/04/0809d3caac868fa23c892c40c66ee5a5.png" alt="Screenshot of download page showing three Microsoft Edge Insider Channels - Beta Channel, Dev Channel, and Canary Channel" width="1460" height="796"></a></p> <p>Canary channel will be updated daily, and Dev channel will be updated weekly. You can even choose to install multiple channels side-by-side for testing&mdash;they will have separate icons and names so you can tell them apart. Support for other platforms, like Windows 7, Windows 8.1, macOS, and other channels, like Beta and Stable, will come later.</p> <p>Every night, we produce a build of Microsoft Edge&#8213;if it passes automated testing, we&rsquo;ll release it to the Canary channel. We use this same channel internally to validate bug fixes and test brand new features. The Canary channel is truly the bleeding edge, so you may discover bugs before we&rsquo;ve had a chance to discover and fix them. If you&rsquo;re eager for the latest bits and don&rsquo;t mind risking a bug or two, this is the channel for you.</p> <p>If you prefer a build with slightly more testing, you might be interested in the Dev channel. The Dev channel is still relatively fresh&#8213;it&rsquo;s the best build of the week from the Canary channel. We look at several sources, like user feedback, automated test results, performance metrics, and telemetry, to choose the right Canary build to promote to the Dev channel. If you want to use the latest development version of Microsoft Edge as a daily driver, this is the channel for you. We expect most users will be on the Dev channel.</p> <p>Later, we will also introduce the Beta and Stable channels. The Beta channel reflects a significantly more stable release and will be a good target for Enterprises and IT Pros to start piloting the next version of Microsoft Edge.</p> <p>We are not changing the existing version of Microsoft Edge installed on your devices at this time &ndash; it will continue to work side by side with the builds from any of the Microsoft Edge Insider Channels.</p> <h1>Adopting and contributing to the Chromium open source project</h1> <p>When we initially announced <a href="https://blogs.windows.com/windowsexperience/2018/12/06/microsoft-edge-making-the-web-better-through-more-open-source-collaboration/">our decision to adopt Chromium</a> as the foundation for future versions of Microsoft Edge, we published a set of <a href="https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md">open source principles</a>&nbsp;and declared our intent to contribute to the Chromium project to make Microsoft Edge and other Chromium-based browsers better on PCs and other devices.</p> <p>While we will continue to focus on delivering a world class browsing experience with Microsoft Edge&rsquo;s user experience and connected services, when it comes to improving the web platform, our default position will be to contribute to the Chromium project.</p> <p>We still have a lot to learn as we increase our use of and contributions to Chromium, but we have received great support from Chromium engineers in helping us get involved in this project, and we&rsquo;re pleased to have landed some modest but meaningful contributions already. Our plan is to continue working in Chromium rather than creating a parallel project, to avoid any risk of fragmenting the community.</p> <p>Our early contributions include landing <a href="https://chromium-review.googlesource.com/q/author:*.microsoft.com+AND+status:merged">over 275 commits into the Chromium project</a> since we joined this community in December. We also have started to make progress on some of the <a href="https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md">initial areas of focus</a> we had shared:</p> <h2>Accessibility</h2> <p>We are committed to building a more accessible web platform for all users. Today, Microsoft Edge is the only browser to earn a perfect score on the <a href="https://html5accessibility.com/">HTML5Accessibility browser benchmark</a>, and we&rsquo;re hoping to bring those contributions to the Chromium project and improve web experiences for all users.</p> <ul><li><strong>Modern accessibility APIs. </strong>To enable a better accessibility experience for screen readers, like Windows Narrator, magnifiers, braille displays, and other accessibility tools, we&rsquo;ve shared our <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/h4HTt4M5dWo/3P2jNGIwBgAJ">intent to implement</a> support for the <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/UIA/explainer.md">Microsoft UI Automation interfaces</a>, a more modern and secure Windows accessibility framework, in Chromium. We&rsquo;re partnering with Google&rsquo;s Accessibility team and other Chromium engineers to land commits and expect the full feature to be completed later this year.</li> <li><strong>High contrast. </strong>To ensure our customers have the best readability experience, we&rsquo;re working in the W3C CSS working group to standardize the <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/HighContrast/explainer.md">high-contrast CSS Media query</a> and have shared our <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/N77UCHle_rw/omPE8XRzFQAJ">intent to implement</a> it in Chromium. This will allow customers to use the Windows Ease of Access settings to select their preferred color contrast settings to improve content readability on Windows devices.</li> <li><strong>HTML video caption styling. </strong>We&rsquo;ve partnered with Chromium engineers to land support for Windows Ease of Access settings <a href="https://chromium-review.googlesource.com/c/chromium/src/+/1482140">to improve caption readability</a> on Windows 10.</li> <li><strong>Caret browsing. </strong>For customers who use their keyboard to navigate the web and select text, we&rsquo;ve shared our <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/ZEEwLuKlmcw/Nrj2wFkJAwAJ">intent to implement</a> <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/CaretBrowsing/explainer.md">caret browsing</a> in Chromium.</li> <li>We&rsquo;re starting to work with our Chromium counterparts to improve the accessibility of native web controls, like media and input controls. Over time we expect this work will help Chromium earn a perfect score on the <a href="https://html5accessibility.com/">HTML5Accessibility browser benchmark</a>.</li> </ul><h2>ARM64</h2> <p>We&rsquo;ve been collaborating with Google engineers to enable <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=893460">Chromium to run natively on Windows on ARM devices</a> starting with Chromium 73. With these contributions, Chromium-based browsers will soon be able to ship native implementations for ARM-based Windows 10 PCs, significantly improving their performance and battery life.</p> <h2>Touch</h2> <p>To help our customers with touch devices get the best possible experience, we&rsquo;ve <a href="https://chromium-review.googlesource.com/c/chromium/src/+/1475084">implemented</a> better support for <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/TSF1/explainer.md">Windows touch keyboard</a> in Chromium, now supporting touch text suggestions as you type and &ldquo;shape writing&rdquo; that lets you type by swiping over keys without releasing your finger.</p> <h2>Scrolling</h2> <p>Microsoft Edge is known for <a href="https://blogs.windows.com/msedgedev/2017/03/08/scrolling-on-the-web/">class-leading scrolling experiences</a> on the web today, and we&rsquo;re collaborating closely with Chromium engineers to make touchpad, touch, mouse wheel, keyboard, and sidebar scrolling as smooth as possible. We&rsquo;re still early in this investigation, but have started sharing <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/master/Scrolling/ImplScrollbars/dev-diagram.md">some ideas in this area</a>.</p> <h2>Media</h2> <p>Premium media sites use the <a href="https://www.w3.org/TR/encrypted-media/">encrypted media extensions</a> (EME) web standard and digital rights management (DRM) systems to protect streaming media content so that it can only be played by users authorized by the streaming service. In fact, Microsoft and other industry partners were recognized with a <a href="https://emmyonline.tv/70th-annual-technology-engineering-emmy-award-recipients/">Technology &amp; Engineering Emmy award</a> yesterday for helping bring premium media to the web through this and other web standards. To provide users with the highest level of compatibility and web developers with technology choice, Microsoft Edge now supports both Microsoft PlayReady and Google Widevine DRM systems.</p> <p>While Microsoft Edge often gets <a href="https://blogs.windows.com/windowsexperience/2016/07/13/get-better-quality-video-with-microsoft-edge/#Kdcsbg1KWl21MxKF.97">highest resolution and bitrate video</a> because it uses the robust hardware-backed Microsoft PlayReady DRM, there are some sites that only support the Google Widevine DRM system. Sites that rely on hardware-backed PlayReady DRM on Microsoft Edge will be able to continue to stream 1080p or 4k with high dynamic range (HDR) or Dolby Vision, while those that only support Widevine will just work in Microsoft Edge for the first time.</p> <p>We also want to help contribute improvements to video playback power efficiency that many of our Microsoft Edge users have come to expect. We&rsquo;re early in these investigations but will be partnering closely with the Chromium team on how we can help improve this space further.</p> <h2>Windows Hello</h2> <p>Microsoft Edge supports the Windows Hello authenticator as a more personal and secure way to use biometrics authentication on the web for password-less and two-factor authentication scenarios. We&rsquo;ve worked with the Chromium team to land Windows Hello support in the <a href="https://www.w3.org/TR/webauthn/">Web Authentication</a> API in Chromium &ndash; you can try that experience out today by using Microsoft Edge Dev or Canary preview builds on the latest Windows 10 Insider Preview release.</p> <h1>Evolving the web through standards</h1> <p>While we&rsquo;re participating in the Chromium open source project, we still believe the evolution of the open web is best served though the standards communities, and the open web benefits from open debate from a wide variety of perspectives.</p> <p>We are continuing to remain deeply engaged in standards discussions where the perspectives of vendors developing different browsers and the larger web community can be heard and considered. You can keep track of all Microsoft explainer documents on the <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers">Microsoft Edge Explainers GitHub</a>.</p> <h2>HTML Modules</h2> <p>For example, we recently introduced the <a href="https://github.com/w3c/webcomponents/blob/gh-pages/proposals/html-modules-explainer.md">HTML Modules</a> proposal, which is now being developed in the W3C and WHATWG <a href="https://github.com/w3c/webcomponents">Web Components Incubation Groups</a>.</p> <p>We&rsquo;ve heard from web developers that while ES6 Script Modules are a great way for developers to componentize their code and create better dependency management systems, the current approach doesn&rsquo;t help developers who use declarative HTML markup. This has forced developers to re-write their code to generate markup dynamically.</p> <p>We&rsquo;ve taken lessons learned from HTML Imports to introduce an extension of the ES6 Script Modules system to include HTML Modules. Considering the early support we&rsquo;ve received on this feature from standards discussions, we&rsquo;ve also shared our <a href="https://groups.google.com/a/chromium.org/d/msg/blink-dev/ewfRSdqcOd8/w_Fr6rJ3DQAJ">intent to implement</a> this feature in Chromium.</p> <h1>User Agent String</h1> <p>With Microsoft Edge adopting Chromium, we are changing our user agent string to closely resemble that of the Chromium user agent string with the addition of the &ldquo;Edg&rdquo; token. If you&rsquo;re blocking site access on user agent strings, please update your logic to treat this string as another Chromium-based browser.</p> <p>Below is the user agent string for the latest Dev Channel build of Microsoft Edge:</p> <pre>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.48 Safari/537.36 Edg/74.1.96.24</pre> <p>We&rsquo;ve selected the &ldquo;Edg&rdquo; token to avoid compatibility issues that may be caused by using the string &ldquo;Edge,&rdquo; which is used by the current version of Microsoft Edge based on EdgeHTML. The &ldquo;Edg&rdquo; token is also consistent with <a href="https://blogs.windows.com/msedgedev/2017/10/05/microsoft-edge-ios-android-developer/">existing tokens</a> used on iOS and Android. We recommend that developers use feature detection where possible and avoid browser version detection through the user agent string, as it results in more maintenance and fragile code.</p> <h1>User Experience</h1> <p>We are committed to building a world class browser with Microsoft Edge through differentiated user experience features and connected services. With this initial release, we have made a number of changes to the user interface to make our product feel more like Microsoft Edge.</p> <p>However, you will continue to see the look and feel of the browser evolve in future releases as we iterate and listen to customer feedback. We do not plan to contribute user experience or Microsoft service changes to Chromium, since browser vendors generally like to make their own decisions in these areas.</p> <p>We know that this initial release is still missing a few features that are available in the current version of Microsoft Edge. We&rsquo;re in the early stages and are intentionally focusing on fundamentals as we continue to work towards a complete feature set.</p> <p>Over time, we will roll out new features and run experiments to gauge user interest and satisfaction, and to assess the quality of each new feature or improvement. This will help us ensure that all new features address our customers&rsquo; needs in the best possible way and meet our quality standards.</p> <h1>Integration with Microsoft services</h1> <p>While the next version of Microsoft Edge will be based on Chromium, we intend to use the best of Microsoft wherever we can, including our services integrations. Some of these services integrations include:</p> <ul><li>Bing Search powers search and address bar suggestions by default.</li> <li>Windows Defender SmartScreen delivers <a href="https://www.microsoft.com/en-US/download/details.aspx?id=58080">best-in-class</a> phishing and malware protection when navigating to sites and downloading content.</li> <li>Microsoft Account service and Azure Active Directory can now be used to sign-in to the browser to help you manage both your personal and work accounts. You can even use multiple identities at the same time in different browser sessions.</li> <li>Microsoft Activity Feed Service synchronizes your data across Microsoft Edge preview builds. We currently synchronize your favorites across your Windows 10 desktop devices running Microsoft Edge preview builds. In future builds, we will also sync passwords, browsing history, and other settings across all supported platforms, including Microsoft Edge on iOS and Android.</li> <li>Microsoft News powers the new tab experience, giving you the choice of an inspirational theme with vivid Bing images, a focused theme that helps you get straight to work, or a more news focused informational theme.</li> </ul><h1>Feedback</h1> <p>Getting your feedback is an important step in helping us make a better browser &ndash; we consider it essential to create the best possible browsing experience. If you run into any issues or have feedback, please use the &ldquo;Send Feedback&rdquo; tool in Microsoft Edge. Simply click the smiley face next to the Menu button and let us know what you like or if there&rsquo;s something we can improve.</p> <p>For web developers, if you encounter an issue that reproduces in Chromium, it&rsquo;s best to file a <a href="https://bugs.chromium.org/p/chromium/issues/list">Chromium bug</a>. For problems in the existing version of Microsoft Edge, please continue to use the <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/">EdgeHTML Issue Tracker</a>.</p> <p>You can also find the latest information on the next version of Microsoft Edge and get in touch with the product team to share feedback or get help on the <a href="https://www.microsoftedgeinsider.com/?form=MO12FP&amp;OCID=MO12FP">Microsoft Edge Insider site</a>.</p> <p>We&rsquo;re delighted to share our first Canary and Dev builds of the next version of Microsoft Edge! We hope you&rsquo;ll <a href="https://www.microsoftedgeinsider.com/en-us/?form=MO12FP&amp;OCID=MO12FP">try the preview out today</a>, and we look forward to hearing your feedback in the Microsoft Edge Insider community.</p> <p>Jatinder Mann, Group Program Manager, Web Platform<br> John Hazen, Group Program Manager, Operations</p> <p>The post <a rel="nofollow" href="https://blogs.windows.com/msedgedev/2019/04/08/microsoft-edge-preview-channel-details/">What to expect in the new Microsoft Edge Insider Channels</a> appeared first on <a rel="nofollow" href="https://blogs.windows.com/msedgedev">Microsoft Edge Blog</a>.</p>
+]]>
+</description>
+<author>Microsoft Edge Team</author>
+<source url="https://blogs.windows.com/msedgedev/feed/">Microsoft Edge Dev Blog</source>
+<comments>
+https://blogs.windows.com/msedgedev/2019/04/08/microsoft-edge-preview-channel-details/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/azure-source-volume-77/
+</guid>
+<pubDate>Mon, 08 Apr 2019 14:30:14 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[ Azure.Source &#8211; Volume 77 ]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/azure-source-volume-77/
+</link>
+<description>
+<![CDATA[
+<p><a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-preview">Preview</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-ga">Generally available</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-news">News &amp; updates</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-tech">Technical content</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-shows">Azure shows</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-events">Events</a> | <a href="https://azure.microsoft.com/en-us/blog/azure-source-volume-77/#azs-cpi">Customers, partners, and industries</a></p>
+ 
+ <h2>Now in preview</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/announcing-the-azure-functions-premium-plan-for-enterprise-serverless-workloads/?ocid=AID765057&amp;wt.mc_id=CFID0447">Announcing the Azure Functions Premium plan for enterprise serverless workloads</a></h3>
+ 
+ <p>We are pleased to announce the Azure Functions Premium plan in preview, our newest Functions hosting model. This plan enables a suite of long requested scaling and connectivity options without compromising on event-based scale. With the Premium plan you can use pre-warmed instances to run your app with no delay after being idle, you can run on more powerful instances, and you can connect to VNETs, all while automatically scaling in response to load.</p>
+ 
+ <p align="center"><img alt="Graphical table showing comparison of Consumption and Premium plans" height="320" src="https://acomblogimages.blob.core.windows.net/media/Default/Open-Live-Writer/Uncompromised-serverless-scale-for-enter_BEFE/20190403-pp1-SKUComparison_2.png" title="Comparison of Consumption and Premium plans" width="480"></p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/windows-server-2019-support-now-available-for-windows-containers-on-azure-app-service/?ocid=AID765057&amp;wt.mc_id=CFID0447">Windows Server 2019 support now available for Windows Containers on Azure App Service</a></h3>
+ 
+ <p>We are happy to announce Windows Server 2019 Container support in public preview. Using a custom Windows container in App Service lets you make OS changes that your app needs, so it's easy to migrate on-premises app that requires custom OS and software configuration. Windows Container support is available in our West US, East US, West Europe, North Europe, East Asia, and East Australia regions. Windows Containers are not supported in App Service Environments at present.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/web-application-firewall-at-azure-front-door-service/?ocid=AID765057&amp;wt.mc_id=CFID0447">Web application firewall at Azure Front Door service</a></h3>
+ 
+ <p>We have heard from many of you that security is a top priority when moving web applications onto the cloud. Today, we are very excited to announce our public preview of the Web Application Firewall (WAF) for the Azure Front Door service.&nbsp; By combining the global application and content delivery network with natively integrated WAF engine, we now offer a highly available platform helping you deliver your web applications to the world, secure and fast!</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/azure-media-services-the-latest-video-indexer-updates-from-nab-show-2019/?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Media Services: The latest Video Indexer updates from NAB Show 2019</a></h3>
+ 
+ <p>After sweeping up multiple awards with the general availability release of Azure Media Services&rsquo; Video Indexer, including the 2018 IABM for innovation in content management and the prestigious Peter Wayne award, our team has remained focused on building a wealth of new features and models to allow any organization with a large archive of media content to unlock insights from their content; and use those insights improve searchability, enable new user scenarios and accessibility, and open new monetization opportunities. At NAB Show 2019, we are announcing a wealth of new enhancements to Video indexer&rsquo;s models and experiences.</p>
+ 
+ <h2>Now generally available</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/extending-azure-security-center-capabilities/?ocid=AID765057&amp;wt.mc_id=CFID0447">Extending Azure security capabilities</a></h3>
+ 
+ <p>As more organizations are delivering innovation faster by moving their businesses to the cloud, increased security is critically important for every industry. Azure has built-in security controls across data, applications, compute, networking, identity, threat protection, and security management so you can customize protection and integrate partner solutions. Microsoft Azure Security Center is the central hub for monitoring and protecting against related incidents within Azure. We love making Azure Security Center richer for our customers, and were excited to share some great updates last week at Hannover Messe 2019. Read on to learn about them.</p>
+ 
+ <p align="center"><img alt="Photo of Azure Dedicated Hardware Security Module (HSM)" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c7bb56ef-f18f-44de-9eb3-7c0108803169.jpg" title="Azure Dedicated Hardware Security Module (HSM)"></p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/event-driven-java-with-spring-cloud-stream-binder-for-azure-event-hubs/?ocid=AID765057&amp;wt.mc_id=CFID0447">Event-driven Java with Spring Cloud Stream Binder for Azure Event Hubs</a></h3>
+ 
+ <p>Spring Cloud Stream Binder for Azure Event Hubs is now generally available. It is now easier to build highly scalable event-driven Java apps using Spring Cloud Stream with Event Hubs, a fully managed, real-time data ingestion service on Azure that is resilient and reliable service for any situation. This includes emergencies, thanks to its geo-disaster recovery and geo-replication features.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/fast-and-optimized-connectivity-and-delivery-solutions-on-azure/?ocid=AID765057&amp;wt.mc_id=CFID0447">Fast and optimized connectivity and delivery solutions on Azure</a></h3>
+ 
+ <p>We&rsquo;re announcing the availability of innovative and industry leading Azure services that will help the attendees of the National Association of Broadcasters Show realize their future vision to deliver for their audiences:&nbsp; Azure Front Door Service (AFD), ExpressRoute Direct and Global Reach, as well as some cool new additions to both AFD and our Content Delivery Network (CDN). April 6-11, Microsoft will be at NAB Show 2019 in Las Vegas, bringing together an industry centered on the ability to deliver richer content experiences for audiences around&nbsp; the word.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/azure-front-door-service-is-now-generally-available/?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Front Door Service is now generally available</a></h3>
+ 
+ <p>We&rsquo;re announcing the general availability of Azure Front Door Service (AFD) which we launched in preview last year &ndash; a scalable and secure entry point for fast delivery of your global applications. AFD is your one stop solution for your global website/application. Azure Front Door Service enables you to define, manage, and monitor the global routing for your web traffic by optimizing for best performance and instant global failover for high availability. With Front Door, you can transform your global (multi-region) consumer and enterprise applications into robust, high-performance personalized modern applications, APIs, and content that reach a global audience with Azure.</p>
+ 
+ <h2>News and updates</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/unlock-dedicated-resources-and-enterprise-features-by-migrating-to-service-bus-premium/?ocid=AID765057&amp;wt.mc_id=CFID0447">Unlock dedicated resources and enterprise features by migrating to Service Bus Premium</a></h3>
+ 
+ <p>Azure Service Bus has been the Messaging as a Service (MaaS) option of choice for our enterprise customers. We&rsquo;ve seen tremendous growth to our customer base and usage of the existing namespaces, which inspires us to bring more features to the service. We recently expanded Azure Service Bus to support all Azure regions with Availability Zones to help our customers build more resilient solutions. We also expanded the Azure Service Bus Premium tier to more regions to enable our customers to leverage many enterprise ready features on their Azure Service Bus namespaces while also being closer to their customers.</p>
+ 
+ <p align="center"><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/5029b259-06ea-43b7-a2ce-a8bb752c00e5.png"><img alt="Screenshot of Azure Service Bus migration in the Azure portal" height="249" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/5029b259-06ea-43b7-a2ce-a8bb752c00e5.png" title="Azure Service Bus migration in the Azure portal (click to enlarge)" width="480"></a></p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/device-template-library-in-iot-central/?ocid=AID765057&amp;wt.mc_id=CFID0447">Device template library in IoT Central</a></h3>
+ 
+ <p>With the new addition of a device template library into our Device Templates page, we are making it easier than ever to onboard and model your devices. Now, when you get started with creating a new template, you can choose between building one from scratch or you can quickly select from a library of existing device templates. Today you&rsquo;ll be able to choose from our MXChip, Raspberry Pi, or Windows 10 IoT Core templates. We will be working to improve this library by adding more device templates which provide customer value.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/alerts-in-azure-are-now-all-the-more-consistent/?ocid=AID765057&amp;wt.mc_id=CFID0447">Alerts in Azure are now all the more consistent!</a></h3>
+ 
+ <p>Azure Monitor alerts provides rich alerting capabilities on a variety of telemetry such as metrics, logs, and activity logs. Over the past year, we have unified the alerting experience by providing a common consumption experience including UX and API for alerts. However, the payload format for alerts remained different which puts the burden of building and maintaining multiple integrations, one for each alert type based on telemetry, on the user. We released a new common alert schema that provides a single extensible format for all alert types.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/gps-week-number-rollover-microsoft-has-you-covered/?ocid=AID765057&amp;wt.mc_id=CFID0447">GPS Week Number Rollover &ndash; Microsoft has you covered!</a></h3>
+ 
+ <p>Microsoft has completed preparations for the upcoming GPS Week Number Rollover to ensure that users of Microsoft time sources do not experience any impact. Microsoft is aware of this upcoming transition and has reviewed devices and procedures to ensure readiness. Azure products and services that rely on GPS timing devices have received declaration of compliance with IS-GPS-200 from the device manufacturers, mitigating risk to users of Microsoft time sources.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/microsoft-azure-portal-april-update/?ocid=AID765057&amp;wt.mc_id=CFID0447">Microsoft Azure portal April 2019 update</a></h3>
+ 
+ <p>This month&rsquo;s updates include improvements to IaaS, Azure Data Explorer, Security Center, Recovery Services, Role-Based Access Control, Support, and Intune.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/updates-to-geospatial-functions-in-azure-stream-analytics-cloud-and-iot-edge/?ocid=AID765057&amp;wt.mc_id=CFID0447">Updates to geospatial features in Azure Stream Analytics &ndash; Cloud and IoT edge</a></h3>
+ 
+ <p>Azure Stream Analytics is a fully managed PaaS service that helps you run real-time analytics and complex event processing logic on telemetry from devices and applications. We announced several enhancements to geospatial features in Azure Stream Analytics. These features will help customers manage a much larger set of mobile assets and vehicle fleet easily, accurately, and more contextually than previously possible. These capabilities are available both in the cloud and on Azure IoT edge.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/self-service-exchange-and-refund-for-azure-reservations/?ocid=AID765057&amp;wt.mc_id=CFID0447">Self-service exchange and refund for Azure Reservations</a></h3>
+ 
+ <p>Azure Reservations provide flexibility to help meet your evolving needs. You can exchange a reservation for another reservation of the same type, and you can refund a reservation if you no longer need it.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/azure-sphere-retail-and-retail-evaluation-feeds/?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Sphere Retail and Retail Evaluation feeds</a></h3>
+ 
+ <p>Azure Sphere developers might have noticed that we now have two Azure Sphere OS feeds where once there was only one. The Azure Sphere Preview feed that delivered over-the-air OS updates has been replaced by feeds named Retail Azure Sphere OS and Retail Evaluation Azure Sphere OS. The Retail feed provides a production-ready OS and is intended for broad deployment to end-user installations. The Retail Evaluation feed provides each new OS for 14 days before we release it to the Retail feed. It is intended for backwards compatibility testing.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/updates/?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Updates</a></h3>
+ 
+ <p>Learn about important Azure product updates, roadmap, and announcements. Subscribe to notifications to stay informed.</p>
+ 
+ <h2>Technical content</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/step-up-your-machine-learning-process-with-azure-machine-learning-service/?ocid=AID765057&amp;wt.mc_id=CFID0447">Step up your machine learning process with Azure Machine Learning service</a></h3>
+ 
+ <p>The Azure Machine Learning service provides a cloud-based service you can use to develop, train, test, deploy, manage, and track machine learning models. With Automated Machine Learning and other advancements available, training and deploying machine learning models is easier and more approachable than ever. Automated machine learning helps users of all skill levels accelerate their pipelines, leverage open source frameworks, and scale easily. Automated machine learning, a form of deep machine learning, makes machine learning more accessible across an organization.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/schema-validation-with-event-hubs/?ocid=AID765057&amp;wt.mc_id=CFID0447">Schema validation with Event Hubs</a></h3>
+ 
+ <p>Event Hubs is fully managed, real-time ingestion Azure service. It integrates seamlessly with other Azure services. It also allows Apache Kafka clients and applications to talk to Event Hubs without any code changes. Apache Avro is a binary serialization format. It relies on schemas (defined in JSON format) that define what fields are present and their type. Since it's a binary format, you can produce and consume Avro messages to and from the Event Hubs. Event Hubs' focus is on the data pipeline. It doesn't validate the schema of the Avro events.</p>
+ 
+ <h3><a href="https://www.youtube.com/watch?v=YNYj7r65feU">SheHacksPurple: Changes to Azure Security Center Subscription</a></h3>
+ 
+ <p>In this short video Tanya Janca will describe recent changes to Azure Security Center Subscription coverage; it now covers storage containers and app service.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=YNYj7r65feU"><img alt="Thumbnail from SheHacksPurple: Changes to Azure Security Center Subscription" border="0" height="269" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/97017b01-3e7b-416b-8202-b2a7078dc51e.jpg" title="Watch SheHacksPurple: Changes to Azure Security Center Subscription on YouTube" width="480"></a></p>
+ 
+ <h3><a href="https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/PowerShell-Basics-Finding-the-right-VM-size-with-Get-AzVMSize/ba-p/389568?ocid=AID765057&amp;wt.mc_id=CFID0447">PowerShell Basics: Finding the right VM size with Get-AzVMSize</a></h3>
+ 
+ <p>Finding the right virtual machine for your needs can be difficult especially with all of the options available. New options seem to come around often so you may need to regularly check the VMs available within your Azure region. Using PowerShell makes it quick and easy to see all of the VM sizes so you can get to building your infrastructure, and Az-VM will help you determine the VM sizes you can deploy in specific regions, into availability sets, or what size a machine in your environment is running.</p>
+ 
+ <h3><a href="https://github.com/gloveboxes/iot-ttn-kotlin-azure-functions">Hands-on Lab: Creating an IoT Solution with Kotlin Azure Functions</a></h3>
+ 
+ <p>Dave Glover walks through building an end-to-end IoT Solution with Azure IoT Hub, IoT Hub, Kotlin based Azure Functions and Azure SignalR.</p>
+ 
+ <h3><a href="https://medium.com/microsoftazure/an-ambiverts-guide-to-azure-functions-95931976c565">An Ambivert&rsquo;s Guide to Azure Functions</a></h3>
+ 
+ <p>Chloe Condon will walk you through how to use Azure Functions, Twilio, and a Flic Button to create an app to trigger calls/texts to your phone.</p>
+ 
+ <h3><a href="https://dev.to/lenadroid/making-machine-learning-approachable-7ap">Making Machine Learning Approachable</a></h3>
+ 
+ <p>Often we hear about machine learning and deep learning as a topic that only researchers, mathematicians, or PhDs can be smart enough grasp. It is possible to explain seemingly complex fundamental concepts and algorithms of machine learning without using cryptic terminology or confusing notation.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/monitoring-on-azure-hdinsight-part-2-cluster-health-and-availability/?ocid=AID765057&amp;wt.mc_id=CFID0447">Monitoring on Azure HDInsight Part 2: Cluster health and availability</a></h3>
+ 
+ <p>This is the second blog post in a four-part series on Monitoring on Azure HDInsight. <a href="https://azure.microsoft.com/en-in/blog/monitoring-on-hdinsight-part-1-an-overview/?ocid=AID765057&amp;wt.mc_id=CFID0447">Monitoring on Azure HDInsight Part 1: An Overview</a> discusses the three main monitoring categories: cluster health and availability, resource utilization and performance, and job status and logs. This blog covers the first of those topics, cluster health and availability, in more depth.</p>
+ 
+ <h2>Azure shows</h2>
+ 
+ <h3><a href="http://azpodcast.azurewebsites.net/post/Episode-273-Application-Patterns-in-Azure">Episode 273 - Application Patterns in Azure</a> | <a href="http://azpodcast.azurewebsites.net/">The Azure Podcast</a></h3>
+ 
+ <p>Rasmus Lystr&oslash;m, a Senior Microsoft consultant from Denmark, shares his thoughts and ideas around building applications that take advantage of Azure and allow developers to focus on the business problem at hand.</p>
+ 
+ <p align="center">
+ <audio controls="" src="https://azpodcast.blob.core.windows.net/episodes/Episode273.mp3">HTML5 audio not supported</audio></p>
+ 
+ <h3><a href="https://channel9.msdn.com/Shows/Internet-of-Things-Show/Azure-Blob-Storage-on-Azure-IoT-Edge?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Blob Storage on Azure IoT Edge</a> | <a href="https://channel9.msdn.com/Shows/Internet-of-Things-Show?ocid=AID765057&amp;wt.mc_id=CFID0447">Internet of Things Show</a></h3>
+ 
+ <p>Azure Blob Storage on IoT Edge is a light-weight Azure Consistent module which provides local Block blob storage. It comes with configurable abilities to: Automatically tier the data from IoT Edge device to Azure; Automatically delete the data from IoT edge device after specified time.</p>
+ 
+ <p align="center"></p>
+ 
+ <h3><a href="https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Azure-Pipelines?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Pipelines</a> | <a href="https://channel9.msdn.com/Shows/Visual-Studio-Toolbox?ocid=AID765057&amp;wt.mc_id=CFID0447">Visual Studio Toolbox</a></h3>
+ 
+ <p>In this episode, Robert is joined by Mickey Gousset, who takes us on a tour of Azure Pipelines. He shows how straightforward it is to automate your builds and deployments using Azure Pipelines. They are a great way to started on your path to using DevOps practices to ship faster at higher quality.</p>
+ 
+ <p align="center"></p>
+ 
+ <h3><a href="https://channel9.msdn.com/Shows/Azure-Friday/Deploy-WordPress-with-Azure-Database-for-MariaDB?ocid=AID765057&amp;wt.mc_id=CFID0447">Deploy WordPress with Azure Database for MariaDB</a> | <a href="https://channel9.msdn.com/Shows/Azure-Friday?ocid=AID765057&amp;wt.mc_id=CFID0447">Azure Friday</a></h3>
+ 
+ <p>Learn how to deploy WordPress backed by Azure Database for MariaDB. It is the latest addition to the open source database services available on the Azure platform and further strengthens Azure's commitment to open source and its communities. The service offers built-in high availability, automatic backups, and scaling of resources to meet your workload's needs.</p>
+ 
+ <p align="center"></p>
+ 
+ <h3><a href="https://www.youtube.com/watch?v=37fvRO9DhnQ">Hybrid enterprise serverless in Microsoft Azure</a> | <a href="https://www.youtube.com/channel/UCJ9905MRHxwLZ2jeNQGIWxA">Microsoft Mechanics</a></h3>
+ 
+ <p>Apply serverless compute securely and confidently to any workload with new enterprise capabilities. Jeff Hollan, Sr. Program Manager from the Azure Serverless team, demonstrates how you can turn on managed service identities and protect secrets with Key Vault integration, control virtual network connectivity for both Functions and Logic Apps, build apps that integrate with systems inside your virtual network using event-driven capabilities and set cost thresholds to control how much you want to scale with the Azure Functions Premium plan.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=37fvRO9DhnQ"><img alt="Hybrid enterprise serverless in Microsoft Azure | Microsoft Mechanics" border="0" height="270" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/471e20e1-8973-4ae6-8034-2448e65ce97b.jpg" title="Hybrid enterprise serverless in Microsoft Azure | Microsoft Mechanics on YouTube" width="480"></a></p>
+ 
+ <h3><a href="https://www.youtube.com/watch?v=NVX1p502qCU">Virtual node autoscaling and Azure Dev Spaces in Azure Kubernetes Service (AKS)</a> | <a href="https://www.youtube.com/channel/UCJ9905MRHxwLZ2jeNQGIWxA">Microsoft Mechanics</a></h3>
+ 
+ <p>Recent updates to the Azure Kubernetes Service (AKS) for developers and ops. Join, Program Manager for Azure Kubernetes Service, Ria Bhatia as she shows you the new autoscaling options using virtual nodes as well as how you can use Azure Dev Spaces to test your AKS apps without simulating dependencies. Also, check out the and new ways to troubleshoot and monitor your Kubernetes apps with Azure Monitor.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=NVX1p502qCU"><img alt="Virtual node autoscaling and Azure Dev Spaces in Azure Kubernetes Service (AKS) | Microsoft Mechanics" border="0" height="270" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/39090094-209f-4b2b-82de-3c0bc83f2bbd.jpg" title="Virtual node autoscaling and Azure Dev Spaces in Azure Kubernetes Service (AKS) | Microsoft Mechanics on YouTube" width="480"></a></p>
+ 
+ <h3><a href="https://www.youtube.com/watch?v=gYpNC_tdbQQ">How to host a static website with Azure Storage</a> | <a href="https://www.youtube.com/playlist?list=PLLasX02E8BPCNCK8Thcxu-Y-XcBUbhFWC">Azure Tips and Tricks</a></h3>
+ 
+ <p>In this edition of Azure Tips and Tricks, learn how you can host a static website running in Azure Storage in a few steps.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=gYpNC_tdbQQ"><img alt="How to host a static website with Azure Storage | Azure Tips and Tricks" border="0" height="269" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/d90ecc5e-00d5-497c-ab80-e0120d90cc38.jpg" title="How to host a static website with Azure Storage | Azure Tips and Tricks on YouTube" width="480"></a></p>
+ 
+ <h3 align="left"><a href="https://www.youtube.com/watch?v=ACVpH6C_NL8">How to use the Azure Activity Log</a> | <a href="https://www.youtube.com/playlist?list=PLLasX02E8BPBKgXP4oflOL29TtqTzwhxR">Azure Portal Series</a></h3>
+ 
+ <p align="left">The Azure Activity Log informs you of the who, the what and the when for operations in your Azure resources. In this video of the Azure Portal &ldquo;How To&rdquo; Series, learn what activity logs are in the Azure Portal, how to access it, and how to make use of them.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=ACVpH6C_NL8"><img alt="How to use the Azure Activity Log | Azure Portal Series" border="0" height="268" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/7adcce97-36a8-4344-bbdb-46f1d2a59276.jpg" title="How to use the Azure Activity Log | Azure Portal Series on YouTube" width="480"></a></p>
+ 
+ <h3><a href="http://azuredevopspodcast.clear-measure.com/ted-neward-on-the-ops-side-of-devops">Ted Neward on the &lsquo;Ops&rsquo; Side of DevOps</a> | <a href="http://azuredevopspodcast.clear-measure.com/">Azure DevOps Podcast</a></h3>
+ 
+ <p>Ted Neward and Jeffrey Palermo are going to be talking about the &lsquo;Ops&rsquo; (AKA the operations) side of DevOps. They discuss how operations is implemented in the DevOps movement, the role of operations, how Dev and Ops should work together, what companies should generally understand around the different roles, where the industry is headed, and Ted&rsquo;s many recommendations in the world of DevOps.</p>
+ 
+ <p align="center">
+ <audio controls="" src="http://traffic.libsyn.com/preview/azuredevops/ADP_030.mp3">HTML5 audio not supported</audio></p>
+ 
+ <h3><a href="http://www.azureability.com/e/codecamping-around-with-phillydotnets-bill-wolff/">Episode 5 - CodeCamping with Philly.NET founder Bill Wolff</a> | <a href="http://www.azureability.com/">AzureABILITY</a></h3>
+ 
+ <p>Philly.NET founder and coding-legend Bill Wolff visits the podcast to talk about both the forthcoming Philly Code Camp 2019.1 and the user-group experience in general.</p>
+ 
+ <p align="center">
+ <audio controls="" src="https://mcdn.podbean.com/mf/play/6q4xj2/AzureABILITY_005.mp3">HTML5 audio not supported</audio></p>
+ 
+ <h2>Events</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/welcome-to-nab-show-2019-from-microsoft-azure/?ocid=AID765057&amp;wt.mc_id=CFID0447">Welcome to NAB Show 2019 from Microsoft Azure!</a></h3>
+ 
+ <p>At <a href="https://www.nabshow.com/">NAB Show 2019</a> this week in Las Vegas we&rsquo;re announcing new Azure rendering, Azure Media Services, Video Indexer and Azure Networking capabilities to help you achieve more. We&rsquo;ll also showcase how partners such as Zone TV and Nexx.TV are using Microsoft AI and Azure Cognitive Services to create more personalized content and improve monetization of existing media assets.</p>
+ 
+ <h3><a href="https://www.youtube.com/watch?v=Kwd5GKZ4tLI">Deliver New Services | Hannover Messe 2019</a></h3>
+ 
+ <p>With intelligent manufacturing technology, you can deliver new services, innovate faster to reduce time to market, and increase your margins.&#8239;At the Hannover Messe 2019 event, discover how Microsoft and partners are empowering companies to create new business value with digital services to develop data-driven and AI-enhanced products and services.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=Kwd5GKZ4tLI"><img alt="Deliver New Services | Hannover Messe 2019" border="0" height="269" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/0c103dfb-5e4b-4120-acbd-8f6d51c783b0.jpg" title="Deliver New Services | Hannover Messe 2019 on YouTube" width="480"></a></p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/database-administrators-discover-gold-in-the-cloud/?ocid=AID765057&amp;wt.mc_id=CFID0447">Database administrators, discover gold in the cloud</a></h3>
+ 
+ <p>Data is referred to these days as &ldquo;the new oil&rdquo; or &ldquo;black gold&rdquo; of industry. If the typical Fortune 100 company gains access to a mere 10 percent more of their data, that can result in increased revenue of millions of dollars. Recently, one of our teams discovered new technology that enables us to do more with less&mdash;like agile development helping us deploy new features and software faster to market, and DevOps ensuring it was done with less impact to mission-critical systems. To learn more, attend a <a href="https://info.microsoft.com/ww-registration-transform-your-DBA-role-for-the-cloud.html?ocid=AID765057&amp;wt.mc_id=CFID0447">free webinar</a> where we&rsquo;ll be sharing more on the many advantages of managing data in the cloud, and how your company&rsquo;s &ldquo;black gold&rdquo; will make you tomorrow&rsquo;s data hero.</p>
+ 
+ <h2>Customers, partners, and industries</h2>
+ 
+ <h3><a href="https://azure.microsoft.com/blog/iot-in-action-enabling-cloud-transformation-across-industries/?ocid=AID765057&amp;wt.mc_id=CFID0447">IoT in Action: Enabling cloud transformation across industries</a></h3>
+ 
+ <p>The intelligent cloud and intelligent edge are sparking massive transformation across industries. As computing gets more deeply embedded in the real world, powerful new opportunities arise to transform revenue, productivity, safety, customer experiences, and more. According to a white paper by <a href="https://info.microsoft.com/Keystone-Data-and-Analytics-Whitepaper.en-gb.1.html?ocid=AID765057&amp;wt.mc_id=CFID0447">Keystone Strategy</a>, digital transformation leaders generate eight percent more per year in operating income than other enterprises. Here we lay out a typical cloud transformation journey and provide examples of how the cloud is transforming city government, industrial IoT, and oil and gas innovators.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/enabling-precision-medicine-with-integrated-genomic-and-clinical-data/?ocid=AID765057&amp;wt.mc_id=CFID0447">Enabling precision medicine with integrated genomic and clinical data</a></h3>
+ 
+ <p>Kanteron Systems Platform is a patient-centric, workflow-aware, precision medicine solution. Their solution to data in silos, detached from the point of care integrates many key types of healthcare data for a complete patient longitudinal record to power precision medicine including medical imaging, digital pathology, clinical genomics, and pharmacogenomic data.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/spinnaker-continuous-delivery-platform-now-with-support-for-azure/?ocid=AID765057&amp;wt.mc_id=CFID0447">Spinnaker continuous delivery platform now with support for Azure</a></h3>
+ 
+ <p>Spinnaker is an open source, multi-cloud continuous delivery platform for releasing software changes with high velocity and confidence. It is being chosen by a growing number of enterprises as the open source continuous deployment platform used to modernize their application deployments. With this blog post and the recent release of Spinnaker (1.13), we are excited to announce that Microsoft has worked with the core Spinnaker team to ensure Azure deployments are integrated into Spinnaker.</p>
+ 
+ <h3><a href="https://azure.microsoft.com/en-us/blog/the-future-of-manufacturing-is-open/?ocid=AID765057&amp;wt.mc_id=CFID0447">The future of manufacturing is open</a></h3>
+ 
+ <p>At Hannover Messe 2019, we launched the Open Manufacturing Platform (OMP) together with the BMW Group, our partner on this initiative. Built on the Microsoft Azure Industrial IoT cloud platform, the OMP will provide a reference architecture and open data model framework for community members who will both contribute to and learn from others around industrial IoT projects.</p>
+ 
+ <p>&nbsp;</p>
+ 
+ <hr><h3><a href="https://www.youtube.com/watch?v=O2utK7GqAWw">Azure Stack HCI solutions, Premium Block Blob Storage and new capabilities in the Azure AI space!</a> | <a href="https://www.youtube.com/playlist?list=PLI1_CQcV71RmnrRBgJNlI1yY_WiOWIXov">Azure This Week - A Cloud Guru</a></h3>
+ 
+ <p>This time on Azure This Week, Lars discusses Microsoft&rsquo;s hybrid cloud strategy which gets another push with hyper-converged infrastructure, Azure Premium Block Blob Storage is now generally available, and AI developers get more goodies on the Azure platform.</p>
+ 
+ <p align="center"><a href="https://www.youtube.com/watch?v=O2utK7GqAWw"><img alt="Azure Stack HCI solutions, Premium Block Blob Storage andnew capabilities in the Azure AI space! | Azure This Week - A Cloud Guru" border="0" height="266" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/b3e417fc-6b84-4289-8035-f9284b311afe.jpg" title="Azure Stack HCI solutions, Premium Block Blob Storage andnew capabilities in the Azure AI space! | Azure This Week - A Cloud Guru on YouTube" width="480"></a></p>
+ 
+ <p align="left">Be sure to check out the new series from A Cloud Guru, <a href="https://www.youtube.com/playlist?list=PLI1_CQcV71RnI3YwRSFNfFcE8u3xojHp-">Azure Fireside Chats</a>.</p>
+]]>
+</description>
+<author>Rob Caron</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/azure-source-volume-77/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/
+</guid>
+<pubDate>Mon, 08 Apr 2019 14:02:13 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+How Skype modernized its backend infrastructure using Azure Cosmos DB – Part 3
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/
+</link>
+<description>
+<![CDATA[
+<p><em>This is a three-part blog post series about how organizations are using Azure Cosmos DB to meet real world needs, and the difference it&rsquo;s making to them. In <a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-1/">par
+]]>
+<![CDATA[
+t 1</a>, we explored the challenges Skype faced that led them to take action. In <a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/">part 2</a>, we examined how Skype implemented Azure Cosmos DB to modernize its backend infrastructure. In this post (part 3 of 3), we cover the outcomes resulting from those efforts.</em></p>
+ 
+ <p><strong>Note:</strong> Comments in italics/parenthesis are the author's.</p>
+ 
+ <h2>The outcomes</h2>
+ 
+ <h3>Improved throughout, latency, scalability, and more</h3>
+ 
+ <p>Using Azure Cosmos DB, Skype replaced three monolithic, geographically isolated data stores with a single, globally distributed user data service that delivers better throughput, lower latencies, and improved availability. The new PCS service can elastically scale on demand to handle to handle future growth, and gives the Skype team ownership of its data without the burden of maintaining its own infrastructure&mdash;all at less than half what it cost to maintain the old PCS system. Development of the solution was fast and straightforward thanks to the extensive functionality provided by Azure Cosmos DB and the fact that it&rsquo;s a fully-hosted service.</p>
+ 
+ <h3>Better throughout and lower latencies</h3>
+ 
+ <p>Compared to the old solution, the new PCS service is delivering improved throughput and lower latency&mdash;in turn enabling the Skype team to easily meet all its SLAs. &ldquo;Easy geographic distribution, as enabled by Azure Cosmos DB, was a key enabler in making all this possible,&rdquo; says Kaduk. &ldquo;For example, by enabling us to put data closer to where its users are, in Europe, we&rsquo;ve been able to significantly reduce the time required for the permission service that&rsquo;s used to setup a call&mdash;and meet our overall one-second SLA for that task.&rdquo;</p>
+ 
+ <h3>Higher availability</h3>
+ 
+ <p>The new PCS service is supporting its workload without timeouts, deadlocks, or quality-of-service degradation&mdash;meaning that users are no longer inconvenienced with bad data or having to wait. And because the service runs on Azure Cosmos DB, the Skype team no longer needs to worry about the availability of the underlying infrastructure upon which its new PCS service runs.&nbsp;</p>
+ 
+ <p>&ldquo;Azure Cosmos DB provides a 99.999 percent read availability SLA for all multiregion accounts, with built-in helps protect against the unlikely event of a regional outage,&rdquo; says Kaduk. &ldquo;We can prioritize failover order for our multiregion accounts and can even manually trigger failover to test the end-to-end availability of our app&mdash;all with guaranteed zero data-loss.&rdquo;</p>
+ 
+ <h3>Elastic scalability</h3>
+ 
+ <p>With Azure Cosmos DB, the Skype team can independently and <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data" target="_blank">elastically scale storage and throughput</a> at any time, across the globe. All physical partition management required to scale is fully managed by Azure Cosmos DB and is transparent to the Skype team. Azure Cosmos DB handles the distribution of data across physical and logical partitions and the routing of query requests to the right partition&mdash;all without compromising availability, consistency, latency, or throughput. All this enables the team to pay for only the storage and throughput it needs today, and to avoid having to invest any time, energy, or money in spare capacity before it&rsquo;s needed.</p>
+ 
+ <p>&ldquo;The ability of Azure Cosmos DB to scale is obvious,&rdquo; says Kaduk. &ldquo;We planned for 100 terabytes of data 18 months ago and are already at 140 terabytes, with no major issues handling that growth.</p>
+ 
+ <h3>Full ownership of data &ndash; with zero maintenance and administration</h3>
+ 
+ <p>Because Azure Cosmos DB is a fully managed Microsoft Azure service, the Skype team doesn&rsquo;t need to worry about day-to-day administration, deploy and configure software, or deal with upgrades. Every database is automatically backed up, protected against regional failures, and encrypted, so you the team doesn&rsquo;t need to worry about those things either&mdash;leaving it with more time to focus on delivering new customer value.</p>
+ 
+ <p>&ldquo;One of the great things about our new PCS service is that we fully own the data store, whereas we didn&rsquo;t before,&rdquo; says Kaduk. &ldquo;In the past, when Skype was first acquired by Microsoft, we had a team that maintained our databases. We didn&rsquo;t want to continue maintaining them, so we handed them off to a central team. Today, that same user data is back under our full control and we&rsquo;re still not burdened with day-to-day maintenance&mdash;it&rsquo;s really the best of both worlds.&rdquo;</p>
+ 
+ <h3>Lower costs</h3>
+ 
+ <p>Although Kaduk&rsquo;s team wasn&rsquo;t paying to maintain the old PCS databases, he knows what that used to cost&mdash;and says that the monthly bill for the new solution running on Azure Cosmos DB is much lower. &ldquo;Our new PCS data store is about 40 percent less expensive than the old one was,&rdquo; he states. &ldquo;We pay that cost ourselves today, but, given all the benefits, it&rsquo;s well worth it.&rdquo;</p>
+ 
+ <h3>Rapid, straightforward implementation</h3>
+ 
+ <p>All in all, Kaduk feels the migration to Azure Cosmos DB was &ldquo;pretty simple and straightforward.&rdquo; Development began in May 2017, and by October 2017, all development was complete and the team began migrating all 4 billion Skype users to the new solution. The team consisted of eight developers, one program manager, and one manager.</p>
+ 
+ <p>&ldquo;We had no prior experience with Azure Cosmos DB, but it was pretty easy to come up to speed,&rdquo; he states. &ldquo;Even with a few lessons learned, we did it all in six months, which is pretty impressive for a project of this scale. One reason for our rapid success was that we didn&rsquo;t have to worry about deploying any physical infrastructure. Azure Cosmos DB also gave us a schema-free document database with both SQL syntax and change feed streaming capabilities built-in, all under strict SLAs. This greatly simplified our architecture and enabled us to meet all our requirements in a minimum amount of time.&rdquo;</p>
+ 
+ <h3>Lessons learned</h3>
+ 
+ <p>Looking back at the project, Kaduk recalls several &ldquo;lessons learned.&rdquo; These include:</p>
+ 
+ <ul><li><strong>Use direct mode for better performance </strong>&ndash;<strong> </strong>How a client connects to Azure Cosmos DB has important performance implications, especially with respect to observed client side latency. The team began by using the default Gateway Mode connection policy, but switched to a Direct Mode connection policy because it <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/performance-tips" target="_blank">delivers better performance</a>.</li>
+ <li><strong>Learn how to write and handle stored procedures</strong> &ndash; With Azure Cosmos DB, transactions can only be implemented using <a href="https://docs.microsoft.com/en-us/rest/api/cosmos-db/stored-procedures" target="_blank">stored procedures</a>&mdash;pieces of application logic that are written in JavaScript that are registered and executed against a collection as a single transaction. <em>(In Azure Cosmos DB, JavaScript is hosted in the same memory space as the database. Hence, requests made within stored procedures execute in the same scope of a database session, which enables Azure Cosmos DB to guarantee ACID for all operations that are part of a single stored procedure.)</em></li>
+ <li><strong>Pay attention to query design</strong> &ndash; With Azure Cosmos DB, queries have a large impact in terms of RU consumption. Developers didn&rsquo;t pay much attention to query design at first, but soon found that RU costs were higher than desired. This led to an increased focus on optimizing query design, such as using point document reads wherever possible and optimizing the query selections per API.</li>
+ <li><strong>Use the Azure Cosmos DB SDK 2.x to optimize connection usage</strong> &ndash; Within Azure Cosmos DB, the data stored in each region is distributed across tens of thousands of physical partitions. To serve reads and writes, the Azure Cosmos DB client SDK must establish a connection with the physical node hosting the partition. The team started by using the Azure Cosmos DB SDK 1.x, but found that its lack of support for connection multiplexing led to excessive connection establishment and closing rates. Switching to the Azure Cosmos DB SDK 2.x, which supports connection multiplexing, helped solve the problem &mdash;and also helped mitigate <a href="https://docs.microsoft.com/en-us/azure/load-balancer/load-balancer-outbound-connections-classic" target="_blank">SNAT port exhaustion issues</a>.</li>
+ </ul><p>The following diagram shows connection status and time_waits when using SDK 1.x.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/cac09d06-6942-43fb-a46b-15249728b69f.png"><img alt="Chart showing connection when using SDK 1.x" border="0" height="399" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/87a294c4-dc66-4620-bb96-81cd063f9239.png" title="Chart showing connection when using SDK 1.x" width="1012"></a></p>
+ 
+ <p>And the following shows the same after the move to SDK 2.x.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/b055741f-a73d-4db2-8e8b-0edef0d462e8.png"><img alt="Chart showing connection when using SDK 2.x" border="0" height="393" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/e1d501df-7e69-43a2-a5b9-486998133d24.png" title="Chart showing connection when using SDK 2.x" width="1144"></a></p>
+]]>
+</description>
+<author>Parul Matah</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/
+</guid>
+<pubDate>Mon, 08 Apr 2019 14:01:13 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+How Skype modernized its backend infrastructure using Azure Cosmos DB – Part 2
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/
+</link>
+<description>
+<![CDATA[
+<p><em>This is a three-part blog post series about how organizations are using Azure Cosmos DB to meet real world needs, and the difference it&rsquo;s making to them. In <a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-1/">part 1</a>, we explored the challenges Skype faced that led them to take action. In this post (part 2 of 3), we examine how Skype implemented Azure Cosmos DB to modernize its backend infrastructure. In <a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/">part 3</a>, we&rsquo;ll cover the outcomes resulting from those efforts.</em></p>
+ 
+ <p><strong>Note:</strong> Comments in italics/parenthesis are the author's.</p>
+ 
+ <h2>The solution</h2>
+ 
+ <h3>Putting data closer to users</h3>
+ 
+ <p>Skype found the perfect fit in Azure Cosmos DB, the globally distributed NoSQL database service from Microsoft. It gave Skype everything needed for its new People Core Service (PCS), including turnkey global distribution and elastic scaling of throughput and storage, making it an ideal foundation for distributed apps like Skype that require extremely low latency at global scale.</p>
+ 
+ <h3>Initial design decisions</h3>
+ 
+ <p>Prototyping began in May 2017. Some early choices made by the team included the following:</p>
+ 
+ <ul><li><strong>Geo-replication:</strong> The team started by deploying Azure Cosmos DB in one <a href="https://azure.microsoft.com/en-us/global-infrastructure/regions/" target="_blank">Azure region</a>, then used its <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/distribute-data-globally" target="_blank">pushbutton geo-replication</a> to replicate it to a total of seven Azure regions: three in North America, two in Europe, and two in the Asia Pacific (APAC) region. However, it later turned out that a single presence in each of those three geographies was enough to meet all SLAs.</li>
+ <li><strong>Consistency level:</strong> In setting up geo-replication, the team chose session consistency from among the <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/consistency-levels" target="_blank">five consistency levels supported by Azure Cosmos DB</a>. <em>(Session consistency is often ideal for scenarios where a device or user session is involved because it guarantees monotonic reads, monotonic writes, and read-your-own-writes.)</em></li>
+ <li><strong>Partitioning:</strong> Skype chose UserID as the <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/partition-data" target="_blank">partition key</a>, thereby ensuring that all data for each user would reside on the same physical partition. A physical partition size of 20GB was used instead of the default 10GB size because the larger number enabled more efficient allocation and usage of <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/request-units" target="_blank">request units</a> per second (RU/s)&mdash;a measure of pre-allocated, guaranteed database throughput. <em>(With Azure Cosmos DB, each collection must have a partition key, which acts as a logical partition for the data and provides Azure Cosmos DB with a natural boundary for transparently distributing it internally, across physical partitions.)</em></li>
+ </ul><h3>Event-driven architecture based on Azure Cosmos DB change feed</h3>
+ 
+ <p>In building the new PCS service, Skype developers implemented a micro-services, event-driven architecture based on <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/change-feed" target="_blank">change feed support</a> in Azure Cosmos DB. Change feed works by &ldquo;listening&rdquo; to an Azure Cosmos DB container for any changes and outputting a sorted list of documents that were changed, in the order in which they were modified. The changes are persisted, can be processed asynchronously and incrementally, and the output can be distributed across one or more consumers for parallel processing. <em>(Change Feed in Azure Cosmos DB is enabled by default for all accounts, and it does not incur any additional costs. You can use provisioned RU/s to read from the feed, just like any other operation in Azure Cosmos DB.)</em></p>
+ 
+ <p>&ldquo;Generally, an event-driven architecture uses Kafka, Event Hub, or some other event source,&rdquo; explains Kaduk. &ldquo;But with Azure Cosmos DB, change feed provided a built-in event source that simplified our overall architecture.&rdquo;</p>
+ 
+ <p>To meet the solution&rsquo;s audit history requirements, developers implemented an <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing" target="_blank">event sourcing with capture state pattern</a>. Instead of storing just the current state of the data in a domain, this pattern uses an append-only store to record the full series of actions taken on the data (the &ldquo;event sourcing&rdquo; part of the pattern), along with the mutated state (i.e. the &ldquo;capture state&rdquo;). The append-only store acts as the system of record and can be used to materialize domain objects. It also provides consistency for transactional data, and maintains full audit trails and history that can enable compensating actions.</p>
+ 
+ <h3>Separate read and write paths and data models for optimal performance</h3>
+ 
+ <p>Developers used the <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs" target="_blank">Command and Query Responsibility Segregation (CQRS) pattern</a> together with the event sourcing pattern to implement separate write and read paths, interfaces, and data models, each tailored to their relevant tasks. &ldquo;When CQRS is used with the Event Sourcing pattern, the store of events is the write model, and is the official source of information capturing what has happened or changed, what was the intention, and who was the originator,&rdquo; explains Kaduk. &ldquo;All of this is stored on one JSON document for each changed domain aggregate&mdash;user, person, and group. The read model provides materialized views that are optimized for querying and are stored in a second, smaller JSON documents. This is all enabled by the Azure Cosmos DB document format and the ability to store different types of documents with different data structures within a single collection.&rdquo; Find more information on <a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs#event-sourcing-and-cqrs" target="_blank">using Event Sourcing together with CQRS</a>.</p>
+ 
+ <h3>Custom change feed processing</h3>
+ 
+ <p>Instead of using Azure Functions to handle change feed processing, the development team chose to implement its own change feed processing using the <a href="https://docs.microsoft.com/en-us/azure/cosmos-db/change-feed-processor" target="_blank">Azure Cosmos DB change feed processor library</a>&mdash;the same code used internally by Azure Functions. This gave developers more granular control over change feed processing, including the ability to implement retrying over queues, dead-letter event support, and deeper monitoring. The custom change feed processors run on Azure Virtual Machines (VMs) under the &ldquo;PaaS v1&rdquo; model.</p>
+ 
+ <p>&ldquo;Using the change feed processor library gave us superior control in ensuring all SLAs were met,&rdquo; explains Kaduk. &ldquo;For example, with Azure Functions, a function can either fail or spin-and-wait while it retries. We can&rsquo;t afford to spin-and-wait, so we used the change feed processor library to implement a queue that retries periodically and, if still unsuccessful after a day or two, sends the request to a &lsquo;dead letter collection&rsquo; for review. We also implemented extensive monitoring&mdash;such as how fast requests are processed, which nodes are processing them, and estimated work remaining for each partition.&rdquo; <em>(See </em><a href="https://blogs.msdn.microsoft.com/fkaduk/tag/changefeed/" target="_blank"><em>Frantisek&rsquo;s blog article</em></a><em> for a deeper dive into how all this works.)</em></p>
+ 
+ <h3>Cross-partition transactions and integration with other services</h3>
+ 
+ <p>Change feed also provided a foundation for implementing background post-processing, such as cross-partition transactions that span the data of more than one user. The case of John blocking Sally from sending him messages is a good example. The system accepts the command from user John to block user Sally, upon which the request is validated and dispatched to the appropriate handler, which stores the event history and updates the query able data for user John. A postprocessor responsible for cross-partition transactions monitors the change feed, copying the information that John blocked Sally into the data for Sally (which likely resides in a different partition) as a reverse block. This information is used for determining the relationship between peers. (<em>More information on this pattern can be found in the article, &ldquo;</em><a href="http://www-db.cs.wisc.edu/cidr/cidr2007/papers/cidr07p15.pdf" target="_blank"><em>Life beyond Distributed Transactions: an Apostate&rsquo;s Opinion</em></a><em>.&rdquo;)</em></p>
+ 
+ <p>Similarly, developers used change feed to support integration with other services, such as notification, graph search, and chat. The event is received on background by all running change feed processors, one of which is responsible for publishing a notification to external event consumers, such as Azure Event Hub, using a public schema.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c7ea79b6-8a3d-4d11-90c9-4a77090404e7.png"><img alt="Azure Cosmos DB flowchart" border="0" height="406" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/30f41c76-fbac-40e0-9511-fedb034505b6.png" title="Azure Cosmos DB flowchart" width="556"></a></p>
+ 
+ <h3>Migration of user data</h3>
+ 
+ <p>To facilitate the migration of user data from SQL Server to Azure Cosmos DB, developers wrote a service that iterated over all the user data in the old PCS service to:</p>
+ 
+ <ul><li>Query the data in SQL Server and transform it into the new data models for Azure Cosmos DB.</li>
+ <li>Insert the data into Azure Cosmos DB and mark the user&rsquo;s address book as mastered in the new database.</li>
+ <li>Update a lookup table for the migration status of each user.</li>
+ </ul><p>To make the entire process seamless to users, developers also implemented a proxy service that checked the migration status in the lookup table for a user and routed requests to the appropriate data store, old or new. After all users were migrated, the old PCS service, the lookup table, and the temporary proxy service were removed from production.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f85fb594-b18a-4834-810d-22e665b83779.png"><img alt="Migration for production flowchart" border="0" height="419" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/f8e1f1ad-6544-47d8-b750-89d6a439a5da.png" title="Migration for production flowchart" width="651"></a></p>
+ 
+ <p>Migration for production users began in October 2017 and took approximately two months. Today, all requests are processed by Azure Cosmos DB, which contains more than 140 terabytes of data in each of the replicated regions. The new PCS service processes up to 15,000 reads and 6,000 writes per second, consuming between 2.5 million and 3 million RUs per second across all replicas. A process monitors that RU usage automatically scaling allocated RUs up or down as needed.</p>
+ 
+ <p><em><a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/">Continue on to part 3</a>, which covers the outcomes resulting from Skype&rsquo;s implementation of Azure Cosmos DB. </em></p>
+]]>
+</description>
+<author>Parul Matah</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-1/
+</guid>
+<pubDate>Mon, 08 Apr 2019 14:00:13 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[
+How Skype modernized its backend infrastructure using Azure Cosmos DB – Part 1
+]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-1/
+</link>
+<description>
+<![CDATA[
+<p><em>This is a three-part blog post series about how organizations are using Azure Cosmos DB to meet real world needs, and the difference it&rsquo;s making to them. In this post (part 1 of 3), we explore the challenges Skype faced that led them to take action. In <a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/">part 2</a>, we&rsquo;ll examine how Skype implemented Azure Cosmos DB to modernize its backend infrastructure. In<a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-3/"> part 3</a>, we&rsquo;ll cover the outcomes resulting from those efforts. </em></p>
+ 
+ <p><strong>Note:</strong> Comments in italics/parenthesis are the author's.</p>
+ 
+ <h2>Scaling to four billion users isn&rsquo;t easy</h2>
+ 
+ <p>Founded in 2003, Skype has grown to become one of the world&rsquo;s premier communication services, making it simple to share experiences with others wherever they are. Since its acquisition by Microsoft in 2010, Skype has grown to more than four billion total users, more than 300 million monthly active users, and more than 40 million concurrent users.</p>
+ 
+ <p>People Core Service (PCS), one of the core internal Skype services, is where contacts, groups, and relationships are stored for each Skype user. The service is called when the Skype client launches, is checked for permissions when initiating a conversation, and is updated as the user&rsquo;s contacts, groups, and relationships are added or otherwise changed. PCS is also used by other, external systems, such as Microsoft Graph, Cortana, bot provisioning, and other third-party services.</p>
+ 
+ <p>Prior to 2017, PCS ran in three datacenters in the United States, with data for one-third of the service&rsquo;s 4 billion users represented in each datacenter. Each location had a large, monolithic SQL Server relational database. Having been in place for several years, those databases were beginning to show their age. Specific problems and pains included:</p>
+ 
+ <ul><li><strong>Maintainability:</strong> The databases had a huge, complex, tightly coupled code base, with long stored procedures that were difficult to modify and debug. There were many interdependencies, as the database was owned by a separate team and contained data for more than just Skype, its largest user. And with user data split across three such systems in three different locations, Skype needed to maintain its own routing logic based on which user&rsquo;s data it needed to retrieve or update.</li>
+ <li><strong>Excessive latency:</strong> With all PCS data being served from the United States, Skype clients in other geographies and the local infrastructure that supported them (such as call controllers), experienced unacceptable latency when querying or updating PCS data. For example, Skype has an internal service level agreement (SLA) of less than one second when setting up a call. However, the round-trip times for the permission check performed by a local call controller in Europe, which reads data from PCS to ensure that user A has permission to call user B, made it impossible to setup a call between two users in Europe within the required one-second period.</li>
+ <li><strong>Reliability and data quality:</strong> Database deadlocks were a problem&mdash;and were exacerbated because data used by PCS was shared with other systems. Data quality was also an issue, with users complaining about missing contacts, incorrect data for contacts, and so on.</li>
+ </ul><p>All of these problems became worse as usage grew, to the point that, by 2017, the pain had become unacceptable. Deadlocks were becoming more and more common as database traffic increased, which resulted in service outages, and weekly backups were leaving some data unavailable. &ldquo;We did the best with what we had, coming up with lots of workarounds to deal with all the deadlocks, such as extra code to throttle database requests,&rdquo; recalls Frantisek Kaduk, Principal .NET Developer on the Skype team. &ldquo;As the problems continued to get worse, we realized we had to do something different.&rdquo;</p>
+ 
+ <p>In addition, the team faced a deadline related to <a href="https://www.microsoft.com/en-us/TrustCenter/CloudServices/Azure/GDPR" target="_blank">General Data Protection Regulation (GDPR)</a>; the system didn&rsquo;t meet GDPR requirements, so there was a deadline for shutting down the servers.</p>
+ 
+ <p>The team decided that, to deliver an uncompromised user experience, it needed its own data store. Requirements included high throughput, low latency, and high availability&mdash;all of which had to be met regardless of where users were in the globe.</p>
+ 
+ <p>An event-driven architecture was a natural fit, however, it would need to be more than just a basic implementation that stored current data. &ldquo;We needed a better audit trail, which meant also storing all the events leading up to a state change,&rdquo; explains Kaduk. &ldquo;For example, to handle misbehaving clients, we need to be able to replay that series of events. Similarly, we need event history to handle cross-service/cross-shard transactions and other post-processing tasks. The events capture the originator of a state change, the intention of that change, and the result of it.&rdquo;</p>
+ 
+ <p><em><a href="https://azure.microsoft.com/en-us/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-2/">Continue on to part 2</a>, which examines how Skype implemented Azure Cosmos DB to modernize its backend infrastructure.</em></p>
+]]>
+</description>
+<author>Parul Matah</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/how-skype-modernized-its-backend-infrastructure-using-azure-cosmos-db-part-1/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/azure-stack-iaas-part-seven/
+</guid>
+<pubDate>Mon, 08 Apr 2019 13:00:13 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[ Azure Stack IaaS – part seven ]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/azure-stack-iaas-part-seven/
+</link>
+<description>
+<![CDATA[
+<h2>It takes a team</h2>
+ 
+ <p>Most apps get delivered by a team. When your team delivers the app through virtual machine (VMs), it is important to coordinate efforts. Born in the cloud to serve teams from all over the world, Azure and Azure Stack have some handy capabilities to help you coordinate VM operations across your team.</p>
+ 
+ <h2>Identity and single sign-on</h2>
+ 
+ <p>The easiest identity to remember is the one you use every day to sign in to your corporate network and check your email. If you are using Azure Active Directory, or your own active directory, your login to Azure Stack will be the same. This is something your admin sets up when the Azure Stack was deployed so you don&rsquo;t have to learn and remember different credentials.</p>
+ 
+ <p>Learn more about <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-integrate-identity" target="_blank">integrating Azure Stack with Azure Active Directory and Active Directory Federation Services (ADFS)</a>.</p>
+ 
+ <h2>Role-based access control</h2>
+ 
+ <p>In the virtualization days my team typically coordinated operations through credentials to VMs and the management tools. The Azure Resource Manager include a very robust role-based access control (RBAC) system that not only allows you to identify who can access the system, but allows you to assign people to roles and set a scope of control to define what they are allowed to do to what.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/18802848-63a2-4ebc-9047-dc4349ff5e57.png"><img alt="Role-based access control in Azure and Azure Stack" border="0" height="365" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/af6a7a00-6809-4a71-8b18-c09332b68bcf.png" title="Role-based access control" width="1173"></a></p>
+ 
+ <h2>More than just people in my organization</h2>
+ 
+ <p>When you work in the cloud, you may need to collaborate with people from other organizations. As more and more things become automated, you might have to give a process, not a person, access to a resource. Azure and Azure Stack have you covered. The image below shows a VM where I have given access both to three applications (service principals) and a user from an external domain (foreign principal).&nbsp;</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/7e969368-9229-410c-9f13-c91a9057ecab.png"><img alt="A virtual machine where access was given to both three applications (service principals) and a user from an external domain (foreign principal)." border="0" height="672" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/7f2fa5ca-8511-4a1a-b8e9-8eaeea4d6730.png" title="Service principals and foreign principal" width="1369"></a></p>
+ 
+ <h3>Service principal</h3>
+ 
+ <p>When an application needs access to deploy or configure VMs, or other resource in your Azure Stack, you can create a service principal which is a credential for the application. You can then delegate only the necessary permissions to that service principal.</p>
+ 
+ <p>As an example, you may have a configuration management tool that inventories VMs in your subscription. In this scenario, you can create a service principal, grant the reader role to that service principal, and limit the configuration management tool to read-only access.</p>
+ 
+ <p>Learn more about <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-create-service-principals" target="_blank">service principals in Azure Stack</a>.</p>
+ 
+ <h3>Foreign principal</h3>
+ 
+ <p>A foreign principal is the identity of a person that is managed by another authority. For example, the team at Contoso.com might need to allow access to a VM for a contractor or a partner from Fabrikam.com. In the virtualization days we would create a user account in our domain for that user, but that was a management headache. With Azure and Azure Stack you can allow users that sign in with their corporate credentials to access your VMs.</p>
+ 
+ <p>Learn how to <a href="https://docs.microsoft.com/en-us/azure/azure-stack/azure-stack-enable-multitenancy" target="_blank">enable multi-tenancy in Azure Stack</a>.</p>
+ 
+ <h2>Activity logs</h2>
+ 
+ <p>When your VM runs around the clock, you will have teams in at all times of the day. Fortunately, Azure and Azure Stack include an activity log that allows to track all changes that have been made to the VM and who initiated the action.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c3d95a9d-2c64-4c43-9639-ce53b003d648.png"><img alt="Activity log in Azure and Azure Stack" border="0" height="453" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/56aae6df-35d0-4d45-8d42-cfdb95f7f5aa.png" title="Activity log in Azure and Azure Stack" width="1183"></a></p>
+ 
+ <p>Learn more about <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-audit" target="_blank">Azure Activity Logs</a>.</p>
+ 
+ <h2>Locks</h2>
+ 
+ <p>Sometimes people make errors, like deleting a production VM by mistake. A nice feature you will find in Azure and Azure Stack is the &ldquo;lock.&rdquo; A lock can be used to prevent any change or deletion on a VM or any other resource. When attempted, the user will get an error message until they manually remove the lock.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/d4b1cbf0-581a-4d40-9f2f-cf285d9ee4e5.png"><img alt="Locks in Azure Stack" border="0" height="558" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/8a712405-acb5-4593-a668-ba2658f8642b.png" title="Locks in Azure Stack" width="847"></a></p>
+ 
+ <p>Learn more about <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-lock-resources" target="_blank">locking VMs and other Azure resources</a>.</p>
+ 
+ <h2>Tags</h2>
+ 
+ <p>The best place to store additional data about your VM is in the tool you manage the VM from. Azure and Azure Stack provide you that ability to add additional information about your VM through the Tags feature. You can use Tags to help your team keep track of the deployment environment, support contacts, cost center, or anything else important. You can even search for these tags in the portal to find the right resources quickly.</p>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/51c4b2fe-a450-452f-b2c9-9ca445578a25.png"><img alt="Tags are name/value pairs that enable you to categorize resources and view consolidated billing." border="0" height="462" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/c205d4a7-9fd7-489f-9d57-37f91169c147.png" title="Tags" width="1007"></a></p>
+ 
+ <p>Learn more about <a href="https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags" target="_blank">tagging VMs and other Azure resources</a>.</p>
+ 
+ <h2>Work as a team, not individuals</h2>
+ 
+ <p>The team features in Azure and Azure Stack allows your team to elevate its game to deliver the best virtual machine operations. Managing an Infrastructure-as-a-Service (IaaS) VM is more than stop, start, and login. The Azure platform powering Azure Stack IaaS allows you to organize, delegate, and track your team&rsquo;s operations so you can deliver a better experience to your users.</p>
+ 
+ <h2>In this blog series</h2>
+ 
+ <p>We hope you come back to read future posts in this blog series. Here are some of our past and upcoming topics:</p>
+ 
+ <ul><li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-iaas-part-one/" target="_blank">Azure Stack at its core is an Infrastructure-as-a-Service (IaaS) platform</a></li>
+ <li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-laas-part-two/" target="_blank">Start with what you already have</a></li>
+ <li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-iaas-part-four" target="_blank">Protect your stuff</a></li>
+ <li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-iaas-part-six/" target="_blank">Pay for what you use</a></li>
+ <li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-iaas-part-3/" target="_blank">Fundamentals of IaaS</a></li>
+ <li><a href="https://azure.microsoft.com/en-us/blog/azure-stack-iaas-part-five/" target="_blank">Do it yourself</a></li>
+ <li>If you do it often, automate it</li>
+ <li>Build on the success of others</li>
+ <li>Journey to PaaS</li>
+ </ul>
+]]>
+</description>
+<author>David Armour</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/azure-stack-iaas-part-seven/feed
+</comments>
+</item>
+<item>
+<guid isPermaLink="true">
+https://azure.microsoft.com/blog/azure-ai-does-that/
+</guid>
+<pubDate>Mon, 08 Apr 2019 12:00:12 +0000</pubDate>
+<relativeTime>3 days ago</relativeTime>
+<channelId>DevBlogs</channelId>
+<title>
+<![CDATA[ Azure AI does that? ]]>
+</title>
+<link>
+https://azure.microsoft.com/blog/azure-ai-does-that/
+</link>
+<description>
+<![CDATA[
+<h2>Five examples of how Azure AI is driving innovation</h2>
+ 
+ <p><a href="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/a35b7a72-f779-42d7-b5d3-4173b2d31070.jpg"><img alt="Azure AI image" border="0" height="362" src="https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/18bf36c5-46f8-4983-9de8-f30870e58850.jpg" title="Azure AI image" width="696"></a></p>
+ 
+ <p>Whether you&rsquo;re just starting off in tech, building, managing, or deploying apps, gathering and analyzing data, or solving global issues &mdash;anyone can benefit from using cloud technology. Below we&rsquo;ve gathered five cool examples of innovative artificial intelligence (AI) to showcase how <i>you</i> can be a catalyst for real change.</p>
+ 
+ <h2>Facial recognition</h2>
+ 
+ <p>You know that old box of photos you have sitting in the attic collecting cobwebs; the one with those beautifully embarrassing childhood photos half-covered by a misplaced thumb? How grateful would your family be if you could bring those back to life digitally, at the tip of your fingers? Manually scanning and downloading photos to all your devices would be a huge pain. And if those photos don&rsquo;t have dates or the names of the people in them written on the back &mdash; forget it! But with AI algorithms, cognitive services, and facial recognition processes, organizing these photos by groups is super simple.</p>
+ 
+ <p>By utilizing <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/face/">Azure&rsquo;s Face API</a>, facial recognition algorithms can quickly and accurately detect, verify, identify, and analyze faces. They can provide facial matching, facial attributes, and characteristic analysis in order to organize people and facial definitions into groups of similar faces.</p>
+ 
+ <h2>Handwriting analysis</h2>
+ 
+ <p>Already spent hours manually sorting through those old photos? Not to worry, another helpful tool in the Computer Vision API is the ability to take the papers and handwritten notes you&rsquo;ve compiled throughout your last project and create a cohesive document. No longer will you need to decipher those scribbles from your teammates and scratch your head whether that obscure symbol is a four or a &ldquo;u.&rdquo;</p>
+ 
+ <p>With <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/Computer-vision/QuickStarts/CSharp-analyze">Computer Vision API&rsquo;s Recognizing Handwritten Text interface</a>, you can conveniently take photos of handwritten notes, forms, whiteboards, sticky notes, that napkin you found, and anything in between. Rather than manually transcribing them, you can turn these documents into digital notes that are easy to comb through with a simple search. The interface can detect, extract, and digitally reproduce any type of handwriting&mdash;even Medieval Klingon! Imagine all the time and paper you will save!</p>
+ 
+ <h2>Text analysis</h2>
+ 
+ <p>A close cousin of the Handwriting API, the <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/">Text Analytics API</a> allows for some pretty neat text analysis as well. Search through hundreds of documents, comb through customer reviews, tweets, and comments, and automatically identify posts for positive or negative sentiment by inputting just a few parameters. The API can also detect up to 120 different languages and identify things like if &ldquo;times&rdquo; refers to The New York Times or Times Square. Pretty cool, right?</p>
+ 
+ <h2>Translate languages</h2>
+ 
+ <p>Speaking of detecting different languages, <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/translator/quickstart-python-translate">the Translator Text API</a> allows you to communicate with your colleagues from all over the map better than ever before. Start typing &ldquo;Hello, it&rsquo;s nice to meet you&rdquo; into your app and the API can translate you and your colleagues&rsquo; entire conversation.</p>
+ 
+ <p>The Translator Text API can show text in different alphabets, translate Chinese characters to PinYin, display any of the supported transliteration languages in the Latin alphabet, and even show words written in the Latin alphabet in non-Latin characters such as Japanese, Hindi, or Arabic, all with some simple code. The API can be integrated into your apps, websites, tools, and solutions and allows you to add multi-language user experiences in more than 60 languages. This API is used by companies, like <a href="https://customers.microsoft.com/en-us/story/ebay">eBay</a>, worldwide for website localization, e-commerce, customer support, messaging applications, bots, and more to provide quick and automatic translations for all their worldly customers.</p>
+ 
+ <p>Translator Text can also translate languages in real time through video/audio input so you can seamlessly communicate with colleagues around the world via video chat. It even converts video to written text, which makes content accessible for those who are hearing or visually impaired.</p>
+ 
+ <h2>AI for Good</h2>
+ 
+ <p>While all these services are great for automating business and personal projects, they can be used for much more. Last fall, Microsoft announced AI for Humanitarian Action: a new $40 million, five-year program that uses the power of AI to help the world recover from disasters, address the needs of children, protect refugees and displaced people, and promote respect for human rights. Part of this initiative is the AI for Good Suite, a five-year commitment to solve society&rsquo;s biggest challenges using AI fundamentals.</p>
+ 
+ <p>One of those challenges is being addressed by long-time Microsoft partner <a href="https://customers.microsoft.com/en-us/story/operation-smile">Operation Smile</a>, a nonprofit dedicated to repairing cleft lips and palates across the globe. Through the use of <a href="https://docs.microsoft.com/en-us/learn/modules/identify-faces-with-computer-vision/">machine vision AI and facial modeling</a>, surgeons can compare pre- and post-surgery outcomes, rank the most optimal repairs, and provide that data back to Operation Smile. From there, the organization can identify their top-performing surgeons and enable them to teach others how to improve their cleft repair techniques through videos that can be accessed around the globe.</p>
+ 
+ <p>Operation Smile is supercharging their doctors&rsquo; talents with technology to increase quality of life throughout the world. By utilizing AI, Operation Smile can help more children than ever before!</p>
+ 
+ <p>With AI, the sky is the limit. And who knows&mdash;you <em>just might</em> discover the next best innovation in AI technology.</p>
+ 
+ <h2>Learn more</h2>
+ 
+ <p><a href="https://aka.ms/mslearncognitiveservices">Learn more about what you can do with Cognitive Services </a></p>
+ 
+ <p><a href="https://aka.ms/azureaiengineercert">Get certified as an Azure AI Engineer</a></p>
+]]>
+</description>
+<author>Sep DiMeglio</author>
+<source url="https://azure.microsoft.com/en-us/blog/feed/">Microsoft Azure Blog</source>
+<comments>
+https://azure.microsoft.com/blog/azure-ai-does-that/feed
+</comments>
+</item>
+</channel>
+</rss>

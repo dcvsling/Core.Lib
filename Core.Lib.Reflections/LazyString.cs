@@ -1,5 +1,7 @@
 
-namespace System
+using System;
+
+namespace Core.Lib
 {
     /// <summary>
     /// �N�n�Q�B�z�����PB󻳲z�����A�ȳ���Ȧs���n쭨or��ɤ~�i�B泲z��Struct

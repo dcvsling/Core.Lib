@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  dotnetVersion: 3.0.100-preview4-010603
+  dotnetVersion: 3.0.100-preview4-010965
   buildConfiguration: 'Debug'
   version: '0.1.0-preview-$(Build.BuildNumber)'
   feedUrl: 'https://www.myget.org/F/dcvs-lib/api/v2/package'

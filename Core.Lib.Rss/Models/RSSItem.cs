@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Core.Lib.RSS
+namespace Core.Lib.RSS.Models
 {
     public class RSSItem
     {

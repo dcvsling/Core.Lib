@@ -1,7 +1,8 @@
 ﻿using Core.Lib.Reflections;
+using System;
 using System.Collections.Concurrent;
 
-namespace System
+namespace Core.Lib
 {
     public static class Accessor
     {

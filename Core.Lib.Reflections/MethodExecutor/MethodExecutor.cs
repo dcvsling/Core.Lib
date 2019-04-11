@@ -1,9 +1,8 @@
-﻿using Core.Lib.MethodExecutor;
-using System.Reflection;
+﻿using System.Reflection;
 
-namespace System
+namespace Core.Lib.MethodExecutor
 {
-
+    
     /// <summary>
     /// The method executor class.
     /// </summary>

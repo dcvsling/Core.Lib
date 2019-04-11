@@ -1,16 +1,12 @@
 ﻿using Microsoft.SyndicationFeed;
 using Microsoft.SyndicationFeed.Rss;
-using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Core.Lib.RSS
+namespace Core.Lib.RSS.Models
 {
-    public static class RSSFeed
+    public static class RSSTask
     {
         public static async Task<List<RSSItem>> ReadFeed(string filepath)
         {
