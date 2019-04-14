@@ -53,7 +53,8 @@ namespace Core.Lib.Configuration.Yaml
             {
                 _path.Push(count.ToString());
                 child.Accept(this);
-                SaveData();
+                if (_buffer.Any())
+                    SaveData();
                 _path.Pop();
                 count++;
             }
