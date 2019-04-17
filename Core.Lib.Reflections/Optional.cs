@@ -99,7 +99,7 @@ namespace Core.Lib.Reflections
         /// <summary>
         /// The equality comparer (readonly).
         /// </summary>
-        private readonly OptionalEqualityComparer<T> _equalityComparer;
+        private readonly OptionalEqualityComparer _equalityComparer;
 
         /// <summary>
         /// The hash code (readonly).
@@ -116,7 +116,7 @@ namespace Core.Lib.Reflections
             Values = target;
             _error = default;
             _hashCode = Values.CreateHashCode(_hashSeed);
-            _equalityComparer = new OptionalEqualityComparer<T>(_hashSeed);
+            _equalityComparer = new OptionalEqualityComparer(_hashSeed);
         }
 
 
@@ -130,7 +130,7 @@ namespace Core.Lib.Reflections
             Values = Enumerable.Empty<T>();
             _error = exception;
             _hashCode = Values.CreateHashCode(_hashSeed);
-            _equalityComparer = new OptionalEqualityComparer<T>(_hashSeed);
+            _equalityComparer = new OptionalEqualityComparer(_hashSeed);
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace Core.Lib.Reflections
         /// 
         /// </summary>
         /// <param name="option"></param>
-        public static implicit operator T[] (Optional<T> option) => option.Values.ToArray();
+        public static implicit operator T[](Optional<T> option) => option.Values.ToArray();
 
         /// <summary>
         /// 
@@ -296,7 +296,7 @@ namespace Core.Lib.Reflections
         /// The optional equality comparer class.
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        private class OptionalEqualityComparer<T>
+        private class OptionalEqualityComparer
                 : IEqualityComparer<T>,
                   IEqualityComparer<IEnumerable<T>>,
                   IEqualityComparer<Optional<T>>

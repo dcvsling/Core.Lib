@@ -38,13 +38,8 @@ namespace Core.Lib.Tests
             var rss = await new RSSWriter().Write(expect);
             var actual = await new RSSReader().Read(new MemoryStream(Encoding.UTF8.GetBytes(rss)));
             Assert.Equal(
-#if NETCOREAPP30
-                Microsoft.JSInterop.Json.Serialize(expect), 
-                Microsoft.JSInterop.Json.Serialize(actual.First())
-#else
                 Newtonsoft.Json.JsonConvert.SerializeObject(expect),
                 Newtonsoft.Json.JsonConvert.SerializeObject(actual.First())
-#endif
             );
         }
 
