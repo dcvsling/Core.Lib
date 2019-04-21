@@ -4,7 +4,7 @@
 using System;
 using Microsoft.AspNetCore.Mvc.Core;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// Provides a <see cref="ApplicationPartFactory"/> type.

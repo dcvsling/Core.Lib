@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.AspNetCore.Mvc.Core;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// Specifies a contract for synthesizing one or more <see cref="ApplicationPart"/> instances

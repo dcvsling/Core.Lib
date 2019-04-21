@@ -1,5 +1,0 @@
-﻿action:
-  equals: "(left, right) => left.Equals(right)"
-  notEquals: "(left, right) => !left.Equals(right)"
-  contains: "(c, val) => val.AsEnumerable().Contains(c)"
-  notContains: "(c, val) => !val.AsEnumerable().Contains(c)"

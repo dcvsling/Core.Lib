@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>
+      netstandard2.0;
+      <!--netstandard2.1;-->
+      netcoreapp3.0
+    </TargetFrameworks>
+  </PropertyGroup>
+
+  <!--<ItemGroup Condition="$(TargetFramework)=='net45'">
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>-->
+
+  <ItemGroup>
+    <PackageReference Include="Humanizer" Version="2.6.2" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.0.0" />
+    
+    <PackageReference Include="YamlDotNet" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(ExtensionsVersion)" />
+  </ItemGroup>
+  <ItemGroup Condition="$(TArgetFramework)=='netstandard2.1'">
+    <PackageReference Remove="System.Memory" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Lib.Configuration.Yaml\Core.Lib.Configuration.Yaml.csproj" />
+  </ItemGroup>
+</Project>

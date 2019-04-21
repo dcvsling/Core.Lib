@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.DependencyModel;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// An <see cref="ApplicationPart"/> backed by an <see cref="System.Reflection.Assembly"/>.

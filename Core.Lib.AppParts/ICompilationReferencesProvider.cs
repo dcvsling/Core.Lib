@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// Exposes one or more reference paths from an <see cref="ApplicationPart"/>.

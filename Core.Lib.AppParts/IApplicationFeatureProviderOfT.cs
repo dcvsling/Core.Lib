@@ -3,7 +3,7 @@
 
 using System.Collections.Generic;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// A provider for a given <typeparamref name="TFeature"/> feature.

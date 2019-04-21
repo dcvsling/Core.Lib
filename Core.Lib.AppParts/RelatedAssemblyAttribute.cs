@@ -1,14 +1,14 @@
 ﻿// Copyright (c) .NET Foundation. All rights reserved.
 // Licensed under the Apache License, Version 2.0. See License.txt in the project root for license information.
 
+using Microsoft.AspNetCore.Mvc.Core;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Microsoft.AspNetCore.Mvc.Core;
 
-namespace Microsoft.AspNetCore.Mvc.ApplicationParts
+namespace Core.Lib.AppParts
 {
     /// <summary>
     /// Specifies a assembly to load as part of MVC's assembly discovery mechanism.
@@ -115,7 +115,7 @@ namespace Microsoft.AspNetCore.Mvc.ApplicationParts
 
         internal static string GetAssemblyLocation(Assembly assembly)
         {
-            if (Uri.TryCreate(assembly.CodeBase, UriKind.Absolute, out var result) && 
+            if (Uri.TryCreate(assembly.CodeBase, UriKind.Absolute, out var result) &&
                 result.IsFile && string.IsNullOrWhiteSpace(result.Fragment))
             {
                 return result.LocalPath;

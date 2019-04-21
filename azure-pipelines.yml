@@ -11,6 +11,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
+  dotnetVersion: 3.0.100-preview5-011329
   version: '0.1.0-preview-$(Build.BuildNumber)'
 
 steps:
