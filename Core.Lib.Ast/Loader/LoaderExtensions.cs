@@ -18,7 +18,7 @@ namespace Microsoft.Extensions.DependencyInjection
                     .Select(x => x.Replace(Directory.GetCurrentDirectory(), string.Empty))
                     .Aggregate(
                         (IConfigurationBuilder)new ConfigurationBuilder(),
-                        (config, path) => config.AddYaml(path, true, true))
+                        (config, path) => config.AddYamlFile(path, true, true))
                     .Build());
             return builder;
         }

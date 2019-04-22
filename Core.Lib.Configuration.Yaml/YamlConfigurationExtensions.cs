@@ -7,7 +7,7 @@ namespace Microsoft.Extensions.Configuration
 
     public static class YamlConfigurationExtensions
     {
-        public static IConfigurationBuilder AddYaml(this IConfigurationBuilder builder, string path, bool options = true, bool reload = true)
+        public static IConfigurationBuilder AddYamlFile(this IConfigurationBuilder builder, string path, bool options = true, bool reload = true)
             => builder.Add(new YamlConfigurationSource {
                 Path = path,
                 ReloadOnChange = reload,

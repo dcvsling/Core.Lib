@@ -15,9 +15,9 @@ namespace Core.Lib.Tests
             //            (IConfigurationBuilder)new ConfigurationBuilder(),
             //            (cfg, path) => cfg.AddYaml(path, true, true))
             //        .Build();
-            var config = new ConfigurationBuilder().AddYaml("asset\\lexer.yml").Build();
-            var section = config.GetSection("services:angular-starter:networks:0");
-            Assert.Equal("angular-starter", section.Value);
+            var config = new ConfigurationBuilder().AddYamlFile("assets\\lexer.yml").Build();
+            var section = config.GetSection("operations:0:check:action");
+            Assert.Equal("equals", section.Value);
 
         }
     }

@@ -1,19 +1,22 @@
-﻿using System.Reflection;
+﻿using Microsoft.AspNetCore.Rest.Abstractions;
+using System.IO;
+using System.Reflection;
 using System.Runtime.Loader;
-using Microsoft.AspNetCore.Rest.Abstractions;
-
 
 namespace Microsoft.AspNetCore.Rest
 {
-    internal class InternalAssemblyLoadcontext : AssemblyLoadContext, IAssemblyLoadContext
+    internal class InternalAssemblyLoadcontext : IAssemblyLoadContext
     {
-        public InternalAssemblyLoadcontext()
-#if NETCOREAPP30
-            : base(true)       
-#endif
-        {
-        }
+        private readonly AssemblyLoadContext _alc
+            = AssemblyLoadContext.Default;
 
-        protected override Assembly Load(AssemblyName assemblyName) => throw new System.NotImplementedException();
+        public Assembly LoadFromAssemblyName(AssemblyName assemblyName)
+            => _alc.LoadFromAssemblyName(assemblyName);
+        public Assembly LoadFromAssemblyPath(string assemblyPath)
+            => _alc.LoadFromAssemblyPath(assemblyPath);
+        public Assembly LoadFromStream(Stream assembly)
+            => _alc.LoadFromStream(assembly);
+        public Assembly LoadFromStream(Stream assembly, Stream assemblySymbols)
+            => _alc.LoadFromStream(assembly, assemblySymbols);
     }
 }

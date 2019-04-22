@@ -1,5 +1,4 @@
-﻿using Core.Lib;
-using Core.Lib.MethodExecutor;
+﻿using Core.Lib.MethodExecutor;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -29,7 +28,7 @@ namespace ESI.Core.Tests
         public void execute_static_method_with_args_and_return()
         {
             var method = typeof(MethodExecutorTests).GetMethod(nameof(Invoke), (BindingFlags)(0 - 1));
-            var isAssert = (bool)MethodExecutor.CreateExecutor(method).Execute(target:null,parameters: true);
+            var isAssert = (bool)MethodExecutor.CreateExecutor(method).Execute(target: null, parameters: true);
             Assert.True(isAssert);
         }
 
@@ -47,7 +46,7 @@ namespace ESI.Core.Tests
         {
             var isAssert = false;
             Action<bool> action = _ => isAssert = _;
-            MethodExecutor.CreateExecutor(action.Method).Execute(action.Target,true);
+            MethodExecutor.CreateExecutor(action.Method).Execute(action.Target, true);
             Assert.True(isAssert);
         }
 
@@ -64,8 +63,8 @@ namespace ESI.Core.Tests
         public void execute_method_with_args_and_return()
         {
             var isAssert = false;
-            Func<bool,bool> action = _ => _;
-            isAssert = (bool)MethodExecutor.CreateExecutor(action.Method).Execute(action.Target,true);
+            Func<bool, bool> action = _ => _;
+            isAssert = (bool)MethodExecutor.CreateExecutor(action.Method).Execute(action.Target, true);
             Assert.True(isAssert);
         }
     }

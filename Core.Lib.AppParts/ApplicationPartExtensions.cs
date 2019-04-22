@@ -3,9 +3,11 @@
 
 using Core.Lib.Reflections;
 using Microsoft.AspNetCore.Rest;
+using Microsoft.AspNetCore.Rest.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyModel;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -23,7 +25,8 @@ namespace Core.Lib.AppParts
                         (m, ps) => ps.Each(m.ApplicationParts.Add))
                 .Services
                 .AddSingleton(p => p.GetRequiredService<IOptions<ApplicationPartManager>>().Value)
-
+                .AddSingleton<IAssemblyLoadContext, InternalAssemblyLoadcontext>()
+                .AddSingleton(AddAssembliesIntoServiceProvider)
                 .AddDefaultAssemblyParts();
 
         private static IServiceCollection AddParts(this IServiceCollection services, string name = Empty.String, params AssemblyName[] assemblies)
@@ -38,5 +41,17 @@ namespace Core.Lib.AppParts
                 .Default
                 .GetDefaultAssemblyNames()
                 .ToArray());
+
+        private static IEnumerable<ApplicationPart> AddAssembliesIntoServiceProvider(IServiceProvider provider)
+        {
+            var alc = provider.GetRequiredService<IAssemblyLoadContext>();
+            return provider.GetRequiredService<IOptions<ApplicationFeature>>().Value
+                .AssemblyNames
+                .Select(alc.LoadFromAssemblyName)
+                .Select(assembly => new AssemblyPart(assembly))
+                .OfType<ApplicationPart>()
+                .ToArray();
+
+        }
     }
 }
