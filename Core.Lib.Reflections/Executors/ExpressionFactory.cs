@@ -1,9 +1,10 @@
-using System.Reflection;
 using System;
-using System.Linq.Expressions;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
+using System.Threading.Tasks;
 
-namespace Core.Lib.MethodExecutor
+namespace Core.Lib.Reflections.Executors
 {
     internal static class ExpressionFactory
     {
@@ -18,16 +19,18 @@ namespace Core.Lib.MethodExecutor
             var parameters = Expression.Parameter(typeof(object[]));
 
             var arguments = method.GetParameters()
-                .Select((x,i) => Expression.Convert(Expression.ArrayIndex(parameters,Expression.Constant(i)),x.ParameterType)).ToArray();
+                .Select((x, i) => Expression.Convert(Expression.ArrayIndex(parameters, Expression.Constant(i)), x.ParameterType)).ToArray();
             var args = arguments.Any()
                 ? WithArguments(arguments)
                 : WithOutArguments();
+
+            var t = TaskOrOrigin();
 
             var r = method.ReturnType == typeof(void)
                 ? NoReturn()
                 : Return();
 
-            return Expression.Lambda<Func<object,object[],object>>(r(args(m)(instance)), declare, parameters).Compile();
+            return Expression.Lambda<Func<object, object[], object>>(r(args(m)(instance)), declare, parameters).Compile();
         }
 
         private static Func<Expression, Expression[], Expression> StaticMethodCallWithArgs(MethodInfo method)
@@ -55,5 +58,15 @@ namespace Core.Lib.MethodExecutor
                 Expression.Constant(new object())
             );
 
+        private static Func<Expression, Expression> TaskOrOrigin()
+            => result => typeof(Task).IsAssignableFrom(result.Type) || result.Type == typeof(Task)
+                ? Expression.Call(null, GetToObject(result.Type.GetGenericArguments()[0]), result)
+                : result;
+
+        private static MethodInfo GetToObject(Type type)
+            => typeof(ExpressionFactory).GetMethod(nameof(ToObject)).MakeGenericMethod(type);
+
+        private static Task<object> ToObject<T>(Task<T> task)
+            => task.ContinueWith(t => (object)t.Result);
     }
 }

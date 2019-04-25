@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Core.Lib.MethodExecutor
+namespace Core.Lib.Reflections.Executors
 {
 
     /// <summary>
@@ -40,6 +40,6 @@ namespace Core.Lib.MethodExecutor
         /// <param name="target">The target.</param>
         /// <param name="parameters">The parameters.</param>
         /// <returns>The <see cref="object"/>.</returns>
-        object Execute(object target,params object[] parameters);
+        object Execute(object target, params object[] parameters);
     }
 }

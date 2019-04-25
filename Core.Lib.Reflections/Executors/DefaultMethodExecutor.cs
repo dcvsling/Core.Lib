@@ -1,8 +1,8 @@
-﻿using System.Reflection;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
-namespace Core.Lib.MethodExecutor
+namespace Core.Lib.Reflections.Executors
 {
 
     internal class DefaultMethodExecutor : IMethodExecutor
@@ -18,6 +18,6 @@ namespace Core.Lib.MethodExecutor
         public TypeInfo TargetTypeInfo => MethodInfo.DeclaringType.GetTypeInfo();
         public Type MethodReturnType => MethodInfo.ReturnType;
 
-        public object Execute(object target,params object[] parameters) => _invoker(target, parameters);
+        public object Execute(object target, params object[] parameters) => _invoker(target, parameters);
     }
 }

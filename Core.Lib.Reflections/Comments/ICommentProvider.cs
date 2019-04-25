@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Core.Net.GraphQLConventions
+namespace Core.Lib.Reflections.Comments
 {
     public interface ICommentProvider
     {

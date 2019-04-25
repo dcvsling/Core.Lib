@@ -12,7 +12,5 @@
     <OutputType Condition="$(TargetFramework)=='netcoreapp2.*'">Exe</OutputType>
     <OutputType Condition="$(TargetFramework)=='netcoreapp3.*'">Exe</OutputType>
   </PropertyGroup>
-  <!--<ItemGroup Condition="$(TargetFramework.Contains('netcoreapp'))">
-    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0-preview4.19177.9" />
-  </ItemGroup>-->
+  
 </Project>

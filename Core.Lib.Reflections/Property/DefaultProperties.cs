@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Serialization;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Reflections.Properties
 {
 
     /// <summary>

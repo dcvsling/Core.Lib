@@ -16,11 +16,8 @@
   <ItemGroup>
     <PackageReference Include="Humanizer" Version="2.6.2" />
     <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="3.0.0" />
-    
-    <PackageReference Include="YamlDotNet" Version="6.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(ExtensionsVersion)" />
   </ItemGroup>
-  <ItemGroup Condition="$(TArgetFramework)=='netstandard2.1'">
+  <ItemGroup Condition="$(TargetFramework)=='netstandard2.1'">
     <PackageReference Remove="System.Memory" />
   </ItemGroup>
   <ItemGroup>

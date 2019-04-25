@@ -1,10 +1,10 @@
-﻿using Core.Lib.MethodExecutor;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using System.Threading.Tasks;
 using Xunit;
 
-namespace ESI.Core.Tests
+namespace Core.Lib.Tests.Reflections
 {
     public class MethodExecutorTests
     {
@@ -66,6 +66,20 @@ namespace ESI.Core.Tests
             Func<bool, bool> action = _ => _;
             isAssert = (bool)MethodExecutor.CreateExecutor(action.Method).Execute(action.Target, true);
             Assert.True(isAssert);
+        }
+
+        async public Task execut_action_with_task_and_return_null_value_task()
+        {
+            var isAssert = false;
+            Func<bool, Task> action = _ => { isAssert = true; return Task.CompletedTask; };
+            await MethodExecutor.CreateExecutor(action.Method).ExecuteAsync(action.Target, true);
+            Assert.True(isAssert);
+        }
+        async public Task execut_func_with_task_and_return_result_value_task()
+        {
+            Func<bool, Task> action = _ => Task.FromResult(true);
+            var result = await MethodExecutor.CreateExecutor(action.Method).ExecuteAsync(action.Target, true);
+            Assert.True((bool)result);
         }
     }
 }

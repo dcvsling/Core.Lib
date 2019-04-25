@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.FileSystemGlobbing;
+using Microsoft.Extensions.Primitives;
+using System;
 using System.Collections.Concurrent;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Core.Net.GraphQLConventions;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.KeyPerFile;
-using Microsoft.Extensions.FileSystemGlobbing;
 
-namespace Core.Lib
+namespace Core.Lib.Reflections.Comments
 {
 
     public static class Comment
@@ -22,17 +21,19 @@ namespace Core.Lib
 
         private static readonly IConfiguration _empty = new ConfigurationBuilder().Build();
 
-        private static ConcurrentDictionary<string, ConcurrentDictionary<string, IConfigurationSection>> _cache
-            = new ConcurrentDictionary<string, ConcurrentDictionary<string, IConfigurationSection>>();
+        private static ConcurrentDictionary<string, ConcurrentDictionary<string, StringValues>> _cache
+            = new ConcurrentDictionary<string, ConcurrentDictionary<string, StringValues>>();
 
         public static void SetRoot(string root)
-            => new Matcher()
+            => _configurations = new ConcurrentDictionary<string, IConfiguration>(new Matcher()
                 .AddInclude("**/*.xml")
-                .AddInclude("**/*.dll")
                 .GetResultsInFullPath(root)
-                .GroupBy(Path.GetFileNameWithoutExtension)
-                .Where(x => x.Count() != 2)
-                .ToDictionary(x => x.Key, x => new ConfigurationBuilder().AddKeyPerFile(".",true));
+                .Select(x => x.Replace(root, Empty.String))
+                .ToDictionary(
+                    Path.GetFileNameWithoutExtension,
+                    x => (IConfiguration)new ConfigurationBuilder()
+                        .AddXmlFile(x, true)
+                        .Build()));
 
         public static string Get(MemberInfo member)
             => GetProvider(member.DeclaringType.Assembly.GetName().Name).Get(member);
@@ -42,7 +43,7 @@ namespace Core.Lib
         private static ICommentProvider GetProvider(string assemblyName)
             => new CommentProvider(
                 _configurations.GetOrAdd(assemblyName, _empty),
-                _cache.GetOrAdd(assemblyName, _ => new ConcurrentDictionary<string, IConfigurationSection>()));
+                _cache.GetOrAdd(assemblyName, _ => new ConcurrentDictionary<string, StringValues>()));
 
     }
 }

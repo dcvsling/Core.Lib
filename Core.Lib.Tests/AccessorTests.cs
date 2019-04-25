@@ -1,10 +1,8 @@
-﻿using Core.Lib;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Xunit;
 
-namespace ESI.Core.Tests
+namespace Core.Lib.Tests.Reflections
 {
-
     /// <summary>
     /// The accessor tests class.
     /// </summary>

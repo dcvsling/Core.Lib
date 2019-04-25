@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace ESI.Core.Tests
+namespace Core.Lib.Tests.AppParts
 {
     public class AppPartTests
     {
