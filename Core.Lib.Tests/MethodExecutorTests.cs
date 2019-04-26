@@ -68,6 +68,7 @@ namespace Core.Lib.Tests.Reflections
             Assert.True(isAssert);
         }
 
+        [Fact]
         async public Task execut_action_with_task_and_return_null_value_task()
         {
             var isAssert = false;
@@ -75,6 +76,7 @@ namespace Core.Lib.Tests.Reflections
             await MethodExecutor.CreateExecutor(action.Method).ExecuteAsync(action.Target, true);
             Assert.True(isAssert);
         }
+        [Fact]
         async public Task execut_func_with_task_and_return_result_value_task()
         {
             Func<bool, Task> action = _ => Task.FromResult(true);

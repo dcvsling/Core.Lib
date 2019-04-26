@@ -8,9 +8,7 @@
     <VersionSuffix>0001</VersionSuffix>
     <PackageOutputPath>$(LocalFeed)</PackageOutputPath>
     <PublishDir>$(MSBuildThisFileDirectory)publish/</PublishDir>
-    <OutputType Condition="$(TargetFramework)=='netstandard*'">Library</OutputType>
-    <OutputType Condition="$(TargetFramework)=='netcoreapp2.*'">Exe</OutputType>
-    <OutputType Condition="$(TargetFramework)=='netcoreapp3.*'">Exe</OutputType>
+    <NoWarn>NU1605</NoWarn>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
-  
 </Project>

@@ -6,7 +6,6 @@
     <AspNetCoreVersion>2.2.*</AspNetCoreVersion>
     <ExtensionsVersion>2.2.*</ExtensionsVersion>
     <DotNetCoreVersion>4.3.*</DotNetCoreVersion>
-    <XmlVersion>2.2.*</XmlVersion>
     <CoreLibVersion>0.1.0-*</CoreLibVersion>
     <DependencyModelVersion>2.1.*</DependencyModelVersion>
   </PropertyGroup>
@@ -35,17 +34,14 @@
     <AspNetCoreVersion>3.0.0-*</AspNetCoreVersion>
     <ExtensionsVersion>3.0.0-*</ExtensionsVersion>
     <DotNetCoreVersion>4.3.0-*</DotNetCoreVersion>
-    <XmlVersion>3.0.0-*</XmlVersion>
     <CoreLibVersion>0.1.0-*</CoreLibVersion>
     <DependencyModelVersion>3.0.0-*</DependencyModelVersion>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.*" />
   </ItemGroup>
   <ItemGroup Condition="$(TargetFramework)=='netcoreapp3.0'">
-    <PackageReference Include="Microsoft.JSInterop" Version="3.0.0-*" />
-    <PackageReference Include="Microsoft.NETCore.Platforms" Version="3.0.0-preview6.19225.4" />
+    <PackageReference Include="Microsoft.JSInterop" Version="$(ExtensionsVersion)" />
   </ItemGroup>
 
   <Import Project="sources.props" Condition="$(RestoreSources)==''" />
