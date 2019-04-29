@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Xunit;
 
-namespace Core.Lib.Tests.AppParts
+namespace Core.Lib.Tests
 {
     public class AppPartTests
     {

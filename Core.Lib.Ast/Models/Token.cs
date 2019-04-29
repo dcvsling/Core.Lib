@@ -5,7 +5,7 @@ using System.Diagnostics;
 namespace Core.Lib.Ast.Models
 {
 
-    [DebuggerDisplay("{Name}: {Value}: {Range}")]
+    [DebuggerDisplay("{Name}:{Value}:{Range}")]
     public struct Token : IEqualityComparer<Token>
     {
         private static ConcurrentDictionary<string, Token> _tokens = new ConcurrentDictionary<string, Token>();
@@ -13,12 +13,13 @@ namespace Core.Lib.Ast.Models
         public string Name;
         public string Value;
         public Range Range;
+        private static Token _default = default;
 
         public override bool Equals(object obj) => obj.GetHashCode() == GetHashCode();
         public override int GetHashCode() => GetHashCode(this);
 
         public bool Equals(Token x, Token y) => GetHashCode(x) == GetHashCode(y);
-        public int GetHashCode(Token obj) => (obj.Value.GetHashCode() << 2) ^ Name.GetHashCode();
+        public int GetHashCode(Token obj) => (obj.Value?.GetHashCode() << 2) ^ obj.Name?.GetHashCode() ?? 0;
 
         public static implicit operator int(Token token) => token.Value.GetHashCode();
         public static implicit operator string(Token token) => token.Value;

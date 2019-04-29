@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Core.Lib.Tests</name>
+    </assembly>
+    <members>
+        <member name="T:Core.Lib.Tests.AccessorTests">
+            <summary>
+            The accessor tests class.
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Get_TestModel_Member_value_will_get_Ok">
+            <summary>
+             --> Test model -->  -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Accessor_can_set_ok_To_TestModel_Member">
+            <summary>
+             -->  -->  -->  -->  --> Test model --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Get_TestModel_number_will_get_1">
+            <summary>
+             --> Test model -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Accessor_can_set_2_To_TestModel_Number">
+            <summary>
+             -->  -->  -->  -->  --> Test model --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Accessor_null_property_will_get_null">
+            <summary>
+             -->  -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Can_set_IEnumerable_to_close_List">
+            <summary>
+             -->  --> I enumerable -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Set_null_will_do_nothing">
+            <summary>
+             -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Use_convert_changeType_when_assign_different_base_struct">
+            <summary>
+             -->  --> change type -->  -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.AccessorTests.Null_assign_to_struct_base_type_will_give_default_value">
+            <summary>
+             -->  -->  -->  -->  -->  -->  -->  -->  --> 
+            </summary>
+        </member>
+        <member name="T:Core.Lib.Tests.AccessorTests.TestModel">
+            <summary>
+            The test model class.
+            </summary>
+        </member>
+        <member name="P:Core.Lib.Tests.AccessorTests.TestModel.List">
+            <summary>
+            Gets the list.
+            </summary>
+        </member>
+        <member name="P:Core.Lib.Tests.AccessorTests.TestModel.Member">
+            <summary>
+            Gets or sets the member.
+            </summary>
+        </member>
+        <member name="P:Core.Lib.Tests.AccessorTests.TestModel.Number">
+            <summary>
+            Gets or sets the number.
+            </summary>
+        </member>
+        <member name="T:Core.Lib.Tests.CommentTests">
+            <summary>
+            type ok
+            </summary>
+        </member>
+        <member name="M:Core.Lib.Tests.CommentTests.get_this_method_comment_will_get_ok">
+            <summary>
+            method ok
+            </summary>
+        </member>
+    </members>
+</doc>

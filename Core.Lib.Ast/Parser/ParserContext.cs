@@ -1,9 +1,10 @@
 ﻿namespace Core.Lib.Ast.Parser
 {
-    using System;
-    using System.Collections.Generic;
     using Core.Lib.Ast.Abstractions;
     using Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class ParserContext : IDisposable
     {
@@ -14,10 +15,10 @@
             _operation = operation;
         }
 
-        public IEnumerable<Node> Parse(ReadOnlySpan<Token> tokens)
+        public IEnumerable<Node> Parse(IEnumerable<Token> tokens)
         {
             var nodes = new List<Node>();
-            while (tokens.Length > 0)
+            while (tokens.Any())
             {
                 nodes.Add(_operation.Parse(tokens));
             }

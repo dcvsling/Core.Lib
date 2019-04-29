@@ -1,10 +1,13 @@
-using Newtonsoft.Json;
-using System.Collections.Generic;
 using Humanizer;
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using YamlDotNet.Serialization;
+using YamlDotNet.Serialization.NamingConventions;
 
 namespace Core.Lib.Reflections
 {
-
     /// <summary>
     /// The string helper class.
     /// </summary>
@@ -16,8 +19,20 @@ namespace Core.Lib.Reflections
         /// <param name="instance">The instance.</param>
         /// <returns>The <see cref="string"/>.</returns>
         /// <typeparam name="T"></typeparam>
-        public static string ToJson<T>(this T instance)
-            => JsonConvert.SerializeObject(instance, Formatting.Indented);
+        public static string ToJson<T>(this T instance, Formatting formatting = Formatting.Indented)
+            => JsonConvert.SerializeObject(instance, formatting);
+
+        public static string ToYaml<T>(this T instance)
+            => _yamlSerializer
+                .Serialize(instance);
+
+        private static ISerializer _yamlSerializer
+            = new SerializerBuilder()
+                .DisableAliases()
+                .EmitDefaults()
+                .WithNamingConvention(new CamelCaseNamingConvention())
+                .WithNamingConvention(new PascalCaseNamingConvention())
+                .Build();
 
         /// <summary>
         /// The format.
@@ -69,6 +84,11 @@ namespace Core.Lib.Reflections
         public static string ToInnerKeyWord(this string text)
             => text.Underscore().ToUpperInvariant();
 
+        public static string WithAssemblyDir(this string path)
+            => Path.Combine(AppContext.BaseDirectory, path);
+
+        public static string WithCurrentDir(this string path)
+            => Path.Combine(Directory.GetCurrentDirectory(), path);
     }
 
 

@@ -1,35 +1,49 @@
 ﻿namespace Core.Lib.Ast.Lexer
 {
+    using Core.Lib.Ast.Abstractions;
+    using Microsoft.Extensions.Logging;
+    using Models;
     using System;
     using System.Collections.Generic;
-    using System.Threading.Tasks;
-    using Core.Lib.Ast.Abstractions;
-    using Models;
+    using System.Linq;
 
     public sealed class LexerContext : IDisposable
     {
-
-        internal static LexerContext Default
-            => new LexerContext(new BasicLexerOperation());
         private readonly ILexerOperation _operations;
-        public Token CurrentToken { get; private set; }
-        public LexerContext(ILexerOperation operations)
+        private readonly ILogger<LexerContext> _logger;
+
+        public LexerContext(ILexerOperation operations, ILogger<LexerContext> logger)
         {
             _operations = operations;
+            _logger = logger;
         }
 
         public void Dispose()
         {
         }
-        async public Task<IEnumerable<Token>> GetTokens(ReadOnlyMemory<char> span)
+        public IEnumerable<Token> GetTokens(string span)
         {
             var location = new Location();
-            var tokens = new List<Token>();
-            while (span.Length > 0)
+            LexerOperationContext ctx = default;
+            _logger.OnLexerStart();
+
+            while (span.Any())
             {
-                var newtoken = await _operations.GetTokenAsync(span);
+                try
+                {
+                    ctx = new LexerOperationContext { Content = span };
+                    _operations.GetToken(ctx);
+                }
+                catch (Exception ex)
+                {
+
+                    throw new LexerOperationException(ctx, location, ex.TargetSite.DeclaringType, ex);
+                }
+                if (!ctx.IsSuccess)
+                    break;
+                var newtoken = ctx.Token;
                 var newloca = location;
-                if (newtoken.Value == "\n")
+                if (newtoken.Name == nameof(Environment.NewLine))
                 {
                     newloca.Column = 0;
                     newloca.Line += 1;
@@ -38,13 +52,12 @@
                 {
                     newloca.Column += newtoken.Value.Length;
                 }
-                CurrentToken = (newtoken, (location, newloca));
+                newloca.Index += newtoken.Value.Length;
+                yield return (newtoken, (location, newloca));
                 location = newloca;
-                tokens.Add(CurrentToken);
-                span = span.Slice(CurrentToken.Value.Length);
-
+                span = span.Substring(newtoken.Value.Length);
             }
-            return tokens;
+            _logger.OnLexerEnd();
         }
     }
 }

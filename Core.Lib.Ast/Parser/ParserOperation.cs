@@ -1,8 +1,9 @@
 ﻿namespace Core.Lib.Ast.Parser
 {
-    using System;
     using Core.Lib.Ast.Abstractions;
     using Models;
+    using System.Collections.Generic;
+    using System.Linq;
 
     internal class ParserOperation : IParserOperation
     {
@@ -14,7 +15,7 @@
             _last = last;
             _next = default;
         }
-        public Node Parse(ReadOnlySpan<Token> span)
+        public Node Parse(IEnumerable<Token> span)
             => _last.Parse(span) ?? _next.Parse(span);
 
         internal ParserOperation Append(IParserOperation parser)
@@ -25,8 +26,8 @@
 
         private class EmptyOperation : IParserOperation
         {
-            public Node Parse(ReadOnlySpan<Token> span)
-                => throw new SyntaxErrorException($"Unexpected character {span[0]}");
+            public Node Parse(IEnumerable<Token> span)
+                => throw new SyntaxErrorException($"Unexpected character {span.FirstOrDefault()}");
         }
     }
 }

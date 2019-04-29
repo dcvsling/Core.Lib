@@ -1,8 +1,6 @@
 ﻿using Core.Lib.Ast.Abstractions;
 using Core.Lib.Ast.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Core.Lib.Ast.Parser
@@ -18,11 +16,11 @@ namespace Core.Lib.Ast.Parser
             _lexer = lexer;
         }
 
-        async public Task<IEnumerable<Node>> Parse(ReadOnlyMemory<char> source)
+        async public Task<IEnumerable<Node>> Parse(string source)
         {
             using (var context = new ParserContext(_parser))
             {
-                return context.Parse((await _lexer.Lex(source)).ToArray().AsSpan());
+                return context.Parse(_lexer.Lex(source));
             }
         }
     }

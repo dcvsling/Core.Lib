@@ -2,23 +2,20 @@
 {
     using Abstractions;
     using Microsoft.Extensions.Options;
-    using Models;
+    using System.Collections.Generic;
     using System.Linq;
 
     internal class LexerOperationFactory : ILexerOperationFactory
     {
-        private readonly IOptionsSnapshot<AstOptions> _snapshot;
-        private readonly IActionStore _store;
         private readonly IOptionsMonitorCache<ILexerOperation> _cache;
+        private readonly IEnumerable<ILexerOperation> _operators;
 
         public LexerOperationFactory(
-            IOptionsSnapshot<AstOptions> snapshot,
-            IActionStore store,
+            IEnumerable<ILexerOperation> operators,
             IOptionsMonitorCache<ILexerOperation> cache)
         {
-            _snapshot = snapshot;
-            _store = store;
             _cache = cache;
+            _operators = operators;
         }
 
 
@@ -26,8 +23,8 @@
             => _cache.GetOrAdd(name, () => CreateLexerOperation(name));
 
         private ILexerOperation CreateLexerOperation(string name)
-           => _snapshot.Get(name).Operations.Aggregate(
+           => _operators.Aggregate(
                LexerOperation.Root,
-               (root, op) => root.Append(new OperatorLexerOperation(op, _store)));
+               (root, op) => root.Append(op));
     }
 }

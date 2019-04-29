@@ -1,45 +1,32 @@
 ﻿namespace Core.Lib.Ast.Lexer
 {
-    using System;
-    using System.Threading.Tasks;
     using Abstractions;
-    using Models;
     internal class LexerOperation : ILexerOperation, IChainableOperation
     {
-        private ILexerOperation _next;
-        private readonly ILexerOperation _last;
+        private readonly ILexerOperation _next;
+        private ILexerOperation _last;
 
-        public static IChainableOperation Root => new EmptyOperation();
-
+        public static IChainableOperation Root => new LexerOperation();
+        private LexerOperation()
+        {
+            _next = default;
+            _last = default;
+        }
         internal LexerOperation(ILexerOperation last)
         {
-            _last = last;
+            _next = last;
+            _last = default;
         }
 
-        async public virtual Task<Token> GetTokenAsync(ReadOnlyMemory<char> span)
-            => (await _last.GetTokenAsync(span)) is Token token != default
-                ? token
-                : await _next.GetTokenAsync(span);
-
+        public void GetToken(LexerOperationContext context)
+        {
+            _last?.GetToken(context);
+            if (!context.IsSuccess) _next?.GetToken(context);
+        }
         IChainableOperation IChainableOperation.Append(ILexerOperation operation)
         {
-            _next = operation;
+            _last = operation;
             return new LexerOperation(this);
         }
-
-        private class EmptyOperation : ILexerOperation, IChainableOperation
-        {
-            private ILexerOperation _operation = default;
-            IChainableOperation IChainableOperation.Append(ILexerOperation operation)
-            {
-                _operation = operation;
-                return new LexerOperation(this);
-            }
-            async public Task<Token> GetTokenAsync(ReadOnlyMemory<char> memory)
-                => (await _operation.GetTokenAsync(memory)) is Token token != default
-                    ? token
-                    : throw new SyntaxErrorException($"Unexpected character {memory.Span[0]}");
-        }
     }
-
 }

@@ -24,8 +24,8 @@ namespace Core.Lib
         private static Task<object> CreateResult(this object result)
             => result is Task
                 ? result.GetType().IsGenericType
-                    ? Task.FromResult<object>(default)
-                    : (Task<object>)result
+                    ? (Task<object>)result
+                    : Task.FromResult<object>(default)
                 : Task.FromResult(result);
     }
 }

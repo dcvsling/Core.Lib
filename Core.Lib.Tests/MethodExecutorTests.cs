@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Core.Lib.Tests.Reflections
+namespace Core.Lib.Tests
 {
     public class MethodExecutorTests
     {
@@ -79,7 +79,7 @@ namespace Core.Lib.Tests.Reflections
         [Fact]
         async public Task execut_func_with_task_and_return_result_value_task()
         {
-            Func<bool, Task> action = _ => Task.FromResult(true);
+            Func<bool, Task<bool>> action = _ => Task.FromResult(true);
             var result = await MethodExecutor.CreateExecutor(action.Method).ExecuteAsync(action.Target, true);
             Assert.True((bool)result);
         }

@@ -7,6 +7,6 @@ namespace Core.Lib.Ast.Abstractions
 {
     public interface ILexer
     {
-        Task<IEnumerable<Token>> Lex(ReadOnlyMemory<char> source);
+        IEnumerable<Token> Lex(string source);
     }
 }

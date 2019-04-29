@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Core.Lib.Ast.Abstractions;
+﻿using Core.Lib.Ast.Abstractions;
 using Core.Lib.Ast.Models;
+using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace Core.Lib.Ast.Lexer
 {
     internal class Lexer : ILexer
     {
-        private readonly ILexerOperation _factory;
+        private readonly ILexerOperationFactory _factory;
+        private readonly ILoggerFactory _logger;
 
-        public Lexer(ILexerOperation factory)
+        public Lexer(ILexerOperationFactory factory, ILoggerFactory logger)
         {
             _factory = factory;
+            _logger = logger;
         }
-        public Task<IEnumerable<Token>> Lex(ReadOnlyMemory<char> source)
-            => new LexerContext(_factory).GetTokens(source);
+        public IEnumerable<Token> Lex(string source)
+        {
+            var ctx = new LexerContext(_factory.GetLexerOperation(string.Empty), _logger.CreateLogger<LexerContext>());
+            return ctx.GetTokens(source);
+        }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Xunit;
 
-namespace Core.Lib.Tests.Reflections
+namespace Core.Lib.Tests
 {
     /// <summary>
     /// The accessor tests class.

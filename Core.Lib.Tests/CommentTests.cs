@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 
-namespace Core.Lib.Tests.Reflections
+namespace Core.Lib.Tests
 {
     /// <summary>
     /// type ok
