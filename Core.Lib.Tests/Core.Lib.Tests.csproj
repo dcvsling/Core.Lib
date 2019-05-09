@@ -22,7 +22,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core.Lib.AppParts\Core.Lib.AppParts.csproj" />
-    <ProjectReference Include="..\Core.Lib.Ast\Core.Lib.Ast.csproj" />
     <ProjectReference Include="..\Core.Lib.Configuration.Yaml\Core.Lib.Configuration.Yaml.csproj" />
     <ProjectReference Include="..\Core.Lib.Mediator\Core.Lib.Mediator.csproj" />
     <ProjectReference Include="..\Core.Lib.Reflections\Core.Lib.Reflections.csproj" />

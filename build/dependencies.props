@@ -38,12 +38,8 @@
     <DependencyModelVersion>3.0.0-*</DependencyModelVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(ExtensionsVersion)" Condition="$(IsPackable)==''" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(ExtensionsVersion)" Condition="$(IsPackable)==''" />
   </ItemGroup>
-  <ItemGroup Condition="$(TargetFramework)=='netcoreapp3.0'">
-    <PackageReference Include="Microsoft.JSInterop" Version="$(ExtensionsVersion)" />
-  </ItemGroup>
-
   <Import Project="sources.props" Condition="$(RestoreSources)==''" />
 </Project>
