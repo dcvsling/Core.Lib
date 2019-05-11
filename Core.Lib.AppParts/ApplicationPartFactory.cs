@@ -4,7 +4,6 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Microsoft.AspNetCore.Mvc.Core;
 
 namespace Core.Lib.AppParts
 {
@@ -58,5 +57,8 @@ namespace Core.Lib.AppParts
 
             return (ApplicationPartFactory)Activator.CreateInstance(type);
         }
+
+        public static IEnumerable<ApplicationPart> GetParts(Assembly assembly)
+            => GetApplicationPartFactory(assembly).GetApplicationParts(assembly);
     }
 }

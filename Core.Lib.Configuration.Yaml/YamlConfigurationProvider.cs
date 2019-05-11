@@ -5,7 +5,7 @@ using YamlDotNet.RepresentationModel;
 
 namespace Core.Lib.Configuration.Yaml
 {
-    internal class YamlConfigurationProvider : FileConfigurationProvider
+    public class YamlConfigurationProvider : FileConfigurationProvider
     {
         public YamlConfigurationProvider(FileConfigurationSource source) : base(source)
         {

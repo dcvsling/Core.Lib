@@ -1,51 +1,33 @@
-﻿using Core.Lib.AppParts;
-using Core.Lib.Reflections;
-using Microsoft.AspNetCore.Rest.Abstractions;
+﻿using Core.Lib.Reflections;
 using Microsoft.Extensions.Options;
 using System.Collections.Generic;
 using System.Linq;
 
-
-namespace Microsoft.AspNetCore.Rest
+namespace Core.Lib.AppParts
 {
 
-    internal class ApplicationPartManagerConfigureOptions : IConfigureNamedOptions<ApplicationPartManager>
+    internal class ApplicationPartManagerConfigureOptions : IConfigureOptions<ApplicationPartManager>
     {
-        private readonly IOptionsSnapshot<ApplicationFeature> _features;
+        private readonly IOptions<ApplicationFeature> _features;
         private readonly IEnumerable<IApplicationFeatureProvider> _providers;
-        private readonly string _name;
         private readonly IAssemblyLoadContext _alc;
 
         public ApplicationPartManagerConfigureOptions(
-            IOptionsSnapshot<ApplicationFeature> assemblyNames,
-            IEnumerable<IApplicationFeatureProvider> providers,
-            IAssemblyLoadContext alc)
-            : this(string.Empty, assemblyNames, providers, alc)
-        {
-        }
-
-        internal ApplicationPartManagerConfigureOptions(
-            string name,
-            IOptionsSnapshot<ApplicationFeature> features,
+            IOptions<ApplicationFeature> features,
             IEnumerable<IApplicationFeatureProvider> providers,
             IAssemblyLoadContext alc)
         {
             _features = features;
             _providers = providers;
-            _name = name;
             _alc = alc;
         }
 
         public void Configure(ApplicationPartManager options)
-            => Configure(string.Empty, options);
-
-        public void Configure(string name, ApplicationPartManager options)
         {
-            var applicationPartManager = new ApplicationPartManager();
-            _features.Get(name).AssemblyNames
+            _features.Value.AssemblyNames
                 .Select(_alc.LoadFromAssemblyName)
                 .Select(asm => new AssemblyPart(asm))
-                .Each(applicationPartManager.ApplicationParts.Add);
+                .Each(options.ApplicationParts.Add);
 
             _providers.Each(options.FeatureProviders.Add);
         }

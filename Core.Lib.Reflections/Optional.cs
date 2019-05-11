@@ -20,7 +20,6 @@ namespace Core.Lib.Reflections
         private static readonly ConcurrentDictionary<Type, Func<object[], object>> _optionalFactory
             = new ConcurrentDictionary<Type, Func<object[], object>>();
 
-
         /// <summary>
         /// Create the optional factory.
         /// </summary>
@@ -119,7 +118,6 @@ namespace Core.Lib.Reflections
             _equalityComparer = new OptionalEqualityComparer(_hashSeed);
         }
 
-
         /// <summary>
         /// Initializes a new instance of the <see cref="Optional"/> class.
         /// </summary>
@@ -179,9 +177,7 @@ namespace Core.Lib.Reflections
                 new JsonSerializerSettings {
                     Formatting = Formatting.Indented,
                     DateFormatString = "yyyy/MM/dd hh:mm:ss",
-
                 });
-
 
         /// <summary>
         /// 

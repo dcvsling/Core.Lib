@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace Core.Lib.Reflections
 {
-
     /// <summary>
     /// The optional helper class.
     /// </summary>
@@ -48,7 +47,6 @@ namespace Core.Lib.Reflections
         /// <typeparam name="T"></typeparam>
         public static Optional<T> OnError<T>(this Optional<T> optional, Func<Exception, T[]> onError)
            => optional._error == default ? optional : Optional.Create(onError(optional._error));
-
 
         /// <summary>
         /// Raises the single event.

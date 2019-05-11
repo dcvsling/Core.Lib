@@ -3,12 +3,13 @@
   <PropertyGroup>
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <LangVersion>latest</LangVersion>
-    <LocalFeed>$(MSBuildThisFileDirectory).artifect/</LocalFeed>
+    <LocalFeed>$(MSBuildThisFileDirectory).artifacts/</LocalFeed>
     <Version>0.1.0</Version>
     <VersionSuffix>0001</VersionSuffix>
     <PackageOutputPath>$(LocalFeed)</PackageOutputPath>
-    <PublishDir>$(MSBuildThisFileDirectory)publish/</PublishDir>
     <NoWarn>NU1605</NoWarn>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
+  
+  
 </Project>

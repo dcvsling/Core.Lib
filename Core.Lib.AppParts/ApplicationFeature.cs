@@ -2,7 +2,7 @@
 using System.Reflection;
 
 
-namespace Microsoft.AspNetCore.Rest
+namespace Core.Lib.AppParts
 {
 
     internal class ApplicationFeature

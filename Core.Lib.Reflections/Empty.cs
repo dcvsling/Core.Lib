@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 namespace Core.Lib.Reflections
 {
 
-
     /// <summary>
     /// The empty class.
     /// </summary>

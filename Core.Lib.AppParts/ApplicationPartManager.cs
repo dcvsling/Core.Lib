@@ -44,26 +44,20 @@ namespace Core.Lib.AppParts
                 throw new ArgumentNullException(nameof(feature));
             }
 
-            foreach (var provider in FeatureProviders.OfType<IApplicationFeatureProvider<TFeature>>())
+            foreach (var provider in FeatureProviders.OfType<IApplicationFeatureProvider<TFeature>>().Distinct())
             {
                 provider.PopulateFeature(ApplicationParts, feature);
             }
         }
 
         internal void PopulateDefaultParts(string entryAssemblyName)
-        {
-            var entryAssembly = Assembly.Load(new AssemblyName(entryAssemblyName));
-            var assembliesProvider = new ApplicationAssembliesProvider();
-            var applicationAssemblies = assembliesProvider.ResolveAssemblies(entryAssembly);
+            => Core.Lib.Reflections.LinqHelper.Each(LoadAllReferenceAssembly(Assembly.Load(new AssemblyName(entryAssemblyName)))
+                .SelectMany(ApplicationPartFactory.GetParts)
+                , ApplicationParts.Add);
 
-            foreach (var assembly in applicationAssemblies)
-            {
-                var partFactory = ApplicationPartFactory.GetApplicationPartFactory(assembly);
-                foreach (var part in partFactory.GetApplicationParts(assembly))
-                {
-                    ApplicationParts.Add(part);
-                }
-            }
-        }
+        private static IEnumerable<Assembly> LoadAllReferenceAssembly(Assembly assembly)
+            => assembly.GetReferencedAssemblies()
+                .Select(Assembly.Load)
+                .SelectMany(asm => LoadAllReferenceAssembly(asm).Prepend(asm));
     }
 }

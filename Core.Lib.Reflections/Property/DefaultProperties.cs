@@ -7,7 +7,6 @@ using System.Runtime.Serialization;
 
 namespace Core.Lib.Reflections.Properties
 {
-
     /// <summary>
     /// The default properties class.
     /// </summary>

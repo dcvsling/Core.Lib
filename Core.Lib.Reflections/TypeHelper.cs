@@ -41,8 +41,6 @@ namespace Core.Lib.Reflections
         private static IEnumerable<string> GetGenericArgumentNames(this Type type)
             => type.IsGenericType ? type.GenericTypeArguments.Select(GetFormatName) : Enumerable.Empty<string>();
 
-
-
         /// <summary>
         /// The is value type or string.
         /// </summary>

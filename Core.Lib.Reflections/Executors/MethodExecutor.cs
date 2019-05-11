@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 
 namespace Core.Lib
 {
-
     /// <summary>
     /// The method executor class.
     /// </summary>

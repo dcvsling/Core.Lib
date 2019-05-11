@@ -49,7 +49,5 @@ namespace Core.Lib.Reflections
         private static string GetMethodParameterNames(this MethodInfo method)
             => string.Join(",", method.GetParameters().Select(x => x.ParameterType.GetFormatName()));
 
-
     }
-
 }

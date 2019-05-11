@@ -7,13 +7,11 @@ using System.Reflection;
 
 namespace Core.Lib.Reflections
 {
-
     /// <summary>
     /// The expression factory class.
     /// </summary>
     internal static partial class ExpressionFactory
     {
-
         /// <summary>
         /// model => (object)model.Property
         /// </summary>

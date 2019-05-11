@@ -134,7 +134,6 @@ namespace Core.Lib.Reflections
             }
         }
 
-
         /// <summary>
         /// The recurse.
         /// </summary>

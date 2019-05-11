@@ -4,7 +4,6 @@ using System.Reflection;
 
 namespace Core.Lib.Reflections.Executors
 {
-
     internal class DefaultMethodExecutor : IMethodExecutor
     {
         private Func<object, object[], object> _invoker;

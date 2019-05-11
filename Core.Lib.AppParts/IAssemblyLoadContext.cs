@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Reflection;
 
-namespace Microsoft.AspNetCore.Rest.Abstractions
+namespace Core.Lib.AppParts
 {
 
     public interface IAssemblyLoadContext

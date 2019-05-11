@@ -4,7 +4,6 @@ using System.Reflection;
 
 namespace Core.Lib.Reflections.Executors
 {
-
     /// <summary>
     /// The IMethodExecutor interface.
     /// </summary>

@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNetCore.Rest.Abstractions;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 using System.Runtime.Loader;
 
-namespace Microsoft.AspNetCore.Rest
+namespace Core.Lib.AppParts
 {
     internal class InternalAssemblyLoadcontext : IAssemblyLoadContext
     {

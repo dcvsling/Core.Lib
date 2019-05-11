@@ -4,7 +4,6 @@ using System.Collections.Concurrent;
 namespace Core.Lib.Reflections
 {
 
-
     /// <summary>
     /// The default accessor class.
     /// </summary>
@@ -43,7 +42,6 @@ namespace Core.Lib.Reflections
         public object Get(object target, string name)
             => _getter.GetOrAdd(name,key => ExpressionFactory.CreatePropertyGetter(_type.GetProperty(key)))
                 .Invoke(target);
-
 
         /// <summary>
         /// Set.

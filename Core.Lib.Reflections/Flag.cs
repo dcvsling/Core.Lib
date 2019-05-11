@@ -100,6 +100,5 @@ namespace Core.Lib.Reflections
         /// <returns>The <see cref="bool"/>.</returns>
         public static bool operator !=(Flag<TFlag, TValue> flag, TValue value)
             => !(flag == value);
-
     }
 }

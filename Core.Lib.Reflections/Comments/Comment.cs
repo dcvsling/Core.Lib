@@ -9,7 +9,6 @@ using System.Reflection;
 
 namespace Core.Lib.Reflections.Comments
 {
-
     public static class Comment
     {
         static Comment()
@@ -44,6 +43,5 @@ namespace Core.Lib.Reflections.Comments
             => new CommentProvider(
                 _configurations.GetOrAdd(assemblyName, _empty),
                 _cache.GetOrAdd(assemblyName, _ => new ConcurrentDictionary<string, StringValues>()));
-
     }
 }

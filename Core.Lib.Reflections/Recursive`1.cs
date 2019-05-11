@@ -17,5 +17,4 @@ namespace Core.Lib.Reflections
     /// <returns>The <see cref="T:R{TDelegate}"/>.</returns>
     /// <typeparam name="TDelegate"></typeparam>
     public delegate Recursive<TDelegate> RecurseFactory<TDelegate>(Func<TDelegate, TDelegate> func) where TDelegate : Delegate;
-
 }

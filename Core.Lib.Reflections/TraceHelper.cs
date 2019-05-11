@@ -5,7 +5,6 @@ using System.Reflection;
 
 namespace Core.Lib.Reflections
 {
-   
     /// <summary>
     /// The trace helper class.
     /// </summary>
@@ -37,6 +36,5 @@ namespace Core.Lib.Reflections
         [DebuggerHidden]
         public static MethodInfo GetCallerMethodInfo()
             => (MethodInfo)GetCallerMethodBase();
-
     }
 }
