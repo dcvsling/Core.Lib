@@ -11,6 +11,8 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
+  group: myget-secret
+  group: myget-url
   dotnetVersion: 3.0.100-preview5-011568
   version: '0.1.0-preview-$(Build.BuildNumber)'
 
@@ -28,5 +30,4 @@ steps:
   displayName: 'dotnet pack version $(version)'
 
 - script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k $(apikey)
-  
   displayName: push to myget
