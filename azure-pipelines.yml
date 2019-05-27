@@ -11,10 +11,12 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  group: myget-secret
-  group: myget-url
-  dotnetVersion: 3.0.100-preview5-011568
-  version: '0.1.0-preview-$(Build.BuildNumber)'
+- group: myget-secret
+- group: myget-url
+- name: dotnetVersion
+  value: 3.0.100-preview5-011568
+- name: version 
+  value: '0.1.0-preview-$(Build.BuildNumber)'
 
 steps:
 
