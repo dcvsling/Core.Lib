@@ -35,3 +35,8 @@ steps:
 
 - script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k $(apikey)
   displayName: push to myget
+
+- task: PublishPipelineArtifact@0
+  inputs:
+    artifactName: 'dcvs-tech-feed'
+    targetPath: $(Build.ArtifactStagingDirectory)
