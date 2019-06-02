@@ -19,6 +19,9 @@ variables:
   value: '0.1.0-preview-$(Build.BuildNumber)'
 - name: Configuration
   value: Debug
+- name: feedUrl
+  value: https://pkgs.dev.azure.com/dcvs-tech/_packaging/dcvs-tech-feed/nuget/v3/index.json
+
 
 steps:
 
@@ -36,7 +39,5 @@ steps:
 - script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k $(apikey)
   displayName: push to myget
 
-- task: PublishPipelineArtifact@0
-  inputs:
-    artifactName: 'dcvs-tech-feed'
-    targetPath: $(Build.ArtifactStagingDirectory)
+- script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k AzureDevOps
+  displayName: push to azure devops artifacts
