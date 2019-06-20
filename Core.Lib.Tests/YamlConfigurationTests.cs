@@ -9,7 +9,7 @@ namespace Core.Lib.Tests
         [Fact]
         public void test_load_yaml_for_config()
         {
-            var config = new ConfigurationBuilder().AddYamlFile("assets\\hostsettings.yml").Build();
+            var config = new ConfigurationBuilder().AddYamlFile("assets/hostsettings.yml").Build();
             Assert.Equal("Core.Net.OAuth;Core.Net.Rest", config.GetSection("HostingStartupAssemblies").Value);
 
         }
