@@ -1,4 +1,4 @@
-using Core.Lib.Mediator;
+using Core.Lib.Reflections.Mediator;
 using Microsoft.Extensions.DependencyInjection;
 using System.Threading.Tasks;
 using Xunit;

@@ -1,0 +1,12 @@
+---
+HostingStartupAssemblies: Core.Net.OAuth;Core.Net.Rest
+oauth:
+  github:
+    ClientId: e3803d7b7b8a241fb828
+    ClientSecret: fb24980b076c1dcd280d7f7ffb577e8e27c7e186
+    AuthorizationEndpoint: https://github.com/login/oauth/authorize
+    TokenEndpoint: https://github.com/login/oauth/access_token
+    UserInformationEndpoint: https://api.github.com/user
+    Scope:
+    - read:user
+...

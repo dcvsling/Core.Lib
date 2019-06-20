@@ -1,15 +1,13 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildThisFileDirectory)build\sdk.props" />
   <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <LangVersion>latest</LangVersion>
     <LocalFeed>$(MSBuildThisFileDirectory).artifacts/</LocalFeed>
     <Version>0.1.0</Version>
-    <VersionSuffix>0001</VersionSuffix>
+    <VersionSuffix>$()</VersionSuffix>
     <PackageOutputPath>$(LocalFeed)</PackageOutputPath>
     <NoWarn>NU1605</NoWarn>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
-  
   
 </Project>

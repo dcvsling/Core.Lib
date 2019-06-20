@@ -1,6 +1,5 @@
 <Project>
   <PropertyGroup>
-    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <DefineConstants Condition="$(Configuration)=='Debug'">$(DefaultConstants);DEBUG</DefineConstants>
     <DefineConstants Condition="$(Configuration)=='Release'">$(DefaultConstants);TRACE</DefineConstants>
     <DefineConstants Condition="$(TargetFramework)=='net462'">$(DefaultConstants);NET;NET462</DefineConstants>

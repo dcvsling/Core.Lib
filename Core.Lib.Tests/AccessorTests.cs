@@ -3,6 +3,7 @@ using Xunit;
 
 namespace Core.Lib.Tests
 {
+
     /// <summary>
     /// The accessor tests class.
     /// </summary>

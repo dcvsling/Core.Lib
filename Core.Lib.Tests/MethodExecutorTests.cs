@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Lib.Reflections.Executors;
+using System;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -82,6 +83,16 @@ namespace Core.Lib.Tests
             Func<bool, Task<bool>> action = _ => Task.FromResult(true);
             var result = await MethodExecutor.CreateExecutor(action.Method).ExecuteAsync(action.Target, true);
             Assert.True((bool)result);
+        }
+
+        [Fact(Skip = "not ready")]
+        async public Task Rewrap_executor()
+        {
+            Func<bool, Task<bool>> action = _ => Task.FromResult(true);
+            var exec = MethodExecutor.CreateExecutor(action.Method);
+            var f = (Func<object[], object>)((args) => exec.ExecuteAsync(action, args));
+            var d = DelegateExecutorHelper.Wrap<Func<bool, Task<bool>>>(exec, f);
+            Assert.Equal(await action.Invoke(true), await d.Invoke(true));
         }
     }
 }

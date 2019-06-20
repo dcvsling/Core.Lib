@@ -1,0 +1,59 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": [ "**.cs", "**.csproj", "**.sln" ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ],
+      "dest": "obj/meta"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "obj/meta/*.yml" ]
+      },
+      {
+        "files": [ "articles/**.md", "articles/**.yml" ]
+      },
+      {
+        "files": [ "toc.yml", "index.md" ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "**/bin/**",
+          "**/obj/**"
+        ]
+      }
+    ],
+    "dest": "bin/site",
+    "globalMetadata": {
+      "_enableSearch": true
+    },
+    "markdownEngineName": "markdig",
+    "template": [ "default", "plugins/darkfx/darkfx" ],
+    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
+  }
+}

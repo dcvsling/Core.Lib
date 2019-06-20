@@ -1,0 +1,3 @@
+[submodule "darkfx"]
+	path = docfx/plugins/darkfx
+	url = https://github.com/steffen-wilke/darkfx.git

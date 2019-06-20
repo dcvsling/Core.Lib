@@ -1,14 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
+﻿using Core.Lib.Reflections;
+using Microsoft.Extensions.Configuration;
 using System;
-using System.IO;
 
 namespace Core.Lib.Configuration
 {
     /// <summary>
     /// Extension methods for registering <see cref="KeyPerFileConfigurationProvider"/> with <see cref="IConfigurationBuilder"/>.
     /// </summary>
-    public static class KeyPerFileConfigurationBuilderExtensions
+    public static class AllFileConfigurationBuilderExtensions
     {
         /// <summary>
         /// Adds configuration using files from a directory. File names are used as the key,
@@ -18,17 +17,13 @@ namespace Core.Lib.Configuration
         /// <param name="directoryPath">The path to the directory.</param>
         /// <param name="optional">Whether the directory is optional.</param>
         /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
-        public static IConfigurationBuilder AddConfiguraionFiles(this IConfigurationBuilder builder, string directoryPath, bool optional, bool reloadOnChange)
-            => builder.AddConfiguraionFiles(source =>
+        public static IConfigurationBuilder AddSettings(this IConfigurationBuilder builder, string directoryPath, bool optional = true, bool reloadOnChange = true, string prefix = Empty.String)
+            => builder.AddSettings(source =>
             {
-                // Only try to set the file provider if its not optional or the directory exists 
-                if (!optional || Directory.Exists(directoryPath))
-                {
-                    source.FileProvider = new PhysicalFileProvider(directoryPath);
-                }
                 source.Optional = optional;
                 source.ReloadOnChange = reloadOnChange;
                 source.Path = directoryPath;
+                source.PrefixPattern = prefix;
             });
 
         /// <summary>
@@ -38,7 +33,7 @@ namespace Core.Lib.Configuration
         /// <param name="builder">The <see cref="IConfigurationBuilder"/> to add to.</param>
         /// <param name="configureSource">Configures the source.</param>
         /// <returns>The <see cref="IConfigurationBuilder"/>.</returns>
-        public static IConfigurationBuilder AddConfiguraionFiles(this IConfigurationBuilder builder, Action<AllFileConfigurationSource> configureSource)
+        public static IConfigurationBuilder AddSettings(this IConfigurationBuilder builder, Action<AllFileConfigurationSource> configureSource)
             => builder.Add(configureSource);
     }
 }

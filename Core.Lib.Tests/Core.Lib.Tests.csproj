@@ -1,31 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>
-      netcoreapp2.1;
-      netcoreapp2.2;
-      netcoreapp3.0;
-    </TargetFrameworks>
-
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <IsPackable>false</IsPackable>
-    <DocumentationFile>$(ProjectDir)$(OutDir)Core.Lib.Tests.xml</DocumentationFile>
+    <DocumentationFile>$(OutputDir)Core.Lib.Tests.xml</DocumentationFile>
   </PropertyGroup>
+
   <ItemGroup>
-    <!--<PackageReference Include="Microsoft.AspNetCore.App" Version="$(AspNetCoreVersion)"/>-->
-    
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(ExtensionsVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(ExtensionsVersion)" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="$(ExtensionsVersion)" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.*" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0-preview-20190606-02" />
     <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    
     <ProjectReference Include="..\Core.Lib.AppParts\Core.Lib.AppParts.csproj" />
     <ProjectReference Include="..\Core.Lib.Configuration.Yaml\Core.Lib.Configuration.Yaml.csproj" />
-    <ProjectReference Include="..\Core.Lib.Mediator\Core.Lib.Mediator.csproj" />
+    <ProjectReference Include="..\Core.Lib.Configuration\Core.Lib.Configuration.csproj" />
+    <ProjectReference Include="..\Core.Lib.Helper\Core.Lib.Helper.csproj" />
     <ProjectReference Include="..\Core.Lib.Reflections\Core.Lib.Reflections.csproj" />
-    <ProjectReference Include="..\Core.Lib.Rss\Core.Lib.Rss.csproj" />
   </ItemGroup>
   
   <ItemGroup>
@@ -35,13 +31,21 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Update="assets\lexer.yml">
+    <None Update="assets\appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\hostsettings.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="assets\settings.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Core.Lib.Tests.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  
+  <ProjectExtensions><VisualStudio><UserProperties assets_4appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
 </Project>
