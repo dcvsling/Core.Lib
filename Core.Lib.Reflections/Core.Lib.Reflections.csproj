@@ -7,6 +7,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Xml" Version="2.2.*" />
     <PackageReference Include="Microsoft.Extensions.FileSystemGlobbing" Version="2.2.*" />
     <PackageReference Include="Microsoft.Extensions.Primitives" Version="2.2.*" />
+    <PackageReference Include="System.Reactive" Version="4.1.5" />
     <PackageReference Include="System.Runtime.Loader" Version="4.3.*" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.*" />
