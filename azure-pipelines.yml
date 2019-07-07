@@ -11,7 +11,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 variables:
-  dotnetVersion: 3.0.100-preview6-012264
+  dotnetVersion: 2.2.300
   version: '0.1.0-preview-$(Build.BuildNumber)'
 
 steps:
@@ -24,12 +24,16 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
-- script: dotnet test 
+- script: dotnet test /p:AltCover=true /p:AltCoverXmlReport="..\coverage.xml"
   displayName: 'dotnet build $(buildConfiguration)'
+  
+- task: reportgenerator@4
+  inputs:
+    reports: 'coverage.xml'
+    targetdir: 'reports'
 
 - script: dotnet pack -o $(Build.ArtifactStagingDirectory) --no-dependencies --no-build --include-symbols -p:PackageVersion=$(version) 
   displayName: 'dotnet pack version $(version)'
 
 - script: dotnet nuget push $(Build.ArtifactStagingDirectory)/ -s $(feedUrl) -k $(apikey)
-  
   displayName: push to myget

@@ -8,8 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="altcover" Version="5.3.675" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0-*" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0-preview-20190606-02" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
       <PrivateAssets>all</PrivateAssets>
@@ -17,8 +18,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    
-    <ProjectReference Include="..\Core.Lib.AppParts\Core.Lib.AppParts.csproj" />
     <ProjectReference Include="..\Core.Lib.Configuration.Yaml\Core.Lib.Configuration.Yaml.csproj" />
     <ProjectReference Include="..\Core.Lib.Configuration\Core.Lib.Configuration.csproj" />
     <ProjectReference Include="..\Core.Lib.Helper\Core.Lib.Helper.csproj" />

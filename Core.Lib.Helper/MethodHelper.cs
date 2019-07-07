@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The method helper class.

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The optional helper class.

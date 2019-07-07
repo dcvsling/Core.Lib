@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The empty class.

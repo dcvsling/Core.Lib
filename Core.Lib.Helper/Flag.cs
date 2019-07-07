@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The flag class.

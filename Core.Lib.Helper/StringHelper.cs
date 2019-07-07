@@ -6,7 +6,7 @@ using System.IO;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The string helper class.
@@ -89,6 +89,9 @@ namespace Core.Lib.Reflections
 
         public static string WithCurrentDir(this string path)
             => Path.Combine(Directory.GetCurrentDirectory(), path);
+
+        public static string Format<T>(this T context, string format)
+            => new ContextValuesFormatter(format).Format(context);
     }
 
 }

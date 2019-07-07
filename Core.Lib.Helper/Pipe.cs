@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     public static class Pipe
     {

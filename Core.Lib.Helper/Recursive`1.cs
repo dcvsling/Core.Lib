@@ -1,6 +1,6 @@
 using System;
 
-namespace Core.Lib.Reflections
+namespace Core.Lib.Helper
 {
     /// <summary>
     /// The r.
