@@ -25,12 +25,13 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - script: dotnet test /p:AltCover=true /p:AltCoverXmlReport="..\coverage.xml"
-  displayName: 'dotnet build $(buildConfiguration)'
+  displayName: 'dotnet test $(buildConfiguration) with code coverage'
   
 - task: reportgenerator@4
   inputs:
     reports: 'coverage.xml'
     targetdir: 'reports'
+  displayName: generate reports
 
 - script: dotnet pack -o $(Build.ArtifactStagingDirectory) --no-dependencies --no-build --include-symbols -p:PackageVersion=$(version) 
   displayName: 'dotnet pack version $(version)'
