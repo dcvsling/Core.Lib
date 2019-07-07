@@ -28,10 +28,12 @@ steps:
   displayName: 'dotnet test $(buildConfiguration) with code coverage'
   
 - task: reportgenerator@4
+  displayName: generate reports
   inputs:
     reports: 'coverage.xml'
     targetdir: 'reports'
-  displayName: generate reports
+    reporttypes: 'HtmlInline_AzurePipelines;Cobertura;Badges'
+    assemblyfilters: '-xunit*'
 
 - script: dotnet pack -o $(Build.ArtifactStagingDirectory) --no-dependencies --no-build --include-symbols -p:PackageVersion=$(version) 
   displayName: 'dotnet pack version $(version)'
